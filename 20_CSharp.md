@@ -17,6 +17,7 @@ Grundlagen, Programmaufbau, Codekonventionen, Kommentare, Strings, Methoden, Ope
 * [TOP 20 Programmiersprachen](https://fossbytes.com/most-popular-programming-languages/)
 
 
+
 <!-- .slide: class="left" -->
 ## Entwicklungsumgebungen
 
@@ -116,11 +117,28 @@ Zeigen in **VS**, Projekt erstellen
 /// <returns>Return Wert beschreiben</returns>
 ```
 
+<!-- .slide: class="left" -->
+## TODO Kommentare
+
+Es können Aufgaben markiert werden welche später noch erledigt werden sollen.
+Visual Studio bietet dafür eine extra Ansicht wo alle [TODO's](https://docs.microsoft.com/de-de/visualstudio/ide/using-the-task-list?view=vs-2019) aufgeführt werden.
+
+```csharp
+//TODO: Name anpassen
+string namea = string.Empty;
+```
+
+Außerdem gibt es weitere Kommentararten wie
+
+* UNDONE
+* HACK
+* FIXME
+
+
 Note: In VS zeigen
 
 * VS Layout umstellen
 * Projekt anlegen
-* Methoden autom erstellen
 * Codevervollständigung
 * Intelli Sense
 
@@ -147,7 +165,7 @@ Note: In VS zeigen
 
 
 <!-- .slide: class="left" -->
-## Ein- und Ausgabe
+## Ein- und Ausgabe in der Konsole
 
 Einige wichtige Methoden zur Ein- und Ausgabe gehören zur Klasse [Console](https://docs.microsoft.com/de-de/dotnet/api/system.console?view=netframework-4.7.2) im
 Namespace System. Sie lauten:
@@ -171,4 +189,86 @@ Console.Write("K");
 Console.WriteLine("IHK")
 ``` 
 
-Note: Übung 1 (Projekt erstellen und etwas in der Console ausgeben)
+
+<!-- .slide: class="left" -->
+## Übung 1
+
+Erstelle ein neues .Net Framework Konsolen Projekt. Dieses soll in der Console:
+
+```Hallo IHK ULM```
+
+ausgeben.
+Erst bei einem Tastendruck soll sich das Konsolenfenster schließen.
+
+
+<!-- .slide: class="left" -->
+## Typische Fehler
+
+### Schreiben von Code außerhalb der Main Method
+
+Einer der häufigsten Fehler bei Anfängern ist **Schreiben außerhalb des Blocks der **```Main()```** Methode**. Dadurch kann die Entwicklungsumgebung oder der Compiler die gegebenen Befehle im Programm nicht richtig lesen.
+
+```csharp
+static void Main(string[] args)
+{
+}
+Console.WriteLine("Hello C#");
+```
+
+
+<!-- .slide: class="left" -->
+### Falsche Großschreibung
+
+Ein weiterer Fehler ist das Vertauschen von **Groß- und Kleinbuchstaben**. Diese sind jedoch für den Aufruf der Befehle und deren korrekte Funktion von Bedeutung.
+
+```csharp
+static void Main(string[] args)
+{
+    Console.Writeline("Hello C#");
+}
+```
+
+Im obigen Beispiel ist `Writeline` falsch geschrieben und muss auf `WriteLine` korrigiert werden.
+
+
+<!-- .slide: class="left" -->
+### Fehlendes Semikolon
+
+Das Fehlen von **einem Semikolon** \(`;`\) am Ende der Befehle ist eines der ewigen Probleme des Programmieranfängers. Das Überspringen dieses Zeichens führt zu einer **fehlfunktion des Programms** und **oft bleibt das Problem unbemerkt**.
+
+```csharp
+static void Main(string[] args)
+{
+    Console.WriteLine("Hello C#")
+}
+```
+
+
+<!-- .slide: class="left" -->
+### Fehlende oder falsche Anführungszeichen oder Klammern
+
+Das Fehlen von **Anführungszeichen** oder **das Fehlen von öffnenden oder schließenden Klammern** kann sich ebenfalls als Problem erweisen. Wie beim Semikolon führt auch hier das Problem zu einer **Fehlfunktion des Programms** oder insgesamt zu dessen Ausfall. Dieser Fehler macht sich bei einem größeren Code kaum bemerkbar.
+
+```csharp
+static void Main(string[] args)
+{
+    Console.WriteLine("Hello C#);
+}
+```
+
+Dieses Programm wirft **einen Kompilierzeitfehler** und der Build wird fehlschlagen. Der Code wird sogar unterstrichen, um den Programmierer auf den Fehler hinzuweisen, den er gemacht hat \(das fehlende schließende Anführungszeichen\):
+
+![](/images/csharp-error.png)
+
+
+<!-- .slide: class="left" -->
+Ein weiteres Beispiel ist das Fehlen von `{` oder `}`. Es kann zu unerwarteten Fehlermeldungen führen, die nicht immer leicht zu verstehen sind.
+
+```csharp
+class Example
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Hello C#);
+}
+```

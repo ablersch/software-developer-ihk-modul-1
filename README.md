@@ -18,7 +18,17 @@ Diese Repository beinhaltet die Unterlagen für den Kurs **Software Developer IH
 ## Inhalt
 
 * Grundlagen DotNet und C#
-* ...
+* Programmaufbau
+* Codekonventionen
+* Datentypen
+* Variablen
+* Operatoren
+* Arrays
+* Kontrollstrukturen
+* Strings
+* Enumeration
+* Methoden
 * Hilfestellungen und Tipps für Visual Studio
+* [C# 7 in a Nutshell](http://2.238.16.249:8880/get/pdf/106)
 
 Mit Übungsaufgaben zu den einzelnen Themen.

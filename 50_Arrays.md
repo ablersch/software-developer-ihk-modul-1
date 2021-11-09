@@ -62,8 +62,15 @@ for (int i = 0; i < cars.Length; i++)
 }
 ```
 
+<!-- .slide: class="left" -->
+## Übung 3
+
+TODO einfaches Array
 
 <!-- .slide: class="left" -->
 ## Mehrdimensionale Arrays
 
+Bsp
+
 https://docs.microsoft.com/de-de/dotnet/csharp/programming-guide/arrays/multidimensional-arrays
+

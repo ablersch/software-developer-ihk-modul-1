@@ -54,6 +54,8 @@ Note: CLI (systemunabhängig) = Programmbefehle als Bytefolge
 
 Just in Time: Auf Zielsystem zur Laufzeit. Übersetzt Bytecode in Maschinensprache (Maschinencode) des jeweiligen Prozessors.
 
+Ein C#-Programm wird in einem Textformat geschrieben, und der Text des Programms wird als Quellcode bezeichnet. Es wird in eine ausführbare Datei kompiliert (z.B. Program.cs wird zu Program.exe kompiliert) oder es wird direkt aus der .NET-Umgebung ausgeführt
+
 
 <!-- .slide: class="left" -->
 ## C\# Code zu CIL Code

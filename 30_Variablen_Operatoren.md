@@ -35,14 +35,15 @@ Console.Write(summe);
 Sinnvoll wenn die Variable immer den gleichen Wert behalten soll z.B. (PI).
 
 ```csharp
+const double pi = 3.14159265359;
 const int pageSize = 50;
 ```
 
 
 <!-- .slide: class="left" -->
-## [Operatoren](https://docs.microsoft.com/de-de/dotnet/csharp/language-reference/operators/)
+## Operatoren
 
-Ein Operator ist ein Symbol, das mathematische oder logische Manipulationen ausführt.
+Ein [Operator](https://docs.microsoft.com/de-de/dotnet/csharp/language-reference/operators/) ist ein Symbol, das mathematische oder logische Manipulationen ausführt.
 
 
 <!-- .slide: class="left" -->
@@ -137,3 +138,11 @@ Note: & Vergleicht immer beide Werte. Wobei && false liefert wenn bereits der er
 | !         | logisches NICHT  | Invertiert das Ergebnis. Gibt bei Wahr, Falsch zurück
 
 [Beispiele logische Operatoren](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/boolean-logical-operators#conditional-logical-and-operator-)
+
+
+<!-- .slide: class="left" -->
+## Übung 2
+
+1. Erstelle ein weiteres .Net Framework Konsolen Projekt. Dieses fragt zwei Zahlenwerte (int) in der Konsole ab und gibt die Summe wieder aus.
+
+2. Ändere dein Projekt damit es auch mit Kommazahlen arbeiten kann.
