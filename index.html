@@ -17,26 +17,34 @@
 		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
 
 		<link href="/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
-
 		
-<style>
-	section.left {
-		text-align: left;
-	}
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		
+		<style>
+			section.left {
+				text-align: left;
+			}
 
-	.reveal {
-		font-size: 30px;
-	}
+			.reveal {
+				font-size: 30px;
+			}
 
-	.reveal li li {
-		font-size: smaller;
-	}
+			.reveal li li {
+				font-size: smaller;
+			}
 
-	.reveal section img {
-		border: none;
-		box-shadow: none;
-	}
-</style>
+			.reveal section img {
+				border: none;
+				box-shadow: none;
+			}
+		</style>
 	</head>
 
 	<body>
@@ -164,7 +172,7 @@
 				// The maximum number of pages a single slide can expand onto when printing
 				pdfMaxPagesPerSlide: 1,
 				// Prints each fragment on a separate slide
-  				pdfSeparateFragments: true,
+  				//pdfSeparateFragments: true,
 				// Enable keyboard shortcuts for navigation
 				keyboard: true,
 				// Enables touch navigation on devices with touch input
