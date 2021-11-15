@@ -38,7 +38,7 @@ Samstags:
     * 11:30 - 12:00 Uhr
 
 
-<!-- .slide: class="left" -->
+<!-- .slide: class="left"-->
 ## Module
 
 | Modul | Punkte |
