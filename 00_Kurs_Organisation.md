@@ -4,6 +4,7 @@ b- Blackscreen
 space - nächste Folie
 s - Speaker notes
 ALT+ links Klick - Zoom
+Print View: http://localhost:8000/?print-pdf
 -->
 # Kurs Organisation
 
