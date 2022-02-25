@@ -63,6 +63,21 @@ Zeigen in **VS**, Projekt erstellen (.NET Core Konsole)
 
 
 <!-- .slide: class="left" -->
+## Top-Level Anweisung
+
+Seit C# 9 ist eine `Main` Methode nicht mehr notwendig. Es können [Top-Level Anweisungen](https://docs.microsoft.com/de-de/dotnet/csharp/fundamentals/program-structure/top-level-statements) verwendet werden um den Code zu minimieren
+
+
+```csharp
+using System;
+
+Console.WriteLine("IHK"); 
+```
+
+Note: Beispiel zeigen in **VS** 2022 mit der neuen Vorlage (.Net 6)
+
+
+<!-- .slide: class="left" -->
 ## Namensräume
 
 * Klassen und Methoden können in sogenannten Namensräumen (engl. Namespaces) hierarchisch geordnet werden.
