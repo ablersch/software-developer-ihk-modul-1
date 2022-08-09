@@ -8,11 +8,11 @@ Variablen und Operatoren
 
 In Variablen können Werte vom entsprechenden Datentypen gespeichert werden.
  
-```csharp
+```csharp []
 // Deklaration
 int alter;
 
-// mehrere Variablen deklarieren
+// mehrere Variablen deklarieren (nicht erwünscht)
 int anzahl, summe;
 
 // Variable initialisieren
@@ -23,11 +23,25 @@ alter = 40;
 
 // Deklarieren und initialisieren
 double summe = 11.5;
-var wert = 5;
 
 // Wert benutzen (ausgeben)
 Console.Write(summe);
 ```
+
+
+<!-- .slide: class="left" -->
+## Variablen var
+
+Variablen, die im Methodenbereich deklariert werden, können einen impliziten "Typ" var haben. Eine implizit typisierte lokale Variable ist stark typisiert, als ob Sie den Typ selbst deklariert hätten, aber der Compiler bestimmt den Typ.
+
+Die folgenden zwei Deklarationen von sind funktional äquivalent:
+
+```csharp []
+var i = 10; // Implicitly typed.
+int i = 10; // Explicitly typed.
+```
+
+mehr zum Thema [var](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/var).
 
 
 <!-- .slide: class="left" -->
@@ -36,7 +50,7 @@ Console.Write(summe);
 [Konstanten](https://docs.microsoft.com/de-de/dotnet/csharp/programming-guide/classes-and-structs/constants) können nicht überschrieben werden. Der Wert ist also nur lesend zugreifbar. Der Wert muss beim deklarieren zugewiesen werden.
 Sinnvoll wenn die Variable immer den gleichen Wert behalten soll z.B. (PI).
 
-```csharp
+```csharp []
 const double PI = 3.14159265359;
 const int PAGE_SIZE = 50;
 ```
@@ -60,11 +74,11 @@ Eine Division durch 0 gibt ein Programmfehler
 | -         | Subtraktion    |  |
 | *         | Multiplikation    |  |
 | /         | Division    |  |
-| %         | Modulo       | Gibt den Teilungsrest zurück |
+| %         | Modulo (Restoperator)      | Gibt den Teilungsrest zurück |
 | ++        | Inkrement    | Wert um 1 erhöhen |
 | --        | Dekrement    | Wert um 1 verringern |
 
-```csharp
+```csharp []
 int value = 5
 int sum = 50 + value;
 sum = sum++;
@@ -82,7 +96,7 @@ Das Prefix erhöht den Wert und fährt dann mit dem Ausdruck fort, während das 
 * Prefix `++x`
 * Postfix `x++`
 
-```csharp
+```csharp []
 int a = 50;
 Console.WriteLine(++a);  // 51
 Console.WriteLine(a);    // 51
@@ -143,6 +157,6 @@ Note: & vergleicht immer beide Werte. Wobei && false liefert wenn bereits der er
 <!-- .slide: class="left" -->
 ## Übung 2
 
-1. Erstelle ein weiteres .Net Core Konsolen Projekt. Dieses fragt zwei Zahlenwerte (int) in der Konsole ab und gibt die Summe wieder aus.
+1. Erstelle ein weiteres .Net Konsolen Projekt. Dieses fragt zwei Zahlenwerte (int) in der Konsole ab und gibt die Summe wieder aus.
 
 2. Ändere dein Projekt damit es auch mit Kommazahlen arbeiten kann.

@@ -34,7 +34,7 @@ Ein Projekt in VS gruppiert logisch mehrere Dateien, die eine bestimmte Anwendun
 <!-- .slide: class="left" -->
 ## Erstes Konsolenprojekt erstellen
 
-* Neues Projekt erstellen → Konsole-App (.NET Core)
+* Neues Projekt erstellen → Konsole-App (.NET 6)
 * aussagekräftigen Namen vergeben
 * Speicherort festlegen
 * Visual Studio erstellt ein leeres C\# Programm
@@ -92,24 +92,6 @@ Code formatieren: Bearbeiten &rarr; Erweitert &rarr; Dokument formatieren
 * Strg + Mausrad drehen - Code vergrößernMarkdown Preview
 
 [weitere Shortcuts](https://www.dofactory.com/reference/visual-studio-shortcuts)
-
-
-<!-- .slide: class="left" -->
-### Codeblöcke Kennzeichnen bzw. zusammenfassen
-
-```csharp
-#region Kommentar bzw Name
-
-CODE
-
-#endregion
-```
-
-
-<!-- .slide: class="left" -->
-### Extra DLL mit Dokumentation (XML) einbinden 
-
-Die XML Kommentardatei muss dort liegen wo die eingebundene DLL liegt (mit gleichem Name). Nur dann kann ist die Dokumentation in IntelliSense verfügbar. Neustart von Visual Studio ist nötig.
 
 
 <!-- .slide: class="left" -->
@@ -177,7 +159,7 @@ Automatisch erstellen mit „Bearbeiten“ &rarr; Feld kapseln
 
 ![PropertyErstellen](images\PropertyErstellen.png)
 
-```csharp
+```csharp []
 private string name;
 
 public string Name
@@ -189,6 +171,6 @@ public string Name
 
 Oder als Auto Property
 
-```csharp
+```csharp []
 public string Name { get; set; }
 ```

@@ -7,7 +7,7 @@ Möglichkeit Programme sinnvoll zu strukturieren und zu steuern.
 <!-- .slide: class="left" -->
 ## IF-ELSE - Anweisung
 
-```csharp
+```csharp []
 var testValue = 50;
 string text;
 
@@ -23,7 +23,7 @@ else
 
 [Bedingungsoperator (Frageoperator)](https://docs.microsoft.com/de-de/dotnet/csharp/language-reference/operators/conditional-operator) liefert immer einen Ausdruck bzw. eine Wertzuweisung: **?:**
 
-```csharp
+```csharp []
 var text = (testValue == 50) ? "erfüllt" : "nicht erfüllt";
 ```
 
@@ -35,11 +35,9 @@ Note: if(else) + tab + tab. If ist natürlich auch mit mehreren IF Zweigen erwei
 <!-- .slide: class="left" -->
 ## SWITCH-CASE - Anweisung
 
-Bei der SWITCH-Anweisung wird der Ausdruck in der Anweisung ausgewertet
-und in Abhängigkeit des ganzzahligen Ausdrucks zum entsprechenden CASE
-gesprungen.
+Bei der SWITCH-Anweisung wird der Ausdruck in der Anweisung ausgewertet und in Abhängigkeit des ganzzahligen Ausdrucks zum entsprechenden CASE gesprungen.
 
-```csharp
+```csharp []
 int caseSwitch = 1;
 switch (caseSwitch)
 {
@@ -61,9 +59,9 @@ Note: switch + tab + tab
 <!-- .slide: class="left" -->
 C\# erlaubt auch **Strings** als Switch-Variable:
 
-```csharp
-string str = "Stuttgart";
-switch (str)
+```csharp []
+var stadt = "Stuttgart";
+switch (stadt)
 {
    case "Ulm":
         Console.WriteLine("Case 1");
@@ -81,7 +79,7 @@ Mehr zum Thema [SWITCH-CASE](https://docs.microsoft.com/de-de/dotnet/csharp/lang
 
 
 <!-- .slide: class="left" -->
-# Schleifen (Iterationen)
+## Schleifen (Iterationen)
 
 Bei der Programmierung ist es oft erforderlich, einen Block von Befehlen mehrfach auszuführen.
 
@@ -89,11 +87,11 @@ Schleifen sind praktisch, weil sie Zeit sparen, Fehler reduzieren und den Code b
 
 
 <!-- .slide: class="left" -->
-## While-Schleife
+### While-Schleife
 
 While-Schleifen können einen Codeblock so lange ausführen, bis eine bestimmte Bedingung ```true``` ist.
 
-```csharp
+```csharp []
 int i = 0;
 while (i < 99 )
 {
@@ -106,10 +104,11 @@ Mehr zum Thema [While-Schleifen](https://docs.microsoft.com/de-de/dotnet/csharp/
 
 
 <!-- .slide: class="left" -->
-## Do-While-Schleife
+### Do-While-Schleife
+
 Die do/while-Schleife ist eine Variante der while-Schleife. Diese Schleife führt den Codeblock einmal aus, bevor sie prüft, ob die Bedingung wahr ist, und wiederholt dann die Schleife, solange die Bedingung wahr ist.
 
-```csharp
+```csharp []
 int i = 0;
 do
 {
@@ -123,7 +122,7 @@ Mehr zum Thema [Do-While-Schleifen](https://docs.microsoft.com/de-de/dotnet/csha
 
 
 <!-- .slide: class="left" -->
-## For-Schleife
+### For-Schleife
 
 Wenn Sie genau wissen, wie oft Sie einen Codeblock in einer Schleife durchlaufen wollen, verwenden Sie die for-Schleife anstelle einer while-Schleife.
 
@@ -131,7 +130,7 @@ Wenn Sie genau wissen, wie oft Sie einen Codeblock in einer Schleife durchlaufen
 
 
 <!-- .slide: class="left" -->
-```csharp
+```csharp []
 // i setzen bevor die Schleife beginnt
 // Kondition die geprüft wird. i muss kleiner 10 sein
 // Erhöht den Schleifenzähler nach jedem Schleifendurchlauf
@@ -141,19 +140,20 @@ for (int i = 0; i < 10; i++ )
     Console.WriteLine("i hat den Wert: " + i);
 }
 ```
+
 Mehr zum Thema [For-Schleifen](https://docs.microsoft.com/de-de/dotnet/csharp/language-reference/statements/iteration-statements#the-for-statement)
 
 Note: for (aufsteigender Counter) fore (absteigender Counter) + tab + tab
 
 
 <!-- .slide: class="left" -->
-## verschachtelte Schleifen
+### verschachtelte Schleifen
 
-Eine Schleifen kann auch verschachtelt werden, d.h. in einer Schleife können wir eine weitere Schleife ausführen.
+Eine Schleifen kann beliebig verschachtelt werden, d.h. in einer Schleife können wir eine weitere Schleife ausführen.
 
 Ein Quadrat mit n-Zeilen zeichnen, die jeweils n-mal das Zeichen **=-** enthalten:
 
-```csharp
+```csharp []
 // Wieviel Schleifendruchläufe
 int n = int.Parse(Console.ReadLine());
 // Äußere Schleife (erzeugt neue Zeile)
@@ -173,14 +173,14 @@ Note: **Übung 3** verschachtelte Schleife
 
 
 <!-- .slide: class="left" -->
-## Foreach-Anweisung
+### Foreach-Anweisung
 
 Die [foreach-Anweisung](https://docs.microsoft.com/de-de/dotnet/csharp/language-reference/statements/iteration-statements#the-foreach-statementn) kann auf Arrays und für jede Klasse eingesetzt
 werden, welche die Schnittstelle IEnumerable implementiert. Fehler mit falscher Indexierung sind nicht mehr möglich.
 
 **For Schleife:**
 
-```csharp
+```csharp []
 double [] meinArray = new double [] { 1.1, 1.2, 1.3, 1.4, 1.5 };
 for(int i=0; i < meinArray.Length; i++)
 {
@@ -190,7 +190,7 @@ for(int i=0; i < meinArray.Length; i++)
 
 **Foreach:**
 
-```csharp
+```csharp []
 foreach (var meinWert in meinArray)
 {
     Console.WriteLine($"{meinWert}\n");
@@ -198,7 +198,7 @@ foreach (var meinWert in meinArray)
 ```
 
 **Achtung:** Der foreach-Bezeichner "meinWert" ist schreibgeschützt. Er
-kann also nicht zur Zuweisung von Arraywerten verwendet werden!
+kann also nicht zur Zuweisung von Array Werten verwendet werden!
 
 Note: Sinnvoll wenn alle Werte durchlaufen werden sollen aber kein Index benötigt wird.
 
@@ -208,11 +208,11 @@ foreach + tab + tab
 
 
 <!-- .slide: class="left" -->
-# Sprunganweisungen
+## Sprunganweisungen
 
-## Break und Continue
+### Break und Continue
 
-```csharp
+```csharp []
 // Schleife komplett beenden, Execute nie ausführen
 for (int i = 0; i < 10; i++) {
     if (i == 0) break;
@@ -220,7 +220,7 @@ for (int i = 0; i < 10; i++) {
 }
 ```
 
-```csharp
+```csharp []
 // Execute nur beim ersten Durchlauf nicht ausführen.
 // Continue beginnt nächste Iteration
 for (int i = 0; i < 10; i++) {
@@ -256,8 +256,8 @@ Das führt zur Frage, wo eine Variable deklariert werden sollte. Dafür gilt vor
 
 * Andere lokale Variablen sollten möglichst zusammenhängend am Anfang eines Code-Teils deklariert werden.
 
-* Auch Klassenvariable sollten innerhalb der Klasse an einer sinnvollen Stelle stehen.
+* Auch Klassen Variablen sollten innerhalb der Klasse an einer sinnvollen Stelle stehen.
 
 Note: **VS** Sichtbarkeit von Variablen zeigen (Klasse, Methode, If, ...).
 Var
-ÜBUNG 4 Fakultät
+**ÜBUNG 4** Fakultät

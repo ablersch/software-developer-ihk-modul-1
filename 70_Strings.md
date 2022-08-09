@@ -5,16 +5,17 @@ Zeichenketten in C#
 
 <!-- .slide: class="left" -->
 ## Was sind Strings
+
 Eine [string](https://docs.microsoft.com/de-de/dotnet/csharp/language-reference/keywords/string) Variable enthält eine Sammlung von Zeichen, die von doppelten Anführungszeichen umgeben sind.
 
-```csharp
-string zeichenKette;
+```csharp []
+string zeichenkette;
 
-zeichenKette = "Hallo C#";
-Console.Write(zeichenKette); // Ausgabe: Hallo C#
+zeichenkette = "Hallo C#";
+Console.Write(zeichenkette); // Ausgabe: Hallo C#
 
-zeichenKette = zeichenKette + " - Fans\n";
-Console.Write(zeichenKette); // Hallo C# - Fans
+zeichenkette = zeichenkette + " - Fans\n";
+Console.Write(zeichenkette); // Hallo C# - Fans
 ```
 
 
@@ -23,14 +24,14 @@ Console.Write(zeichenKette); // Hallo C# - Fans
 
 * Über Index
 
-```csharp
+```csharp []
 string text = "Hello";
 Console.WriteLine(text[0]);  // Ausgabe: H
 ```
 
 * Index abrufen
 
-```csharp
+```csharp []
 Console.WriteLine(text.IndexOf("l"));  // Ausgabe 2
 ```
 
@@ -40,7 +41,7 @@ Console.WriteLine(text.IndexOf("l"));  // Ausgabe 2
 
 * String Vergleich
 
-```csharp
+```csharp []
 string text = "IHK Ulm";
 if (text == "IHK Ulm")       // => true
 if (text.Equals("IHK Ulm"))  // => true
@@ -49,26 +50,26 @@ if (text.Equals("ihk ulm", StringComparison.OrdinalIgnoreCase))  // => true
 
 * Länge eines Strings ermitteln
 
-```csharp
+```csharp []
 int i = text.Length;
 ```
 
 * Umwandeln in String
 
-```csharp
+```csharp []
 text = text + i;     //.ToString()
 text += i;
 ```
 
 * Teilstring von Index 0 bis Index 2
 
-```csharp
+```csharp []
 text = text.Substring(0, text.IndexOf("K") +1); // Array Index beginnt bei 0
 ```
 
 * Teile eines Strings ersetzen
 
-```csharp
+```csharp []
 text = text.Replace("H", "A");
  ```
 
@@ -80,22 +81,21 @@ Note: weitere Methoden zeigen in **VS**. z.B. string.IsNullOrEmpty, Trim, Remove
 
 * Konvertierung eines Strings in int mit der Klasse **Convert**
 
-```csharp
+```csharp []
 string text = "580";
 int zahl = Convert.ToInt32(text);
 ```
 
 * Konvertierung mit **Parse**
 
-```csharp
+```csharp []
 zahl = Int32.Parse(text);
 ```
 
 * Prüfen ob Konvertierung möglich ist mit **TryParse**
 
-```csharp
-//Ref Parameter
-bool result = Int32.TryParse(text, out var zahlVariable);  
+```csharp []
+bool result = Int32.TryParse(text, out var zahl);  
 if (!result) {
     Console.WriteLine("Umwandlung fehlgeschlagen");
 }
@@ -103,7 +103,7 @@ if (!result) {
 
 * Konvertierung von **double** nach int
 
-```csharp
+```csharp []
 double zahl = 12.66789;
 int intZahl = Convert.ToInt32(zahl);  // gerundet 13
 ```
@@ -130,7 +130,7 @@ Console.WriteLine($"Die Summe von {a} plus {b} ist {a+b}");
 
 * StringBuilder
 
-```csharp
+```csharp []
 StringBuilder sb = new StringBuilder();
 sb.Append("Die Summe von ");
 sb.Append(a);
@@ -146,7 +146,7 @@ Mehr zum Thema [String Verkettung](https://docs.microsoft.com/de-de/dotnet/cshar
 <!-- .slide: class="left" -->
 ## String Formatierung
 
-```csharp
+```csharp []
 // Nach dem Wert 20 Stellen frei
 Console.WriteLine($"Die Summe von {a,-20:D} plus {b,-20:D} ist {a + b,-20:D}");
 
@@ -168,13 +168,13 @@ Mehr zum Thema [String Formatierung 1](https://docs.microsoft.com/de-de/dotnet/s
 [String Formatierung 2](http://www.ne555.at/2014/index.php/pc-programmierung/einfuehrung-c/274-strings-formatieren-mit-c.html)
 
 Note: Platzhalter können mehrfach verwendet werden.
-{0,-20:D}  rechts der Zahl 20 Stellen frei
+{0,-20:D} rechts der Zahl 20 Stellen frei
 
 
 <!-- .slide: class="left" -->
 ## Escape-Sequenzen
 
-[Escape-Sequenzen](https://docs.microsoft.com/en-us/cpp/c-language/escape-sequences?view=vs-2019) werden normalerweise verwendet, um Aktionen wie Wagenrücklauf und Tabulatorbewegungen an Terminals und Druckern auszuführen.
+[Escape-Sequenzen](https://docs.microsoft.com/en-us/cpp/c-language/escape-sequences?view=msvc-170) werden normalerweise verwendet, um Aktionen wie Wagenrücklauf und Tabulatorbewegungen an Terminals und Druckern auszuführen.
 
 | Zeichen      | Beschreibung
 | -------------|-------------|
@@ -182,7 +182,7 @@ Note: Platzhalter können mehrfach verwendet werden.
 | `\n`         | Neue Zeile
 | `\r`         | Zeilenumbruch
 | `\t`         | Tabs
-| `\\`         | Sonderzeichen wie ", ', \
+| `\\`         | Sonderzeichen z.B. \
 
 ```csharp
 Console.Write("You pressed \n");
@@ -194,7 +194,7 @@ Console.Write("You pressed \n");
 
 Die Klasse `Console` kann nicht nur Daten lesen und schreiben sondern auch:
 
-```csharp
+```csharp []
 Console.BackgroundColor = ConsoleColor.DarkRed; //Hintergrundfarbe setzen
 Console.ForegroundColor = ConsoleColor.White: //Vordergrundfarbe setzen
 Console.Title = "IHK Ulm"; // Setzt den Titel im Konsolenfenster
@@ -204,15 +204,15 @@ Console.WindowWidth = 150; // Setzt die Fenster Breite
 
 
 <!-- .slide: class="left" -->
-###  Konsole
+### Konsole
 
-Mit ```ReadKey()``` kann die vom Benutzer gedrückte Taste abgerufen werden. Die Methode liefert ein ```ConsoleKeyInfo``` Objekt zurück. Damit kann auf die Eingabe zugegriffen werden mit folgende Eigenschaften:
+Mit ```ReadKey()``` kann die vom Benutzer gedrückte Taste abgerufen werden. Die Methode liefert ein ```ConsoleKeyInfo``` Objekt zurück. Damit kann auf die Eingabe zugegriffen werden mit folgenden Eigenschaften:
 
 * Key: Es kann auf bestimmte Tasten über die Enumeration ```ConsoleKey``` geprüft werden.
 * KeyChar: Ruft das Unicode Zeichen ab (also das gedrückte Zeichen).
 * Modifiers: Es kann auf bestimmte Tasten (z.b. SHIFT, ALT, CONTROL) über die Enumeration ```ConsoleModifiers``` geprüft werden.
 
-```csharp
+```csharp []
 // ReadKey aufrufen und den Wert in einer lokalen Variable speichern
 // Dann prüfen ob die gedrückte Taste ESC war
 ConsoleKeyInfo info = Console.ReadKey();

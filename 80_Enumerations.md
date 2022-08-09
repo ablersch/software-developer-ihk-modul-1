@@ -1,6 +1,6 @@
 # Enumeration (Aufzählungen)
 
-Enumeration "Klasse"
+Enumerationtypen
 
 
 <!-- .slide: class="left" -->
@@ -15,7 +15,7 @@ Alle Werte in einer Enumeration werden auf eine Zahl abgebildet. Wird kein Wert 
 <!-- .slide: class="left" -->
 ## Enumeration Definieren
 
-```csharp
+```csharp []
 // Es werden intern Werte von 0 -6 vergeben
 public enum Days { Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday }
 
@@ -28,7 +28,7 @@ public enum Days { Monday = 1, Tuesday, Wednesday, Thursday, Friday, Saturday, S
 <!-- .slide: class="left" -->
 ## Beispiel
 
-```csharp
+```csharp []
 using System;
 
 class Program
@@ -67,7 +67,7 @@ Note: **VS** Enum
 <!-- .slide: class="left" -->
 ## Enum Übung
 
-Erstellen Sie ein kleines Konsolenprogramm wo ein Level (Werte 1-3) für eine Person abgefragt wird. Dieser Wert soll in einer Enum Variable gespeichert werden. Danach die Bezeichnung des zugehörigen Enum Wertes ausgeben.
+Erstellen Sie ein kleines Konsolen Programm wo ein Level (Werte 1-3) für eine Person abgefragt wird. Dieser Wert soll in einer Enum Variable gespeichert werden. Danach die Bezeichnung des zugehörigen Enum Wertes ausgeben.
 
 Enum Werte:
 

@@ -1,56 +1,76 @@
-# .NET Framework
+# Microsoft .NET
 
-Was ist .NET
+Was ist Microsoft .NET
 
 
 <!-- .slide: class="left" -->
-## Was ist das .NET Framework
+## .NET historische Entwicklung (.NET Framework zu .NET)
 
-* Das .NET Framework bezeichnet eine von Microsoft entwickelte Plattform zur Entwicklung und Ausführung von Anwendungen für das Web, Windows und Microsoft Azure.
+![.NET historische Entwicklung](images/DotNetHistory.png)
 
-* .NET ist plattformunabhängig.
 
-* Beim .NET Framework handelt es sich um eine offene Technologie.
+<!-- .slide: class="left" -->
+## .NET Framework
+
+* Das .NET Framework bezeichnet eine von Microsoft entwickelte Plattform zur Entwicklung und Ausführung von Anwendungen für Windows und das Web.
+
+* Windows only
+
+* Beim .NET Framework handelt es sich um geschlossenen Quellcode.
 
 * Es unterstützt eine Vielzahl an Programmiersprachen (C++, C#, F# und Visual Basic).
 
-* Für die Entwicklung von .NET Anwendungen wird von Microsoft Visual Studio empfohlen.
 
-Note: Plattformunabhängig = Unterschied in Architektur, Prozessor und OS. Wird durch die Laufzeitumgebung (CLR) gewährleistet.
+<!-- .slide: class="left" -->
+## .NET Core
+
+* Modernere Weiterentwicklung vom .NET Framework.
+
+* .NET Core ist plattformunabhängig (Cross-Plattform).
+
+* OpenSource Implementierung von .NET Framework (komplett auf GitHub verfügbar)
+
+Note: Auf das wichtigste reduziert. Alle Auswüchse des .Net Frameworks entfernt. Kompatibilität leidet dadurch.
+Plattformunabhängig = Unterschied in Architektur, Prozessor und OS. Wird durch die Laufzeitumgebung (CLR) gewährleistet.
 
 
 <!-- .slide: class="left" -->
-## .NET Core (.NET 6)
+## .NET bzw .NET 6
 
-* Cross-Plattform und OpenSource Implementierung von .NET
+Zurück zu einem ".NET".
 
-* Zukunft von .NET
+Die Entwicklung auf verschiedenen Plattformen wurde vereinheitlicht.
+
+![.NET 6](images/DotNet.jpg)
+
+Note: Um mehr Kompatibilität zu gewährleisten wieder mehr Features z.B. WinForms.
+Unabhängig von den Tools (z.B. VS Versionen)
 
 
 <!-- .slide: class="left" -->
-## .NET Architektur
+## .NET 6 Architektur
 
-![DotNet Architektur](images/DotNetArchitecture.png)
+![DotNet Architektur](images/DotNetArchitecture.jpg)
 
 
 <!-- .slide: class="left" -->
 ## Ablauf der Entwicklung eines .NET Programms
 
-* Jede der unterstützten Hochsprachen wird von .NET zunächst in die Zwischensprache **CIL**(Common Intermediate Language) übersetzt (früher Microsoft Intermediate Language (MSIL)).
+* Jede der unterstützten Hochsprachen wird von .NET zunächst in die Zwischensprache **IL**(Intermediate Language) übersetzt.
 
-* Ein kompiliertes Programm besteht aus Anweisungen in der Sprache **CIL**.
+* Ein kompiliertes Programm besteht aus Anweisungen in der Sprache **IL**.
 
-* Der CIL Code wird von einem sogenannten **Just-in-Time Compiler** (JIT-Compiler) in die Maschinensprache des jeweiligen Prozessors übersetzt, ähnlich wie bei Java.
+* Der IL Code wird von einem sogenannten **Just-in-Time Compiler** (JIT-Compiler) in die Maschinensprache des jeweiligen Prozessors übersetzt.
 
-* Das Programm wird dann von der Laufzeitumgebung Common Language Runtime (CLR) ausgeführt.
+* Das Programm wird dann von der Laufzeitumgebung **Common Language Runtime** (CLR) ausgeführt.
 
 
 <!-- .slide: class="left" -->
-## Ablauf der Entwicklung eines .NET Programms
+## Ablauf der Entwicklung eines .NET Programms Schaubild
 
 ![DotNet Compiler CIL zu nativem Code](images/DotNetCILCompiler.png)
 
-Note: CLI (systemunabhängig) = Programmbefehle als Bytefolge
+Note: IL (systemunabhängig) = Programmbefehle als Bytefolge
 
 Just in Time: Auf Zielsystem zur Laufzeit. Übersetzt Bytecode in Maschinensprache (Maschinencode) des jeweiligen Prozessors.
 
@@ -58,11 +78,11 @@ Ein C#-Programm wird in einem Textformat geschrieben, und der Text des Programms
 
 
 <!-- .slide: class="left" -->
-## C\# Code zu CIL Code
+## Beispiel C\# Code zu IL Code
 
 C#
 
-```csharp
+```csharp []
 class MainClass
 {
     public static void Main()
@@ -72,43 +92,4 @@ class MainClass
 }
 ```
 
-CIL
-
-```csharp
-.assembly HalloWelt { }
-.assembly extern mscorlib { }
-.method public static void Main() cil managed
-{
-    .entrypoint
-    .maxstack 1
-    ldstr "Hallo IHK!"
-    call void [mscorlib]System.Console::WriteLine(string)
-    ret
-}
-```
-
-
-<!-- .slide: class="left" -->
-## Assemblierung
-
-* Der Compiler fügt mehrere CIL Modul- und Objektdateien zu einer **Assembly** zusammen. Dies ist die kleinste, verteilbare Einheit.
-
-* Im einfachsten Fall handelt es sich dabei um eine einzelne Anwendung (EXE-Datei oder um eine Klassenbibliothek (DLL).
-
-* Eine Assembly kann aber auch aus mehreren DLL-Dateien und weiteren Ressourcen Bildern bestehen.
-
-* Jede Assembly enthält ein **Manifest** mit Beschreibungsdaten (Metadaten) über die darin definierten Typen, über importierte Typen, andere verwaltete Assemblies sowie Versionsinformationen.
-
-* Die Definition einer Assemblierung kann in einer einzigen Datei enthalten oder über mehrere Dateien verteilt sein.
-
-Note: Solution -> Eigenschaften -> Assemblyinformationen
-
-
-<!-- .slide: class="left" -->
-## Assemblierung
-
-![Single File Assembly](images/SingleFileAssembly.png)
-
-Note: Mögliche Komponenten einer Assembly
-
-Auch Multi File Assembly möglich
+Note: Beispiel zeigen in https://sharplab.io/ (IL, JIT)

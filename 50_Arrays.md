@@ -19,7 +19,7 @@ Arrays werden definiert in dem nach dem Datentyp eckige Klammern folgen.
 Dieses Array nimmt Elemente vom Datentyp string auf.
 Werte können direkt beim anlegen dem Array hinzugefügt werden.
 
-```csharp
+```csharp []
 string[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
 int[] numbers = {10, 20, 30, 40};
 ```
@@ -30,7 +30,7 @@ int[] numbers = {10, 20, 30, 40};
 
 Ein Array besitzt immer eine definierte Länge die beim erstellen angegeben wird. Nach dem erstellen kann die Länge nicht mehr geändert werden.
 
-```csharp
+```csharp []
 // Array beinhaltet 4 Elemente auf
 int[] numbers = {10, 20, 30, 40}; 
 
@@ -44,7 +44,7 @@ int[] array = new int[5];
 
 Elemente in einem Array werden immer mit einem Index identifiziert. Dieser beginnt immer bei 0!
 
-```csharp
+```csharp []
 string[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
 Console.WriteLine(cars[0]); // Ausgabe Volvo
 
@@ -59,7 +59,7 @@ Console.WriteLine(cars.Length) // Länge des Arrays
 
 Dazu muss jedes Element in einer Schleife abgerufen werden.
 
-```csharp
+```csharp []
 string[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
 
 // 1. Möglichkeit 
@@ -75,4 +75,4 @@ foreach (var car in cars)
 }
 ```
 
-Note: ÜBUNG 5 Arrays
+Note: **ÜBUNG 5** Arrays

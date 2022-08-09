@@ -41,19 +41,19 @@ Note:
 <!-- .slide: class="left" -->
 ## Programmaufbau
 
-```csharp
+```csharp []
 using System; // Assemblies einbinden (Klassen aus dem System Namespace nutzen)
 
-namespace Programmaufbau //Projektteile werden in Namensräumen (Container) zusammengefasst
-{ // markiert den Beginn eines Codeblocks
-    class Program // Bauplan für Abbildung von Objekten. Alles muss in einer Klasse laufen
+namespace Programmaufbau; //Projektteile werden in Namensräumen (Containern) zusammengefasst.
+
+internal class Program // Bauplan für Abbildung von Objekten. Alles muss in einer Klasse laufen
+{
+    static void Main(string[] args) // Einstiegspunkt mit Parameter Array
     {
-        static void Main(string[] args) // Einstiegspunkt mit Parameter Array
-        {
-            Console.WriteLine("IHK"); // String Wert in der Console ausgeben
-        }
-    } // Ende der Klasse
-} // markiert das Ende eines Codeblocks
+        Console.WriteLine("IHK"); // String Wert in der Console ausgeben
+    }
+} // Ende der Klasse
+
 ```
 
 Note: Static kann ausgeführt werden ohne Instanz einer Klasse. Daraus können selbst nur statische Methoden aufgerufen werden.
@@ -65,10 +65,9 @@ Zeigen in **VS**, Projekt erstellen (.NET Core Konsole)
 <!-- .slide: class="left" -->
 ## Top-Level Anweisung
 
-Seit C# 9 ist eine `Main` Methode nicht mehr notwendig. Es können [Top-Level Anweisungen](https://docs.microsoft.com/de-de/dotnet/csharp/fundamentals/program-structure/top-level-statements) verwendet werden um den Code zu minimieren
+Seit C# 9 ist eine `Main` Methode nicht mehr notwendig. Es können [Top-Level Anweisungen](https://docs.microsoft.com/de-de/dotnet/csharp/fundamentals/program-structure/top-level-statements) verwendet werden um den Code zu minimieren.
 
-
-```csharp
+```csharp []
 using System;
 
 Console.WriteLine("IHK"); 
@@ -90,18 +89,18 @@ Note: Beispiel zeigen in **VS** 2022 mit der neuen Vorlage (.Net 6)
 
 
 <!-- .slide: class="left" -->
-## Codekonventionen
+## Codekonventionen Namen
 
-* Generell sind nur Buchstaben erlaubt, keine Zahlen oder Sonderzeichen.
+* Generell sind bei Namen nur Buchstaben erlaubt, keine Zahlen oder Sonderzeichen.
 * Pascal-Schreibweise (jeden Anfangsbuchstaben eines Wortes groß)
     * bei Klassen- und Methodennamen
-    * **WriteToErrorLog()**
+    * z.B.: **WriteToErrorLog()**
 * Camel-Schreibweise (jeden Anfangsbuchstaben eines Wortes groß, außer beim ersten Wort)
     * bei Variablen
-    * **string exportFilePath**
+    * z.B.: **string exportFilePath**
 * Großbuchstaben
     * bei Konstanten
-    * **APPLICATION_PATH = "xxxx"**
+    * z.B.:**APPLICATION_PATH = "xxxx"**
 * aussagekräftige Namen verwenden
 * Mehr zum Thema [Namenskonvention](https://docs.microsoft.com/de-de/dotnet/standard/design-guidelines/naming-guidelines)
 
@@ -136,15 +135,15 @@ Note: Beispiel zeigen in **VS** 2022 mit der neuen Vorlage (.Net 6)
 <!-- .slide: class="left" -->
 ## TODO Kommentare
 
-Es können Aufgaben markiert werden, welche später noch erledigt werden sollen.
-Visual Studio bietet dafür eine extra Ansicht wo alle [TODO's](https://docs.microsoft.com/de-de/visualstudio/ide/using-the-task-list?view=vs-2019) aufgeführt werden.
+Es können Aufgaben markiert werden, welche später erledigt werden sollen.
+Visual Studio bietet dafür eine extra Ansicht wo alle [TODO's](https://docs.microsoft.com/de-de/visualstudio/ide/using-the-task-list?view=vs-2022) aufgeführt werden.
 
-```csharp
+```csharp []
 //TODO: Name anpassen
 string abcdef = string.Empty;
 ```
 
-Außerdem gibt es weitere Kommentararten wie
+Außerdem gibt es weitere Kommentar Arten wie z.B.:
 
 * UNDONE
 * HACK
@@ -158,7 +157,7 @@ Note: In VS zeigen
 
 
 <!-- .slide: class="left" -->
-## Datentypen in C#
+## Datentypen in C# Teil 1
 
 ### Teil 1
 
@@ -174,17 +173,15 @@ Note: In VS zeigen
 
 
 <!-- .slide: class="left" -->
-## Datentypen in C#
-
 ### Teil 2
 
 | Datentyp  | Größe        | Beschreibung  |
-| ------------- |-------------| -----|
+| ----------|--------------| --------------|
 | int       | 32 Bit  | Ganze Zahlen von -2 147 483 648 bis 2 147 483 647    |
 | long      | 64 Bit  | Ganze Zahlen von -9,223,372,036,854,775,808 bis 9,223,372,036,854,775,807    |
 | ulong     | 64 Bit  | 0 bis 18.446.744.073.709.551.615    |
-| object    |   |     |
-| short     | 16 Bit  | Ganzzahlen mit Vorzeicvhen von –32.768 bis 32.767    |
+| object    | 32 Bit   | kann auf Daten eines beliebigen Datentyps verweisen    | 
+| short     | 16 Bit  | Ganzzahlen mit Vorzeichen von –32.768 bis 32.767    |
 | ushort    | 16 Bit  | Ganzzahlen ohne Vorzeichen von 0 bis 65.535    |
 | string    | 16 Bit | Speichert eine Zeichenfolge   |
 
@@ -196,14 +193,14 @@ Mehr zum Thema [Datentypen](https://docs.microsoft.com/de-de/dotnet/csharp/langu
 
 Der `bool` Datentyp wird genutzt wenn nur zwei Werte möglich sind. z.B. Ja/nein, An/Aus oder Wahr/Falsch.
 
-```csharp
+```csharp []
 bool isOpen = true;
 Console.WriteLine(isOpen);  // Ausgabe: True
 ```
 
 Üblicher ist es jedoch, boolesche Werte aus booleschen Ausdrücken zurückzugeben, um bedingte Tests durchzuführen.
 
-```csharp
+```csharp []
 Console.WriteLine(10 > 9); // Ausgabe True, weil 10 größer ist wie 9
 ```
 
@@ -213,7 +210,7 @@ Der boolesche Wert eines Ausdrucks ist die Grundlage für alle Vergleiche und Be
 <!-- .slide: class="left" -->
 ## Ein- und Ausgabe in der Konsole
 
-Einige wichtige Methoden zur Ein- und Ausgabe gehören zur Klasse [Console](https://docs.microsoft.com/de-de/dotnet/api/system.console?view=netframework-4.7.2) im
+Einige wichtige Methoden zur Ein- und Ausgabe gehören zur Klasse [Console](https://docs.microsoft.com/de-de/dotnet/api/system.console?view=net-6.0) im
 Namespace System. Sie lauten:
 
 | Methode      | Beschreibung
@@ -226,7 +223,7 @@ Namespace System. Sie lauten:
 
 ## Beispiel
 
-```csharp
+```csharp []
 Console.Write("I");
 Console.Write("H");
 Console.Write("K");
@@ -239,7 +236,7 @@ Console.WriteLine("IHK")
 <!-- .slide: class="left" -->
 ## Übung 1
 
-Erstelle ein neues .Net Core Konsolen Projekt. Dieses soll in der Console:
+Erstelle ein neues .Net Konsolen Projekt. Dieses soll in der Console:
 
 ```Hallo IHK ULM```
 
@@ -252,9 +249,9 @@ Erst bei einem Tastendruck soll sich das Konsolenfenster schließen.
 
 ### Schreiben von Code außerhalb der Main Method
 
-Einer der häufigsten Fehler bei Anfängern ist **Schreiben außerhalb des Blocks der `Main()` Methode**. Dadurch kann die Entwicklungsumgebung oder der Compiler die gegebenen Befehle im Programm nicht richtig lesen.
+Einer der häufigsten Fehler bei Anfängern ist **Schreiben außerhalb des Blocks der `Main()` Methode**. Dadurch kann die Entwicklungsumgebung oder der Compiler die angegebenen Befehle im Programm nicht richtig lesen.
 
-```csharp
+```csharp []
 static void Main(string[] args)
 {
 }
@@ -267,7 +264,7 @@ Console.WriteLine("Hello C#");
 
 Ein weiterer Fehler ist das Vertauschen von **Groß- und Kleinbuchstaben**. Diese sind jedoch für den Aufruf der Befehle und deren korrekter Funktion von Bedeutung.
 
-```csharp
+```csharp []
 static void Main(string[] args)
 {
     Console.Writeline("Hello C#");
@@ -280,9 +277,9 @@ Im obigen Beispiel ist `Writeline` falsch geschrieben und muss auf `WriteLine` k
 <!-- .slide: class="left" -->
 ### Fehlende Semikolon
 
-Das Fehlen von **einem Semikolon** \(`;`\) am Ende der Befehle ist eines der ewigen Probleme des Programmieranfängers. Das Überspringen dieses Zeichens führt zu einer **Fehlfunktion des Programms**.
+Das Fehlen von **einem Semikolon** \(`;`\) am Ende der Befehle ist eines der meisten Fehler bei Programmieranfänger. Das Überspringen dieses Zeichens führt zu einer **Fehlfunktion des Programms**.
 
-```csharp
+```csharp []
 static void Main(string[] args)
 {
     Console.WriteLine("Hello C#")
@@ -293,9 +290,9 @@ static void Main(string[] args)
 <!-- .slide: class="left" -->
 ### Fehlende oder falsche Anführungszeichen oder Klammern
 
-Das Fehlen von **Anführungszeichen** oder **das Fehlen von öffnenden oder schließenden Klammern** kann sich ebenfalls als Problem erweisen. Wie beim Semikolon führt auch hier das Problem zu einer **Fehlfunktion des Programms** oder insgesamt zu dessen Ausfall. Dieser Fehler macht sich bei einem größeren Code kaum bemerkbar.
+Das Fehlen von **Anführungszeichen** oder **das Fehlen von öffnenden oder schließenden Klammern** kann sich ebenfalls als Problem erweisen. Wie beim Semikolon führt auch hier das Problem zu einer **Fehlfunktion des Programms** oder insgesamt zu dessen Ausfall. Dieser Fehler macht sich bei  größerem Code kaum bemerkbar.
 
-```csharp
+```csharp []
 static void Main(string[] args)
 {
     Console.WriteLine("Hello C#);
@@ -312,7 +309,7 @@ Dieses Programm wirft **einen Kompilierzeitfehler** und der Build wird fehlschla
 <!-- .slide: class="left" -->
 Ein weiteres Beispiel ist das Fehlen von `{` oder `}`. Es kann zu unerwarteten Fehlermeldungen führen, die nicht immer leicht zu verstehen sind.
 
-```csharp
+```csharp []
 class Example
 {
     static void Main(string[] args)
