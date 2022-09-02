@@ -119,7 +119,13 @@ Oder über Smarttag
 
 
 <!-- .slide: class="left" -->
-## Codeausschnitte / Codevorlagen
+## Codeschnipsel / Codevorlagen
+
+![Schnipsel aktivieren](images/VisualStudioSnippet.png)
+
+
+<!-- .slide: class="left" -->
+### Codeschnipsel / Codevorlagen verwenden
 
 Bezeichnung + Tab + Tab oder Rechtsklick &rarr; Ausschnitt einfügen
 * if
@@ -129,7 +135,7 @@ Bezeichnung + Tab + Tab oder Rechtsklick &rarr; Ausschnitt einfügen
 * cw
 * try
 
-Codeausschnitte bearbeiten unter: Extras &rarr; Codeausschnitt-Manager
+Codeschnipsel bearbeiten unter: Extras &rarr; Codeschnipsel-Manager
 
 ### Beispiel bei Switch
 
