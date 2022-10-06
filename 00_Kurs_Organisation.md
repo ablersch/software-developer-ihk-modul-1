@@ -10,15 +10,17 @@ Print View: http://localhost:8000/?print-pdf
 
 Ablauf, Termine, Prüfungen, etc.
 
-Note: Persönliche Vorstellung von den Teilnehmern und mir mit Vorkenntnisse
+Note: 
+* Persönliche Vorstellung der Teilnehmer mit Ihren Programmiervorkenntnissen
+* Sitzplan
 
 ---
 
 <!-- .slide: class="left" -->
 ## Kurs Organisation
 
-* [Modul Material (Skript und Übungen)](https://github.com/ablersch/software-developer-ihk-modul-1) von GitHub
-* [Stundenplan](Stundenplan_SoftwareDeveloper.pdf)
+* [Skript und Übungen](https://github.com/ablersch/software-developer-ihk-modul-1) von GitHub (https://github.com/ablersch)
+* Stundenplan folgt
 
 ---
 
