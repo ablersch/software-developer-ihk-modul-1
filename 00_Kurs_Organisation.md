@@ -20,7 +20,6 @@ Note: Persönliche Vorstellung von den Teilnehmern und mir mit Vorkenntnisse
 * [Stundenplan](Stundenplan_SoftwareDeveloper.pdf)
 
 
-
 <!-- .slide: class="left" -->
 ## Ablauf
 
