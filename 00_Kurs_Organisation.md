@@ -52,6 +52,7 @@ Samstags:
 | Modul III - C# GUI und Webanwendungen| 25 |
 | Modul IV - Projektarbeit | 25 |
 
+---
 
 <!-- .slide: class="left" -->
 ## Prüfungen
@@ -64,6 +65,7 @@ Samstags:
 * Projektarbeit
   * Das gelernte in einem kleinen Projekt umsetzen
 
+---
 
 <!-- .slide: class="left" -->
 ## Projektarbeit
@@ -77,6 +79,7 @@ abgegeben werden welche folgende Bestandteile beinhaltet:
 * Ziel/Aufgabe der Anwendung
 * Dokumentation der Anwendung
 
+---
 
 <!-- .slide: class="left" -->
 ### Ziel der Projekte
@@ -89,6 +92,7 @@ Bearbeitung einer programmiertechnischen Aufgaben- bzw. Fragestellung, die
 * unter Berücksichtigung des Kenntnisstandes
 * unter Berücksichtigung fachübergreifender Zusammenhänge bearbeitet wird.
 
+---
 
 <!-- .slide: class="left" -->
 ### Themenbereiche

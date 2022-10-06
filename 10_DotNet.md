@@ -36,6 +36,7 @@ Was ist Microsoft .NET
 Note: Auf das wichtigste reduziert. Alle Auswüchse des .Net Frameworks entfernt. Kompatibilität leidet dadurch.
 Plattformunabhängig = Unterschied in Architektur, Prozessor und OS. Wird durch die Laufzeitumgebung (CLR) gewährleistet.
 
+---
 
 <!-- .slide: class="left" -->
 ## .NET bzw .NET 6
@@ -49,12 +50,14 @@ Die Entwicklung auf verschiedenen Plattformen wurde vereinheitlicht.
 Note: Um mehr Kompatibilität zu gewährleisten wieder mehr Features z.B. WinForms.
 Unabhängig von den Tools (z.B. VS Versionen)
 
+---
 
 <!-- .slide: class="left" -->
 ## .NET 6 Architektur
 
 ![DotNet Architektur](images/DotNetArchitecture.jpg)
 
+---
 
 <!-- .slide: class="left" -->
 ## Ablauf der Entwicklung eines .NET Programms
@@ -67,6 +70,7 @@ Unabhängig von den Tools (z.B. VS Versionen)
 
 * Das Programm wird dann von der Laufzeitumgebung **Common Language Runtime** (CLR) ausgeführt.
 
+---
 
 <!-- .slide: class="left" -->
 ## Ablauf der Entwicklung eines .NET Programms Schaubild
@@ -79,6 +83,7 @@ Just in Time: Auf Zielsystem zur Laufzeit. Übersetzt Bytecode in Maschinensprac
 
 Ein C#-Programm wird in einem Textformat geschrieben, und der Text des Programms wird als Quellcode bezeichnet. Es wird in eine ausführbare Datei kompiliert (z.B. Program.cs wird zu Program.exe kompiliert) oder es wird direkt aus der .NET-Umgebung ausgeführt
 
+---
 
 <!-- .slide: class="left" -->
 ## Beispiel C\# Code zu IL Code
