@@ -126,7 +126,7 @@ Mehr zum Thema [Do-While-Schleifen](https://docs.microsoft.com/de-de/dotnet/csha
 
 Wenn Sie genau wissen, wie oft Sie einen Codeblock in einer Schleife durchlaufen wollen, verwenden Sie die for-Schleife anstelle einer while-Schleife.
 
-![For-Schleife](/images/for-loop.png)
+![For-Schleife](images/for-loop.png)
 
 
 <!-- .slide: class="left" -->

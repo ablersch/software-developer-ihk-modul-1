@@ -149,13 +149,13 @@ Switch + Tab + Tab &rarr; Name der Enum Variable Enter + Enter &rarr; nun wird a
 
 Name der Methode an der Stelle schreiben wo sie benutzt werden soll.
 
-![MethodeErstellen](images\MethodeErstellen.png)
+![MethodeErstellen](images/MethodeErstellen.png)
 
 
 <!-- .slide: class="left" -->
 ### Methode umbenennen
 
-![MethodenUmbenennen](images\MethodenUmbenennen.png)
+![MethodenUmbenennen](images/MethodenUmbenennen.png)
 
 
 <!-- .slide: class="left" -->
@@ -163,7 +163,7 @@ Name der Methode an der Stelle schreiben wo sie benutzt werden soll.
 
 Automatisch erstellen mit „Bearbeiten“ &rarr; Feld kapseln
 
-![PropertyErstellen](images\PropertyErstellen.png)
+![PropertyErstellen](images/PropertyErstellen.png)
 
 ```csharp []
 private string name;

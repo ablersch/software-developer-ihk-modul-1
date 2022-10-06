@@ -303,7 +303,7 @@ static void Main(string[] args)
 <!-- .slide: class="left" -->
 Dieses Programm wirft **einen Kompilierzeitfehler** und der Build wird fehlschlagen. Der fehlerhafte Code wird sogar unterstrichen, um den Programmierer auf den Fehler hinzuweisen, den er gemacht hat \(das fehlende schließende Anführungszeichen\):
 
-![](/images/csharp-error.png)
+![](images/csharp-error.png)
 
 
 <!-- .slide: class="left" -->
