@@ -2,12 +2,14 @@
 
 Was ist Microsoft .NET
 
+---
 
 <!-- .slide: class="left" -->
 ## .NET historische Entwicklung (.NET Framework zu .NET)
 
 ![.NET historische Entwicklung](images/DotNetHistory.png)
 
+---
 
 <!-- .slide: class="left" -->
 ## .NET Framework
@@ -20,6 +22,7 @@ Was ist Microsoft .NET
 
 * Es unterstützt eine Vielzahl an Programmiersprachen (C++, C#, F# und Visual Basic).
 
+---
 
 <!-- .slide: class="left" -->
 ## .NET Core
