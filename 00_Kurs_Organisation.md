@@ -20,6 +20,7 @@ Note: Persönliche Vorstellung von den Teilnehmern und mir mit Vorkenntnisse
 * [Modul Material (Skript und Übungen)](https://github.com/ablersch/software-developer-ihk-modul-1) von GitHub
 * [Stundenplan](Stundenplan_SoftwareDeveloper.pdf)
 
+---
 
 <!-- .slide: class="left" -->
 ## Ablauf
@@ -39,6 +40,7 @@ Samstags:
     * 10:00 - 10:15 Uhr
     * 11:30 - 12:00 Uhr
 
+---
 
 <!-- .slide: class="left"-->
 ## Module
