@@ -2,12 +2,14 @@
 
 Was sind Arrays? Wozu werden diese benötigt? Wie werden sie genutzt?
 
+---
 
 <!-- .slide: class="left" -->
 ## Was ist ein Array?
 
 Ein [Array](https://docs.microsoft.com/de-de/dotnet/csharp/programming-guide/arrays/) ist ein Datencontainer welcher mehrere Elemente vom gleichen Datentyp aufnehmen kann und dies in einer Variable speichert.
 
+---
 
 <!-- .slide: class="left" -->
 ## Deklaration und Initialisierung
@@ -24,6 +26,7 @@ string[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
 int[] numbers = {10, 20, 30, 40};
 ```
 
+---
 
 <!-- .slide: class="left" -->
 ## Deklaration und Initialisierung
@@ -38,6 +41,7 @@ int[] numbers = {10, 20, 30, 40};
 int[] array = new int[5]; 
 ```
 
+---
 
 <!-- .slide: class="left" -->
 ## Zugriff auf die Array Daten
@@ -53,6 +57,7 @@ cars[1] = "Audi"; // 2. Wert ändern
 Console.WriteLine(cars.Length) // Länge des Arrays
 ```
 
+---
 
 <!-- .slide: class="left" -->
 ## Zugriff auf alle Array Daten

@@ -2,6 +2,7 @@
 
 Enumerationtypen
 
+---
 
 <!-- .slide: class="left" -->
 ## Was sind Enumerations
@@ -11,6 +12,7 @@ Konstanten oder Optionen damit abgebildet. Alle Werte sind schreibgeschützt.
 
 Alle Werte in einer Enumeration werden auf eine Zahl abgebildet. Wird kein Wert definiert wird bei 0 begonnen.
 
+---
 
 <!-- .slide: class="left" -->
 ## Enumeration Definieren
@@ -24,6 +26,7 @@ public enum Days { Monday = 1, Tuesday, Wednesday, Thursday, Friday, Saturday, S
 
 ```
 
+---
 
 <!-- .slide: class="left" -->
 ## Beispiel
@@ -63,6 +66,7 @@ class Program
 
 Note: **VS** Enum
 
+---
 
 <!-- .slide: class="left" -->
 ## Enum Übung

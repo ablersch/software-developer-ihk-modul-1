@@ -3,6 +3,7 @@
 Durch [Kontrollstrukturen](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/selection-statements) sind wir in der Lage, Programme nicht nur sequentiell, also Zeile für Zeile, ablaufen zu lassen sondern wir haben die
 Möglichkeit Programme sinnvoll zu strukturieren und zu steuern.
 
+---
 
 <!-- .slide: class="left" -->
 ## IF-ELSE - Anweisung
@@ -31,6 +32,7 @@ Mehr zum Thema [IF](https://docs.microsoft.com/de-de/dotnet/csharp/language-refe
 
 Note: if(else) + tab + tab. If ist natürlich auch mit mehreren IF Zweigen erweiter- oder/und verschachtelbar.
 
+---
 
 <!-- .slide: class="left" -->
 ## SWITCH-CASE - Anweisung
@@ -55,6 +57,7 @@ switch (caseSwitch)
 
 Note: switch + tab + tab
 
+---
 
 <!-- .slide: class="left" -->
 C\# erlaubt auch **Strings** als Switch-Variable:
@@ -77,6 +80,7 @@ switch (stadt)
 
 Mehr zum Thema [SWITCH-CASE](https://docs.microsoft.com/de-de/dotnet/csharp/language-reference/statements/selection-statements#the-switch-statement)
 
+---
 
 <!-- .slide: class="left" -->
 ## Schleifen (Iterationen)
@@ -85,6 +89,7 @@ Bei der Programmierung ist es oft erforderlich, einen Block von Befehlen mehrfac
 
 Schleifen sind praktisch, weil sie Zeit sparen, Fehler reduzieren und den Code besser lesbar machen.
 
+---
 
 <!-- .slide: class="left" -->
 ### While-Schleife
@@ -102,6 +107,7 @@ while (i < 99 )
 
 Mehr zum Thema [While-Schleifen](https://docs.microsoft.com/de-de/dotnet/csharp/language-reference/statements/iteration-statements#the-while-statement)
 
+---
 
 <!-- .slide: class="left" -->
 ### Do-While-Schleife
@@ -120,6 +126,7 @@ while (i < 99 )
 
 Mehr zum Thema [Do-While-Schleifen](https://docs.microsoft.com/de-de/dotnet/csharp/language-reference/statements/iteration-statements#the-do-statement)
 
+---
 
 <!-- .slide: class="left" -->
 ### For-Schleife
@@ -128,6 +135,7 @@ Wenn Sie genau wissen, wie oft Sie einen Codeblock in einer Schleife durchlaufen
 
 ![For-Schleife](images/for-loop.png)
 
+---
 
 <!-- .slide: class="left" -->
 ```csharp []
@@ -145,6 +153,7 @@ Mehr zum Thema [For-Schleifen](https://docs.microsoft.com/de-de/dotnet/csharp/la
 
 Note: for (aufsteigender Counter) fore (absteigender Counter) + tab + tab
 
+---
 
 <!-- .slide: class="left" -->
 ### verschachtelte Schleifen
@@ -171,6 +180,7 @@ for (int row = 1; row <= n; row++)
 
 Note: **Übung 3** verschachtelte Schleife
 
+---
 
 <!-- .slide: class="left" -->
 ### Foreach-Anweisung
@@ -206,6 +216,7 @@ Mit GetEnumerator() kann Index abgerufen und bearbeitet werden.
 
 foreach + tab + tab
 
+---
 
 <!-- .slide: class="left" -->
 ## Sprunganweisungen
@@ -231,6 +242,7 @@ for (int i = 0; i < 10; i++) {
 
 Mehr zum Thema [Sprunganweisungen](https://docs.microsoft.com/de-de/dotnet/csharp/language-reference/keywords/jump-statements)
 
+---
 
 <!-- .slide: class="left" -->
 ## Gültigkeitsbereich von Variablen
@@ -244,6 +256,7 @@ Mehr zum Thema [Sprunganweisungen](https://docs.microsoft.com/de-de/dotnet/cshar
 
 Außerhalb dieses Bereichs steht eine Variable nicht zur Verfügung: Sie ist dort unbekannt (ihr Wert kann nicht genutzt werden).
 
+---
 
 <!-- .slide: class="left" -->
 ### Deklaration von Variablen

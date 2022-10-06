@@ -2,6 +2,7 @@
 
 Variablen und Operatoren
 
+---
 
 <!-- .slide: class="left" -->
 ## Variablen
@@ -28,6 +29,7 @@ double summe = 11.5;
 Console.Write(summe);
 ```
 
+---
 
 <!-- .slide: class="left" -->
 ## Variablen var
@@ -43,6 +45,7 @@ int i = 10; // Explicitly typed.
 
 mehr zum Thema [var](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/var).
 
+---
 
 <!-- .slide: class="left" -->
 ## Konstanten
@@ -55,12 +58,14 @@ const double PI = 3.14159265359;
 const int PAGE_SIZE = 50;
 ```
 
+---
 
 <!-- .slide: class="left" -->
 ## Operatoren
 
 Ein [Operator](https://docs.microsoft.com/de-de/dotnet/csharp/language-reference/operators/) ist ein Symbol, das mathematische oder logische Manipulationen ausführt.
 
+---
 
 <!-- .slide: class="left" -->
 ## arithmetische Operatoren
@@ -87,6 +92,7 @@ sum = sum++;
 Note: Punt vor Strich Regeln gelten hier auch. Kann durch Klammern umgangen werden. Werte in der Klammer werden zuerst ausgeführt.
 Der Modulo-Operator wird als Restoperator bezeichnet, weil er den Rest einer ganzzahligen Division zurückgibt.
 
+---
 
 <!-- .slide: class="left" -->
 ## Postfix und Prefix
@@ -106,6 +112,7 @@ Console.WriteLine(a++);  // 50
 Console.WriteLine(a);    // 51
 ```
 
+---
 
 <!-- .slide: class="left" -->
 ## Zuweisungsoperatoren
@@ -128,6 +135,7 @@ Diese führen eine Aktion aus und weisen den Wert der Variable zu.
 
 Note: & vergleicht immer beide Werte. Wobei && false liefert wenn bereits der erste Wert false ist.
 
+---
 
 <!-- .slide: class="left" -->
 ## Vergleichssoperatoren
@@ -141,6 +149,7 @@ Note: & vergleicht immer beide Werte. Wobei && false liefert wenn bereits der er
 | >=        | Größer als oder gleich   |
 | <=        | Kleiner als oder gleich    |
 
+---
 
 <!-- .slide: class="left" -->
 ## logische Operatoren
@@ -153,6 +162,7 @@ Note: & vergleicht immer beide Werte. Wobei && false liefert wenn bereits der er
 
 [Beispiele logische Operatoren](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/boolean-logical-operators#conditional-logical-and-operator-)
 
+---
 
 <!-- .slide: class="left" -->
 ## Übung 2

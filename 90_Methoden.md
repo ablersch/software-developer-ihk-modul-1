@@ -2,6 +2,7 @@
 
 Was sind Methoden? Warum soll man Methoden benutzen?
 
+---
 
 <!-- .slide: class="left" -->
 ## Methodendefinition
@@ -18,6 +19,7 @@ Was sind Methoden? Warum soll man Methoden benutzen?
 
 Note: In C# wird nur von Methoden gesprochen. Keine Unterscheidung wie in C von Funktion (mit Rückgabewert) oder Prozedur (void)
 
+---
 
 <!-- .slide: class="left" -->
 ## Syntax der Methodendefinition
@@ -43,6 +45,7 @@ Note:
 
 Pascal-Schreibweise (jeden Anfangsbuchstaben eines Wortes groß)
 
+---
 
 <!-- .slide: class="left" -->
 ## Methode aufrufen
@@ -58,6 +61,7 @@ static void Main(string[] args)
 }
 ```
 
+---
 
 <!-- .slide: class="left" -->
 ## Methodenparameter
@@ -80,6 +84,7 @@ static void Main(string[] args)
 }
 ```
 
+---
 
 <!-- .slide: class="left" -->
 ### Rückgabewerte
@@ -95,6 +100,7 @@ static int MyMethod(int x)
 }
 ```
 
+---
 
 <!-- .slide: class="left" -->
 ### Beispiel
@@ -125,6 +131,7 @@ class Program
 }
 ```
 
+---
 
 <!-- .slide: class="left" -->
 ## Überladen (Overloading)
@@ -145,6 +152,7 @@ Note:
 **VS** Methoden
 **ÜBUNG 7 und 8** Palindrom und Medienverwaltung 1
 
+---
 
 <!-- .slide: class="left" -->
 ## Ref Parameter
@@ -171,6 +179,7 @@ Addiere(ref int zahlTemp) {
 }
 ```
 
+---
 
 <!-- .slide: class="left" -->
 ## Out Parameter (Ausgabeparameter)

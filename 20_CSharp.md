@@ -2,6 +2,7 @@
 
 Grundlagen, Programmaufbau, Codekonventionen, Kommentare und häufige Fehler.
 
+---
 
 <!-- .slide: class="left" -->
 ## C Sharp
@@ -16,6 +17,7 @@ Grundlagen, Programmaufbau, Codekonventionen, Kommentare und häufige Fehler.
 
 * [TOP 10 Programmiersprachen](https://fossbytes.com/most-popular-programming-languages/)
 
+---
 
 <!-- .slide: class="left" -->
 ## Entwicklungsumgebungen
@@ -27,6 +29,7 @@ Zur Erstellung eines C\# Programms wird eine Entwicklungsumgebung (IDE - Integra
 * Visual Studio Code
 * Mono Develop
 
+---
 
 <!-- .slide: class="left" -->
 ### Visual Studio
@@ -37,6 +40,7 @@ Note:
 * Visual Studio Aufbau
 * Einstellungen
 
+---
 
 <!-- .slide: class="left" -->
 ## Programmaufbau
@@ -61,6 +65,7 @@ Alle Zeilen werden mit Strichpunkt abgeschlossen
 
 Zeigen in **VS**, Projekt erstellen (.NET Core Konsole)
 
+---
 
 <!-- .slide: class="left" -->
 ## Top-Level Anweisung
@@ -75,6 +80,7 @@ Console.WriteLine("IHK");
 
 Note: Beispiel zeigen in **VS** 2022 mit der neuen Vorlage (.Net 6)
 
+---
 
 <!-- .slide: class="left" -->
 ## Namensräume
@@ -87,6 +93,7 @@ Note: Beispiel zeigen in **VS** 2022 mit der neuen Vorlage (.Net 6)
 
 ![Namespace](images/Namespace.png)
 
+---
 
 <!-- .slide: class="left" -->
 ## Codekonventionen Namen
@@ -104,6 +111,7 @@ Note: Beispiel zeigen in **VS** 2022 mit der neuen Vorlage (.Net 6)
 * aussagekräftige Namen verwenden
 * Mehr zum Thema [Namenskonvention](https://docs.microsoft.com/de-de/dotnet/standard/design-guidelines/naming-guidelines)
 
+---
 
 <!-- .slide: class="left" -->
 ## Codekonventionen
@@ -114,6 +122,7 @@ Note: Beispiel zeigen in **VS** 2022 mit der neuen Vorlage (.Net 6)
 * nicht selbsterklärende Stellen im Code kommentieren
 * zum Kommentieren innerhalb eines Codeblocks nicht /\* \...\*/ benutzen sondern // oder ///
 
+---
 
 <!-- .slide: class="left" -->
 ## XML-Kommentare
@@ -131,6 +140,7 @@ Note: Beispiel zeigen in **VS** 2022 mit der neuen Vorlage (.Net 6)
 /// <returns>Return Wert beschreiben</returns>
 ```
 
+---
 
 <!-- .slide: class="left" -->
 ## TODO Kommentare
@@ -155,6 +165,7 @@ Note: In VS zeigen
 * Codevervollständigung
 * Intelli-Sense
 
+---
 
 <!-- .slide: class="left" -->
 ## Datentypen in C# Teil 1
@@ -171,6 +182,7 @@ Note: In VS zeigen
 | double    | 64 bit  | Speichert Kommazahlen. Ausreichend für die Speicherung von 15 Dezimalziffern    |
 | float     | 32 Bit  | Speichert Kommazahlen. Ausreichend für die Speicherung von 6 bis 7 Dezimalziffern    |
 
+---
 
 <!-- .slide: class="left" -->
 ### Teil 2
@@ -187,6 +199,7 @@ Note: In VS zeigen
 
 Mehr zum Thema [Datentypen](https://docs.microsoft.com/de-de/dotnet/csharp/language-reference/builtin-types/built-in-types)
 
+---
 
 <!-- .slide: class="left" -->
 ### Booleans
@@ -206,6 +219,7 @@ Console.WriteLine(10 > 9); // Ausgabe True, weil 10 größer ist wie 9
 
 Der boolesche Wert eines Ausdrucks ist die Grundlage für alle Vergleiche und Bedingungen in C#.
 
+---
 
 <!-- .slide: class="left" -->
 ## Ein- und Ausgabe in der Konsole
@@ -220,6 +234,7 @@ Namespace System. Sie lauten:
 | `Write()`    | Gibt einen String auf der Konsole ohne Zeilenumbruch aus.
 | `WriteLine()`| Entspricht Write() nur mit Zeilenumbruch.
 
+---
 
 ## Beispiel
 
@@ -232,6 +247,7 @@ Console.Write("K");
 Console.WriteLine("IHK")
 ``` 
 
+---
 
 <!-- .slide: class="left" -->
 ## Übung 1
@@ -243,6 +259,7 @@ Erstelle ein neues .Net Konsolen Projekt. Dieses soll in der Console:
 ausgeben.
 Erst bei einem Tastendruck soll sich das Konsolenfenster schließen.
 
+---
 
 <!-- .slide: class="left" -->
 ## Typische Fehler
@@ -258,6 +275,7 @@ static void Main(string[] args)
 Console.WriteLine("Hello C#");
 ```
 
+---
 
 <!-- .slide: class="left" -->
 ### Falsche Großschreibung
@@ -273,6 +291,7 @@ static void Main(string[] args)
 
 Im obigen Beispiel ist `Writeline` falsch geschrieben und muss auf `WriteLine` korrigiert werden.
 
+---
 
 <!-- .slide: class="left" -->
 ### Fehlende Semikolon
@@ -286,6 +305,7 @@ static void Main(string[] args)
 }
 ```
 
+---
 
 <!-- .slide: class="left" -->
 ### Fehlende oder falsche Anführungszeichen oder Klammern
@@ -299,12 +319,14 @@ static void Main(string[] args)
 }
 ```
 
+---
 
 <!-- .slide: class="left" -->
 Dieses Programm wirft **einen Kompilierzeitfehler** und der Build wird fehlschlagen. Der fehlerhafte Code wird sogar unterstrichen, um den Programmierer auf den Fehler hinzuweisen, den er gemacht hat \(das fehlende schließende Anführungszeichen\):
 
 ![](images/csharp-error.png)
 
+---
 
 <!-- .slide: class="left" -->
 Ein weiteres Beispiel ist das Fehlen von `{` oder `}`. Es kann zu unerwarteten Fehlermeldungen führen, die nicht immer leicht zu verstehen sind.

@@ -2,6 +2,7 @@
 
 Zeichenketten in C#
 
+---
 
 <!-- .slide: class="left" -->
 ## Was sind Strings
@@ -18,6 +19,7 @@ zeichenkette = zeichenkette + " - Fans\n";
 Console.Write(zeichenkette); // Hallo C# - Fans
 ```
 
+---
 
 <!-- .slide: class="left" -->
 ## String Zugriff
@@ -35,6 +37,7 @@ Console.WriteLine(text[0]);  // Ausgabe: H
 Console.WriteLine(text.IndexOf("l"));  // Ausgabe 2
 ```
 
+---
 
 <!-- .slide: class="left" -->
 ## String Methoden
@@ -75,6 +78,7 @@ text = text.Replace("H", "A");
 
 Note: weitere Methoden zeigen in **VS**. z.B. string.IsNullOrEmpty, Trim, Remove, ToUpper ...
 
+---
 
 <!-- .slide: class="left" -->
 ## String Konvertierung
@@ -112,6 +116,7 @@ Mehr zum Thema [String Konvertierung](https://docs.microsoft.com/de-de/dotnet/cs
 
 Note: Bei Convert und Parse Fehler abfangen
 
+---
 
 <!-- .slide: class="left" -->
 ## String Verkettung
@@ -142,6 +147,7 @@ sb.Append(a+b);
 
 Mehr zum Thema [String Verkettung](https://docs.microsoft.com/de-de/dotnet/csharp/how-to/concatenate-multiple-strings)
 
+---
 
 <!-- .slide: class="left" -->
 ## String Formatierung
@@ -170,6 +176,7 @@ Mehr zum Thema [String Formatierung 1](https://docs.microsoft.com/de-de/dotnet/s
 Note: Platzhalter können mehrfach verwendet werden.
 {0,-20:D} rechts der Zahl 20 Stellen frei
 
+---
 
 <!-- .slide: class="left" -->
 ## Escape-Sequenzen
@@ -188,6 +195,7 @@ Note: Platzhalter können mehrfach verwendet werden.
 Console.Write("You pressed \n");
 ```
 
+---
 
 <!-- .slide: class="left" -->
 ## Konsole
@@ -202,6 +210,7 @@ Console.WindowHeight = 50; // Setzt die Fenster Höhe
 Console.WindowWidth = 150; // Setzt die Fenster Breite
 ```
 
+---
 
 <!-- .slide: class="left" -->
 ### Konsole
