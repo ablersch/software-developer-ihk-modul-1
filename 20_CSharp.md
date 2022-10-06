@@ -60,10 +60,11 @@ internal class Program // Bauplan für Abbildung von Objekten. Alles muss in ein
 
 ```
 
-Note: Static kann ausgeführt werden ohne Instanz einer Klasse. Daraus können selbst nur statische Methoden aufgerufen werden.
-Alle Zeilen werden mit Strichpunkt abgeschlossen
+Note: 
+* Static kann ausgeführt werden ohne Instanz einer Klasse. Daraus können selbst nur statische Methoden aufgerufen werden.
+* Alle Zeilen werden mit Strichpunkt abgeschlossen.
 
-Zeigen in **VS**, Projekt erstellen (.NET Core Konsole)
+Zeigen in **VS**, Projekt erstellen (.NET Konsole)
 
 ---
 
@@ -178,9 +179,9 @@ Note: In VS zeigen
 | byte      | 8 Bit    | Zahlen von 0 bis 255  |
 | sbyte     | 8 Bit     | Zahlen mit Vorzeichen von -128 - 127    |
 | char      | 16 Bit           | Speichert ein einzelnes Zeichen/Buchstabe |
-| decimal   | 128 Bit  | Zahl mit Dezimalstellen     |
-| double    | 64 bit  | Speichert Kommazahlen. Ausreichend für die Speicherung von 15 Dezimalziffern    |
-| float     | 32 Bit  | Speichert Kommazahlen. Ausreichend für die Speicherung von 6 bis 7 Dezimalziffern    |
+| decimal   | 128 Bit  | Zahl mit Dezimalstellen 29 Stellen (–7,922816E28 bis +7,922816E28)    |
+| double    | 64 bit  | Speichert Kommazahlen mit 15 Stellen (–1,79769313486232E308 bis +1,79769313486232E308)    |
+| float     | 32 Bit  | Speichert Kommazahlen mit 6 bis 9 Stellen (-3.402823E38 bis +3.402823E38)   |
 
 ---
 

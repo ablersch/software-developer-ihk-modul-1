@@ -33,8 +33,11 @@ Was ist Microsoft .NET
 
 * OpenSource Implementierung von .NET Framework (komplett auf GitHub verfügbar)
 
-Note: Auf das wichtigste reduziert. Alle Auswüchse des .Net Frameworks entfernt. Kompatibilität leidet dadurch.
-Plattformunabhängig = Unterschied in Architektur, Prozessor und OS. Wird durch die Laufzeitumgebung (CLR) gewährleistet.
+Note: 
+* Auf das wichtigste reduziert
+* Alle Auswüchse des .Net Frameworks entfernt. 
+* Kompatibilität leidet dadurch
+* Plattformunabhängig = Unterschied in Architektur, Prozessor und OS. Wird durch die Laufzeitumgebung (CLR) gewährleistet.
 
 ---
 
@@ -47,8 +50,9 @@ Die Entwicklung auf verschiedenen Plattformen wurde vereinheitlicht.
 
 ![.NET 6](images/DotNet.jpg)
 
-Note: Um mehr Kompatibilität zu gewährleisten wieder mehr Features z.B. WinForms.
-Unabhängig von den Tools (z.B. VS Versionen)
+Note: 
+* Um mehr Kompatibilität zu gewährleisten wieder mehr Features z.B. WinForms.
+* Unabhängig von den Tools (z.B. VS Versionen)
 
 ---
 
@@ -77,7 +81,8 @@ Unabhängig von den Tools (z.B. VS Versionen)
 
 ![DotNet Compiler CIL zu nativem Code](images/DotNetCILCompiler.png)
 
-Note: IL (systemunabhängig) = Programmbefehle als Bytefolge
+Note: 
+IL (systemunabhängig) = Programmbefehle als Bytefolge
 
 Just in Time: Auf Zielsystem zur Laufzeit. Übersetzt Bytecode in Maschinensprache (Maschinencode) des jeweiligen Prozessors.
 
