@@ -11,7 +11,11 @@ Print View: http://localhost:8000/?print-pdf
 Ablauf, Termine, Prüfungen, etc.
 
 Note: 
-* Persönliche Vorstellung der Teilnehmer mit Ihren Programmiervorkenntnissen
+* Persönliche Vorstellung der Teilnehmer 
+  * Name, Alter, Wohnort
+  * Arbeit
+  * Programmiervorkenntnisse
+  * Warum dieser Kurs? Welche Ziele werden verfolgt
 * Sitzplan
 
 ---
