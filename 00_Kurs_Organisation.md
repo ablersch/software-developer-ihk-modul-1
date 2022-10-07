@@ -75,14 +75,14 @@ Samstags:
 <!-- .slide: class="left" -->
 ## Projektarbeit
 
-Das Projekt muss als reines Softwareprojekt mit einem Zeitaufwand von 30-32
+Das Projekt muss als reines Softwareprojekt mit einem Zeitaufwand von ca 30
 Stunden ausgeführt werden. Es muss eine Projektdokumentation erstellt und
 abgegeben werden welche folgende Bestandteile beinhaltet:
 
-* Ist-Analyse
-* Soll-Zustandsbeschreibung
-* Ziel/Aufgabe der Anwendung
+* Ziel und Aufgabe der Anwendung
 * Dokumentation der Anwendung
+
+Die Anwendung muss beim Dozenten ausführbar sein. D.h. notwendige Abhängigkeiten (Datenbanken, Dateien, Konfiguration) mit abgeben.
 
 ---
 
@@ -92,7 +92,7 @@ abgegeben werden welche folgende Bestandteile beinhaltet:
 Bearbeitung einer programmiertechnischen Aufgaben- bzw. Fragestellung, die
 
 * Selbständig oder in der Gruppe (wird das Projekt in der Gruppe erarbeitet muss definiert werden wer für welchen Teil zuständig ist)
-* in einer vorgegebenen Frist
+* in einer vorgegebenen Zeit
 * theoretisch fundiert und/oder anwendungsorientiert
 * unter Berücksichtigung des Kenntnisstandes
 * unter Berücksichtigung fachübergreifender Zusammenhänge bearbeitet wird.
