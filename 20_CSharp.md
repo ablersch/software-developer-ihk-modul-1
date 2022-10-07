@@ -37,8 +37,10 @@ Zur Erstellung eines C\# Programms wird eine Entwicklungsumgebung (IDE - Integra
 ![Visual Studio 2019](images/visual-studio.png)
 
 Note: 
-* Visual Studio Aufbau
-* Einstellungen
+* Öffnen Visual Studio
+* eventuell Einstellungen vornehmen
+* Visual Studio Aufbau erklären
+
 
 ---
 
@@ -63,8 +65,10 @@ internal class Program // Bauplan für Abbildung von Objekten. Alles muss in ein
 Note: 
 * Static kann ausgeführt werden ohne Instanz einer Klasse. Daraus können selbst nur statische Methoden aufgerufen werden.
 * Alle Zeilen werden mit Strichpunkt abgeschlossen.
+* Jeder Block ist eingefasst in {}
 
-Zeigen in **VS**, Projekt erstellen (.NET Konsole)
+Zeigen in **VS** Projekt erstellen (.NET Konsole ohne Top Level Statements).
+Programm ausführen. (Nicht mitmachen Übung folgt)
 
 ---
 
@@ -74,12 +78,13 @@ Zeigen in **VS**, Projekt erstellen (.NET Konsole)
 Seit C# 9 ist eine `Main` Methode nicht mehr notwendig. Es können [Top-Level Anweisungen](https://docs.microsoft.com/de-de/dotnet/csharp/fundamentals/program-structure/top-level-statements) verwendet werden um den Code zu minimieren.
 
 ```csharp []
-using System;
-
 Console.WriteLine("IHK"); 
 ```
 
-Note: Beispiel zeigen in **VS** 2022 mit der neuen Vorlage (.Net 6)
+Note: 
+* Beispiel zeigen in **VS** 2022 mit der neuen Vorlage (.Net 6)
+* Neu erstellen
+* Debug Release Build (Ordner)
 
 ---
 
@@ -160,9 +165,9 @@ Außerdem gibt es weitere Kommentar Arten wie z.B.:
 * HACK
 * FIXME
 
-Note: In VS zeigen
+Note: In **VS** zeigen
 
-* Kommentare und TODO's
+* Kommentare, XML Kommentare und TODO's
 * Codevervollständigung
 * Intelli-Sense
 
@@ -225,8 +230,7 @@ Der boolesche Wert eines Ausdrucks ist die Grundlage für alle Vergleiche und Be
 <!-- .slide: class="left" -->
 ## Ein- und Ausgabe in der Konsole
 
-Einige wichtige Methoden zur Ein- und Ausgabe gehören zur Klasse [Console](https://docs.microsoft.com/de-de/dotnet/api/system.console?view=net-6.0) im
-Namespace System. Sie lauten:
+Einige wichtige Methoden zur Ein- und Ausgabe gehören zur Klasse [Console](https://docs.microsoft.com/de-de/dotnet/api/system.console?view=net-6.0) im Namespace System. Sie lauten:
 
 | Methode      | Beschreibung
 | -------------|-------------|
@@ -248,6 +252,10 @@ Console.Write("K");
 Console.WriteLine("IHK")
 ``` 
 
+Note: 
+* cw + Tab + Tab
+* Optionen --> Texteditor --> C# --> IntelliSense --> Schnippsel immer einschließen
+
 ---
 
 <!-- .slide: class="left" -->
@@ -258,6 +266,25 @@ Erstelle ein neues .Net Konsolen Projekt. Dieses soll in der Console:
 ```Hallo IHK ULM```
 
 ausgeben.
+Erst bei einem Tastendruck soll sich das Konsolenfenster schließen.
+
+---
+
+<!-- .slide: class="left" -->
+## Übung 1.1
+
+Erstelle ein neues .Net Konsolen Projekt. Dieses soll in der Console nach deinem Vornamen und Nachnamen fragen. Beide Werte sollen dann eingeben werden. Am Ende den Namen komplett ausgeben.
+
+Zum Beispiel:
+
+```csharp []
+Wie ist dein Vorname?
+'Andreas'
+Wie ist dein Nachname?
+'Blersch'
+Dein Name ist: 'Andreas Blersch'
+```
+
 Erst bei einem Tastendruck soll sich das Konsolenfenster schließen.
 
 ---
@@ -311,7 +338,7 @@ static void Main(string[] args)
 <!-- .slide: class="left" -->
 ### Fehlende oder falsche Anführungszeichen oder Klammern
 
-Das Fehlen von **Anführungszeichen** oder **das Fehlen von öffnenden oder schließenden Klammern** kann sich ebenfalls als Problem erweisen. Wie beim Semikolon führt auch hier das Problem zu einer **Fehlfunktion des Programms** oder insgesamt zu dessen Ausfall. Dieser Fehler macht sich bei  größerem Code kaum bemerkbar.
+Das Fehlen von **Anführungszeichen** oder **das Fehlen von öffnenden oder schließenden Klammern** kann sich ebenfalls als Problem erweisen. Wie beim Semikolon führt auch hier das Problem zu einer **Fehlfunktion des Programms** oder insgesamt zu dessen Ausfall. Dieser Fehler macht sich bei größerem Code kaum bemerkbar.
 
 ```csharp []
 static void Main(string[] args)

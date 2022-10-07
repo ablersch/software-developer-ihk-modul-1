@@ -22,6 +22,9 @@ Note:
 * [Skript und Übungen](https://github.com/ablersch/software-developer-ihk-modul-1) von GitHub (https://github.com/ablersch)
 * Stundenplan folgt
 
+Note: 
+* Anmeldung Rechner
+
 ---
 
 <!-- .slide: class="left" -->

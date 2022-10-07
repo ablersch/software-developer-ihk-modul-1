@@ -10,7 +10,7 @@ Variablen und Operatoren
 In Variablen können Werte vom entsprechenden Datentypen gespeichert werden.
  
 ```csharp []
-// Deklaration
+// Deklaration (Name und Datentyp wird bekanntgegeben)
 int alter;
 
 // mehrere Variablen deklarieren (nicht erwünscht)
@@ -34,13 +34,13 @@ Console.Write(summe);
 <!-- .slide: class="left" -->
 ## Variablen var
 
-Variablen, die im Methodenbereich deklariert werden, können einen impliziten "Typ" var haben. Eine implizit typisierte lokale Variable ist stark typisiert, als ob Sie den Typ selbst deklariert hätten, aber der Compiler bestimmt den Typ.
+Variablen, die im Methodenbereich deklariert werden, können einen impliziten "Typ" var haben. Der Compiler bestimmt den Datentyp automatisch auf Basis des zugewiesenen Wertes.
 
-Die folgenden zwei Deklarationen von sind funktional äquivalent:
+Die folgenden zwei Deklarationen sind funktional äquivalent:
 
 ```csharp []
-var i = 10; // Implicitly typed.
-int i = 10; // Explicitly typed.
+int i = 10; // explizit typisierte.
+var i = 10; // implizit typisierte (es wird kein expliziter Datentyp angegeben).
 ```
 
 mehr zum Thema [var](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/var).
@@ -89,8 +89,11 @@ int sum = 50 + value;
 sum = sum++;
 ```
 
-Note: Punt vor Strich Regeln gelten hier auch. Kann durch Klammern umgangen werden. Werte in der Klammer werden zuerst ausgeführt.
-Der Modulo-Operator wird als Restoperator bezeichnet, weil er den Rest einer ganzzahligen Division zurückgibt.
+Note: 
+* Punt vor Strich Regeln gelten.
+    * Können durch Klammern umgangen werden. 
+     Werte in der Klammer werden zuerst ausgeführt.
+* Der Modulo-Operator wird als Restoperator bezeichnet, weil er den Rest einer ganzzahligen Division zurückgibt.
 
 ---
 
@@ -133,7 +136,8 @@ Diese führen eine Aktion aus und weisen den Wert der Variable zu.
 [Beispiele logische bit Operatoren](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/boolean-logical-operators) und
 [Bitweise und Verschiebungs-Operatoren](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/bitwise-and-shift-operators)
 
-Note: & vergleicht immer beide Werte. Wobei && false liefert wenn bereits der erste Wert false ist.
+Note: & vergleicht immer beide Werte (Wobei && false liefert wenn bereits der erste Wert false ist).
+The result of x & y is true if both x and y evaluate to true. Otherwise, the result is false.
 
 ---
 
@@ -169,4 +173,8 @@ Note: & vergleicht immer beide Werte. Wobei && false liefert wenn bereits der er
 
 1. Erstelle ein weiteres .Net Konsolen Projekt. Dieses fragt zwei Zahlenwerte (int) in der Konsole ab und gibt die Summe wieder aus.
 
-2. Ändere dein Projekt damit es auch mit Kommazahlen arbeiten kann.
+2. Außerdem soll verglichen werden ob die beiden Zahlenwerte identisch sind. Wenn ja soll 'true' ausgegeben werden, ansonsten 'false.'
+
+3. Ändere dein Projekt damit es auch mit Kommazahlen arbeiten kann.
+
+---

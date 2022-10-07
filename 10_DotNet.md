@@ -34,7 +34,7 @@ Was ist Microsoft .NET
 * OpenSource Implementierung von .NET Framework (komplett auf GitHub verfügbar)
 
 Note: 
-* Auf das wichtigste reduziert
+* Auf das wichtigste reduziert.
 * Alle Auswüchse des .Net Frameworks entfernt. 
 * Kompatibilität leidet dadurch
 * Plattformunabhängig = Unterschied in Architektur, Prozessor und OS. Wird durch die Laufzeitumgebung (CLR) gewährleistet.
@@ -60,6 +60,11 @@ Note:
 ## .NET 6 Architektur
 
 ![DotNet Architektur](images/DotNetArchitecture.jpg)
+
+Note:
+* .Net Runtime und Mono Runtime bilden die Basis
+* BCL (Base Class Library) Teil der CLI
+* .Net 6 vereint .Net Framework, .Net Core und Mono
 
 ---
 

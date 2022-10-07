@@ -30,7 +30,9 @@ var text = (testValue == 50) ? "erfüllt" : "nicht erfüllt";
 
 Mehr zum Thema [IF](https://docs.microsoft.com/de-de/dotnet/csharp/language-reference/statements/selection-statements#the-if-statemente)
 
-Note: if(else) + tab + tab. If ist natürlich auch mit mehreren IF Zweigen erweiter- oder/und verschachtelbar.
+Note: 
+* if(else) + tab + tab. 
+* If ist natürlich auch mit mehreren IF Zweigen erweiter- oder/und verschachtelbar.
 
 ---
 
@@ -151,14 +153,38 @@ for (int i = 0; i < 10; i++ )
 
 Mehr zum Thema [For-Schleifen](https://docs.microsoft.com/de-de/dotnet/csharp/language-reference/statements/iteration-statements#the-for-statement)
 
-Note: for (aufsteigender Counter) fore (absteigender Counter) + tab + tab
+Note: 
+* for (aufsteigender Counter) + tab + tab 
+* fore (absteigender Counter) + tab + tab
+* int n = int.Parse(Console.ReadLine());
+
+---
+
+<!-- .slide: class="left" -->
+## Übung
+
+Erstelle ein weiteres .Net Konsolen Projekt. Dieses fragt einen Zahlenwerte (int) in der Konsole ab.
+Nun soll in einer Schleife solange von 1 beginnend immer die nächste Zahl bis zum eingegeben Wert ausgegeben werden.
+Was muss getan werden um vom eingegebenen Zahlenwert bis zur 1 zu kommen?
+
+Beispiel
+
+```csharp []
+Bitte eine Zahl eingeben:
+'5'
+1
+2
+3
+4
+5
+```
 
 ---
 
 <!-- .slide: class="left" -->
 ### verschachtelte Schleifen
 
-Eine Schleifen kann beliebig verschachtelt werden, d.h. in einer Schleife können wir eine weitere Schleife ausführen.
+Eine Schleife kann beliebig verschachtelt werden, d.h. in einer Schleife können wir eine weitere Schleife ausführen.
 
 Ein Quadrat mit n-Zeilen zeichnen, die jeweils n-mal das Zeichen **=-** enthalten:
 
