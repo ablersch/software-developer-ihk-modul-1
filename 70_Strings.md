@@ -114,7 +114,7 @@ int intZahl = Convert.ToInt32(zahl);  // gerundet 13
 
 Mehr zum Thema [String Konvertierung](https://docs.microsoft.com/de-de/dotnet/csharp/programming-guide/types/how-to-convert-a-string-to-a-number)
 
-Note: Bei Convert und Parse Fehler abfangen
+Note: Bei Convert und Parse Fehler abfangen.
 
 ---
 
@@ -237,4 +237,7 @@ if (info.KeyChar == 'a')
 
 ```
 
-Note: cw (if, for, ...) + tab + Tab in **VS** zeigen. Daten von Console lesen. ConsoleKeyInfo zeigen.**ÜBUNG 6** Passwort
+Note: 
+* Daten von der Console lesen. 
+* ConsoleKeyInfo zeigen.
+* **ÜBUNG 6** Passwort

@@ -32,7 +32,7 @@ Mehr zum Thema [IF](https://docs.microsoft.com/de-de/dotnet/csharp/language-refe
 
 Note: 
 * if(else) + tab + tab. 
-* If ist natürlich auch mit mehreren IF Zweigen erweiter- oder/und verschachtelbar.
+* If ist natürlich auch mit mehreren If Zweigen erweiter- oder/und verschachtelbar.
 
 ---
 
@@ -236,11 +236,10 @@ foreach (var meinWert in meinArray)
 **Achtung:** Der foreach-Bezeichner "meinWert" ist schreibgeschützt. Er
 kann also nicht zur Zuweisung von Array Werten verwendet werden!
 
-Note: Sinnvoll wenn alle Werte durchlaufen werden sollen aber kein Index benötigt wird.
-
-Mit GetEnumerator() kann Index abgerufen und bearbeitet werden.
-
-foreach + tab + tab
+Note: 
+* foreach + tab + tab
+* Sinnvoll wenn alle Werte durchlaufen werden sollen aber kein Index benötigt wird.
+* Mit GetEnumerator() kann Index abgerufen und bearbeitet werden.
 
 ---
 
@@ -297,6 +296,7 @@ Das führt zur Frage, wo eine Variable deklariert werden sollte. Dafür gilt vor
 
 * Auch Klassen Variablen sollten innerhalb der Klasse an einer sinnvollen Stelle stehen.
 
-Note: **VS** Sichtbarkeit von Variablen zeigen (Klasse, Methode, If, ...).
-Var
-**ÜBUNG 4** Fakultät
+Note:
+* **VS** Sichtbarkeit von Variablen zeigen (Klasse, Methode, If, ...).
+* Var
+* **ÜBUNG 4** Fakultät

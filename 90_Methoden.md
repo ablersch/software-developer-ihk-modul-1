@@ -42,8 +42,7 @@ Note:
 * MyMethod() Name der Methode
 * static bedeutet, dass die Methode zur Klasse Program gehört und nicht zu einem Objekt der Klasse Program. 
 * void Die Methode gibt keinen Wert zurück
-
-Pascal-Schreibweise (jeden Anfangsbuchstaben eines Wortes groß)
+* Pascal-Schreibweise (jeden Anfangsbuchstaben eines Wortes groß)
 
 ---
 
@@ -207,4 +206,4 @@ bool Addiere(int zahl1, int zahl2, out int result) {
 }
 ```
 
-Note: **VS** Ref und out zeigen
+Note: **VS** Ref und out Parameter zeigen.

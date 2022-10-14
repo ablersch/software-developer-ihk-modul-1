@@ -15,8 +15,8 @@ Note:
   * Name, Alter, Wohnort
   * Arbeit
   * Programmiervorkenntnisse
-  * Warum dieser Kurs? Welche Ziele werden verfolgt
-* Sitzplan
+  * Warum dieser Kurs? Welche Ziele werden verfolgt?
+* Sitzplan erstellen
 
 ---
 
@@ -27,7 +27,7 @@ Note:
 * Stundenplan folgt
 
 Note: 
-* Anmeldung Rechner
+* Anmeldung Computer
 
 ---
 

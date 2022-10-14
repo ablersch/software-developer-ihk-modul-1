@@ -37,7 +37,7 @@ Zur Erstellung eines C\# Programms wird eine Entwicklungsumgebung (IDE - Integra
 ![Visual Studio 2019](images/visual-studio.png)
 
 Note: 
-* Öffnen Visual Studio
+* Öffnen von Visual Studio
 * eventuell Einstellungen vornehmen
 * Visual Studio Aufbau erklären
 
@@ -67,8 +67,8 @@ Note:
 * Alle Zeilen werden mit Strichpunkt abgeschlossen.
 * Jeder Block ist eingefasst in {}
 
-Zeigen in **VS** Projekt erstellen (.NET Konsole ohne Top Level Statements).
-Programm ausführen. (Nicht mitmachen Übung folgt)
+In **VS** zweigen wie ein neues Projekt erstellt wird (.NET Konsole ohne Top Level Statements).
+Programm ausführen (Übung dazu folgt).
 
 ---
 
@@ -84,7 +84,7 @@ Console.WriteLine("IHK");
 Note: 
 * Beispiel zeigen in **VS** 2022 mit der neuen Vorlage (.Net 6)
 * Neu erstellen
-* Debug Release Build (Ordner)
+* Debug und Release Build (Ordner)
 
 ---
 
@@ -254,7 +254,7 @@ Console.WriteLine("IHK")
 
 Note: 
 * cw + Tab + Tab
-* Optionen --> Texteditor --> C# --> IntelliSense --> Schnippsel immer einschließen
+* Sollte dies nicht funktionieren aktivieren unter (Optionen --> Texteditor --> C# --> IntelliSense --> Schnippsel immer einschließen)
 
 ---
 

@@ -35,8 +35,8 @@ Was ist Microsoft .NET
 
 Note: 
 * Auf das wichtigste reduziert.
-* Alle Auswüchse des .Net Frameworks entfernt. 
-* Kompatibilität leidet dadurch
+* Alle Auswüchse des .Net Frameworks entfernt.
+* Kompatibilität leidet dadurch.
 * Plattformunabhängig = Unterschied in Architektur, Prozessor und OS. Wird durch die Laufzeitumgebung (CLR) gewährleistet.
 
 ---
@@ -87,11 +87,9 @@ Note:
 ![DotNet Compiler CIL zu nativem Code](images/DotNetCILCompiler.png)
 
 Note: 
-IL (systemunabhängig) = Programmbefehle als Bytefolge
-
-Just in Time: Auf Zielsystem zur Laufzeit. Übersetzt Bytecode in Maschinensprache (Maschinencode) des jeweiligen Prozessors.
-
-Ein C#-Programm wird in einem Textformat geschrieben, und der Text des Programms wird als Quellcode bezeichnet. Es wird in eine ausführbare Datei kompiliert (z.B. Program.cs wird zu Program.exe kompiliert) oder es wird direkt aus der .NET-Umgebung ausgeführt
+* IL (systemunabhängig) = Programmbefehle als Bytefolge
+* Just in Time: Auf Zielsystem zur Laufzeit. Übersetzt Bytecode in Maschinensprache (Maschinencode) des jeweiligen Prozessors.
+* Ein C#-Programm wird in einem Textformat geschrieben, und der Text des Programms wird als Quellcode bezeichnet. Es wird in eine ausführbare Datei kompiliert (z.B. Program.cs wird zu Program.exe kompiliert) oder es wird direkt aus der .NET-Umgebung ausgeführt.
 
 ---
 
@@ -110,4 +108,4 @@ class MainClass
 }
 ```
 
-Note: Beispiel zeigen in https://sharplab.io/ (IL, JIT)
+Note: Umwandlung zeigen in https://sharplab.io/ (IL, JIT) + Unterschied verschiedener Prozessoren.

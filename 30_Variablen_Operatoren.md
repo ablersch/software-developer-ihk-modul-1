@@ -91,8 +91,8 @@ sum = sum++;
 
 Note: 
 * Punt vor Strich Regeln gelten.
-    * Können durch Klammern umgangen werden. 
-     Werte in der Klammer werden zuerst ausgeführt.
+    * Können durch Klammern umgangen werden.
+    * Werte in der Klammer werden zuerst ausgeführt.
 * Der Modulo-Operator wird als Restoperator bezeichnet, weil er den Rest einer ganzzahligen Division zurückgibt.
 
 ---
@@ -137,7 +137,6 @@ Diese führen eine Aktion aus und weisen den Wert der Variable zu.
 [Bitweise und Verschiebungs-Operatoren](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/bitwise-and-shift-operators)
 
 Note: & vergleicht immer beide Werte (Wobei && false liefert wenn bereits der erste Wert false ist).
-The result of x & y is true if both x and y evaluate to true. Otherwise, the result is false.
 
 ---
 
