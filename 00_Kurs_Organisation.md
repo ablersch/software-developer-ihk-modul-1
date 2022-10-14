@@ -1,4 +1,4 @@
-﻿<!-- 
+<!-- 
 f - Fullscreen
 b- Blackscreen
 space - nächste Folie
@@ -11,11 +11,7 @@ Print View: http://localhost:8000/?print-pdf
 Ablauf, Termine, Prüfungen, etc.
 
 Note: 
-* Persönliche Vorstellung der Teilnehmer 
-  * Name, Alter, Wohnort
-  * Arbeit
-  * Programmiervorkenntnisse
-  * Warum dieser Kurs? Welche Ziele werden verfolgt
+* Persönliche Vorstellung der Teilnehmer mit Ihren Programmiervorkenntnissen
 * Sitzplan
 
 ---
@@ -23,7 +19,7 @@ Note:
 <!-- .slide: class="left" -->
 ## Kurs Organisation
 
-* [Skript und Übungen](https://github.com/ablersch/software-developer-ihk-modul-1) von GitHub (https://github.com/ablersch)
+* [Skript und Übungen](https://github.com/ablersch/software-developer-ihk-modul-2) von GitHub (https://github.com/ablersch)
 * Stundenplan folgt
 
 Note: 
