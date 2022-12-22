@@ -4,9 +4,9 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>C# Grundlagen Teil 2</title>
+		<title>C# Grundlagen</title>
 
-		<meta name="description" content="Modul II - C# Grundlagen IHK Ulm">
+		<meta name="description" content="Modul I - C# Grundlagen IHK Ulm">
 		<meta name="author" content="Andreas Blersch">
 
 		<link rel="stylesheet" href="dist/reset.css">
@@ -27,110 +27,124 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+		
+		<style>
+			section.left {
+				text-align: left;
+			}
 
-<style>
-	section.left {
-		text-align: left;
-	}
+			.reveal {
+				font-size: 30px;
+			}
 
-	.reveal {
-		font-size: 30px;
-	}
+			.reveal li li {
+				font-size: smaller;
+			}
 
-	.reveal li li {
-		font-size: smaller;
-	}
-
-	.reveal section img {
-		border: none;
-		box-shadow: none;
-	}
-</style>
+			.reveal section img {
+				border: none;
+				box-shadow: none;
+			}
+		</style>
 	</head>
+
 	<body>
-			<div id="hidden" style="display:none;">
-					<div id="header">
-						<div id="header-left">Modul II - C# Aufbau</div>
-						<div id="header-right"><img src="images/IHK-logo.svg" class="logo" /></div>
-						<div id="footer-left">Andreas Blersch</div>
-					</div>
-				</div>
-
-
-		<div class="reveal">
-			<div class="slides">
-				<section>
-					<h1>Modul II - C# Aufbau</h1>
-					<h3>Software Developer IHK</h3>
-					<p>
-						<small>Erstellt von Andreas Blersch</small>
-					</p>
-				</section>
-	
-				<section data-markdown="00_Kurs_Organisation.md"   
-					data-separator="^\n\n\n"  
-					data-separator-vertical="^---\r?\n$"
-					data-separator-notes="^Note:"  
-					data-charset="utf-8">
-				</section>
-
-				<section data-markdown="10_Objektorientierung.md"   
-					data-separator="^\n\n\n"  
-					data-separator-vertical="^---\r?\n$""
-					data-separator-notes="^Note:"  
-					data-charset="utf-8">
-				</section>
-
-				<section data-markdown="20_Vererbung.md"   
-					data-separator="^\n\n\n"  
-					data-separator-vertical="^---\r?\n$"
-					data-separator-notes="^Note:"  
-					data-charset="utf-8">
-				</section>
-
-				<section data-markdown="30_Auflistungen.md"   
-					data-separator="^\n\n\n"  
-					data-separator-vertical="^---\r?\n$"
-					data-separator-notes="^Note:"  
-					data-charset="utf-8">
-				</section>
-
-				<section data-markdown="40_Casting.md"   
-					data-separator="^\n\n\n"  
-					data-separator-vertical="^---\r?\n$"
-					data-separator-notes="^Note:"  
-					data-charset="utf-8">
-				</section>
-
-				<section data-markdown="50_LINQ.md"   
-					data-separator="^\n\n\n"  
-					data-separator-vertical="^---\r?\n$"
-					data-separator-notes="^Note:"  
-					data-charset="utf-8">
-				</section>
-
-				<section data-markdown="70_Fehlerbehandlung.md"   
-					data-separator="^\n\n\n"  
-					data-separator-vertical="^---\r?\n$"
-					data-separator-notes="^Note:"  
-					data-charset="utf-8">
-				</section>
-
-				<section data-markdown="80_Dateioperationen.md"   
-					data-separator="^\n\n\n"  
-					data-separator-vertical="^---\r?\n$"
-					data-separator-notes="^Note:"  
-					data-charset="utf-8">
-				</section>
-
-				<section data-markdown="90_Interfaces_Abstract.md"   
-					data-separator="^\n\n\n"  
-					data-separator-vertical="^---\r?\n$"
-					data-separator-notes="^Note:"  
-					data-charset="utf-8">
-				</section>
+		<div id="hidden" style="display:none;">
+			<div id="header">
+				<div id="header-left">Modul I - C# Grundlagen</div>
+				<div id="header-right"><img src="images/IHK-logo.svg" class="logo" /></div>
+				<div id="footer-left">Andreas Blersch</div>
 			</div>
 		</div>
+
+
+<div class="reveal">
+	<div class="slides">
+		<section>
+			<h1>Modul I - C# Grundlagen</h1>
+			<h3>Software Developer IHK</h3>
+			<p>
+				<small>Erstellt von Andreas Blersch</small>
+			</p>
+		</section>
+<!--
+	vertical separator: ^\r\n  works an github pages
+    Slides are separated by regexp matching newline + three dashes + newline, vertical slides identical but two dashes
+data-separator-vertical="^\r?\n---\r?\n$"
+-->
+		<section data-markdown="00_Kurs_Organisation.md"   
+			data-separator="^\n\n\n"
+			data-separator-vertical="^---\r?\n$"
+			data-separator-notes="^Note:"  
+			data-charset="utf-8">
+		</section>
+
+		<section data-markdown="10_DotNet.md"   
+			data-separator="^\n\n\n"
+			data-separator-vertical="^\r?\n---\r?\n$"
+			data-separator-notes="^Note:"  
+			data-charset="utf-8">
+		</section>
+
+		<section data-markdown="20_CSharp.md"   
+			data-separator="^\n\n\n"
+			data-separator-vertical="^\r?\n---\r?\n$"
+			data-separator-notes="^Note:"  
+			data-charset="utf-8">
+		</section>
+
+		<section data-markdown="30_Variablen_Operatoren.md"   
+			data-separator="^\n\n\n"
+			data-separator-vertical="^\r?\n---\r?\n$"
+			data-separator-notes="^Note:"  
+			data-charset="utf-8">
+		</section>
+
+		<section data-markdown="40_Kontrollstrukturen.md"   
+			data-separator="^\n\n\n"
+			data-separator-vertical="^\r?\n---\r?\n$"
+			data-separator-notes="^Note:"  
+			data-charset="utf-8">
+		</section>
+
+		<section data-markdown="50_Arrays.md"   
+			data-separator="^\n\n\n"
+			data-separator-vertical="^\r?\n---\r?\n$"
+			data-separator-notes="^Note:"  
+			data-charset="utf-8">
+		</section>
+
+		<section data-markdown="70_Strings.md"   
+			data-separator="^\n\n\n"
+			data-separator-vertical="^\r?\n---\r?\n$"
+			data-separator-notes="^Note:"  
+			data-charset="utf-8">
+		</section>
+
+		<section data-markdown="80_Enumerations.md"   
+			data-separator="^\n\n\n"
+			data-separator-vertical="^\r?\n---\r?\n$"
+			data-separator-notes="^Note:"  
+			data-charset="utf-8">
+		</section>
+
+		<section data-markdown="90_Methoden.md"   
+			data-separator="^\n\n\n"
+			data-separator-vertical="^\r?\n---\r?\n$"
+			data-separator-notes="^Note:"  
+			data-charset="utf-8">
+		</section>
+
+		<section data-markdown="200_VisualStudio.md"   
+			data-separator="^\n\n\n"
+			data-separator-vertical="^\r?\n---\r?\n$"
+			data-separator-notes="^Note:"  
+			data-charset="utf-8">
+		</section>
+
+		
+	</div>
+</div>
 
 		<script src="dist/reveal.js"></script>
 		<script src="plugin/notes/notes.js"></script>

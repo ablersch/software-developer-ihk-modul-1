@@ -1,11 +1,11 @@
-# Modul II - C# Grundlagen
+# Modul I - C# Grundlagen
 
 Diese Repository beinhaltet die Unterlagen für den Kurs **Software Developer IHK**
 
 ## Material
 
-* [Im Browser](https://ablersch.github.io/software-developer-ihk-modul-2)
-* [Druckversion](https://ablersch.github.io/software-developer-ihk-modul-2?print-pdf)
+* [Im Browser](https://ablersch.github.io/software-developer-ihk-modul-1)
+* [Druckversion](https://ablersch.github.io/software-developer-ihk-modul-1?print-pdf)
 
 Optimiert für Chrome!
 
@@ -19,13 +19,18 @@ Optimiert für Chrome!
 
 ## Inhalt
 
-* Objektorientierung
-* Auflistungen
-* Namensräume
-* Casting
-* Fehlerbehandlung
-* Dateioperationen
-* Interfaces und abstrakte Klassen
+* Kurs Organisation
+* Grundlagen DotNet und C#
+* Programmaufbau
+* Codekonventionen
+* Datentypen
+* Variablen
+* Operatoren
+* Kontrollstrukturen
+* Arrays
+* Strings
+* Enumerations
+* Methoden
 * Hilfestellungen und Tipps für Visual Studio
 
 Mit Übungsaufgaben zu den einzelnen Themen.

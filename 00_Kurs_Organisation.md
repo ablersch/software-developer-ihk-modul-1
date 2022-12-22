@@ -23,7 +23,7 @@ Note:
 <!-- .slide: class="left" -->
 ## Kurs Organisation
 
-* [Skript und Übungen](https://github.com/ablersch/software-developer-ihk-modul-2) von GitHub (https://github.com/ablersch)
+* [Skript und Übungen](https://github.com/ablersch/software-developer-ihk-modul-1) von GitHub (https://github.com/ablersch)
 * Stundenplan folgt
 
 Note: 
