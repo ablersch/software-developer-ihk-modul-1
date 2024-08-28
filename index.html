@@ -12,21 +12,23 @@
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/white.css" id="theme">
-		<link rel="stylesheet" href="css/headers.css">
+		<!--<link rel="stylesheet" href="css/headers.css">-->
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
 
 		<link href="images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
 
-		<!-- Printing and PDF exports -->
+		<!-- Printing and PDF exports 
 		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+			  var link = document.createElement( 'link' );
+			  link.rel = 'stylesheet';
+			  link.type = 'text/css';
+			  link.href = 'css/print/pdf.css';
+			  document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		  </script>
 		
 		<style>
 			section.left {
@@ -45,7 +47,7 @@
 				border: none;
 				box-shadow: none;
 			}
-		</style>
+		</style>-->
 	</head>
 
 	<body>
@@ -151,8 +153,8 @@ data-separator-vertical="^\r?\n---\r?\n$"
 		<script src="plugin/zoom/zoom.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
-		<script src="js/jquery.min.js"></script>
-		<script src="js/headers.js"></script>
+		<!--<script src="js/jquery.min.js"></script>
+		<script src="js/headers.js"></script>-->
 
 		<script>
 			// More info about initialization & config:
@@ -186,9 +188,9 @@ data-separator-vertical="^\r?\n---\r?\n$"
   				//showNotes: false,
 				//dependencies: [{ src: 'plugin/toolbar/toolbar.js' }],
 				// Activate the scroll view
-				view: 'scroll',
+				//view: 'scroll',
 				// Force the scrollbar to remain visible
-				scrollProgress: true,
+				//scrollProgress: true,
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ],
 
