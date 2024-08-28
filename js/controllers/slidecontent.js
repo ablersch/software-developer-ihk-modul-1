@@ -1,4 +1,4 @@
-import { extend, queryAll, closest, getMimeTypeFromFile, encodeRFC3986URI } from '../utils/util.js'
+import { extend, queryAll, closest, getMimeTypeFromFile } from '../utils/util.js'
 import { isMobile } from '../utils/device.js'
 
 import fitty from 'fitty';
@@ -24,10 +24,6 @@ export default class SlideContent {
 	 * @param {HTMLElement} element
 	 */
 	shouldPreload( element ) {
-
-		if( this.Reveal.isScrollView() ) {
-			return true;
-		}
 
 		// Prefer an explicit global preload setting
 		let preload = this.Reveal.getConfig().preloadIframes;
@@ -112,9 +108,7 @@ export default class SlideContent {
 					// URL(s)
 					else {
 						backgroundContent.style.backgroundImage = backgroundImage.split( ',' ).map( background => {
-							// Decode URL(s) that are already encoded first
-							let decoded = decodeURI(background.trim());
-							return `url(${encodeRFC3986URI(decoded)})`;
+							return `url(${encodeURI(background.trim())})`;
 						}).join( ',' );
 					}
 				}
@@ -142,15 +136,13 @@ export default class SlideContent {
 
 					// Support comma separated lists of video sources
 					backgroundVideo.split( ',' ).forEach( source => {
-						const sourceElement = document.createElement( 'source' );
-						sourceElement.setAttribute( 'src', source );
-
 						let type = getMimeTypeFromFile( source );
 						if( type ) {
-							sourceElement.setAttribute( 'type', type );
+							video.innerHTML += `<source src="${source}" type="${type}">`;
 						}
-
-						video.appendChild( sourceElement );
+						else {
+							video.innerHTML += `<source src="${source}">`;
+						}
 					} );
 
 					backgroundContent.appendChild( video );
@@ -375,11 +367,8 @@ export default class SlideContent {
 			isVisible  		= !!closest( event.target, '.present' );
 
 		if( isAttachedToDOM && isVisible ) {
-			// Don't restart if media is already playing
-			if( event.target.paused || event.target.ended ) {
-				event.target.currentTime = 0;
-				event.target.play();
-			}
+			event.target.currentTime = 0;
+			event.target.play();
 		}
 
 		event.target.removeEventListener( 'loadeddata', this.startEmbeddedMedia );

@@ -40,7 +40,7 @@ export default class Location {
 	 *
 	 * @returns slide indices or null
 	 */
-	getIndicesFromHash( hash=window.location.hash, options={} ) {
+	getIndicesFromHash( hash=window.location.hash ) {
 
 		// Attempt to parse the hash as either an index or name
 		let name = hash.replace( /^#\/?/, '' );
@@ -49,7 +49,7 @@ export default class Location {
 		// If the first bit is not fully numeric and there is a name we
 		// can assume that this is a named link
 		if( !/^[0-9]*$/.test( bits[0] ) && name.length ) {
-			let slide;
+			let element;
 
 			let f;
 
@@ -62,19 +62,17 @@ export default class Location {
 
 			// Ensure the named link is a valid HTML ID attribute
 			try {
-				slide = document
-					.getElementById( decodeURIComponent( name ) )
-					.closest('.slides section');
+				element = document.getElementById( decodeURIComponent( name ) );
 			}
 			catch ( error ) { }
 
-			if( slide ) {
-				return { ...this.Reveal.getIndices( slide ), f };
+			if( element ) {
+				return { ...this.Reveal.getIndices( element ), f };
 			}
 		}
 		else {
 			const config = this.Reveal.getConfig();
-			let hashIndexBase = config.hashOneBasedIndex || options.oneBasedIndex ? 1 : 0;
+			let hashIndexBase = config.hashOneBasedIndex ? 1 : 0;
 
 			// Read the index components of the hash
 			let h = ( parseInt( bits[0], 10 ) - hashIndexBase ) || 0,
@@ -141,7 +139,7 @@ export default class Location {
 			let hash = this.getHash();
 
 			// If we're configured to push to history OR the history
-			// API is not available.
+			// API is not avaialble.
 			if( config.history ) {
 				window.location.hash = hash;
 			}
