@@ -39,7 +39,6 @@ Note:
 * eventuell Einstellungen vornehmen
 * Visual Studio Aufbau erklären
 
-
 ---
 
 <!-- .slide: class="left" -->
@@ -48,7 +47,7 @@ Note:
 ```csharp []
 using System; // Assemblies einbinden (Klassen aus dem System Namespace nutzen)
 
-namespace Programmaufbau; //Projektteile werden in Namensräumen (Containern) zusammengefasst.
+namespace Programmaufbau; // Projektteile werden in Namensräumen (Containern) zusammengefasst.
 
 internal class Program // Bauplan für Abbildung von Objekten. Alles muss in einer Klasse laufen
 {
