@@ -42,13 +42,13 @@ Note:
 ---
 
 <!-- .slide: class="left" -->
-## .NET bzw .NET 7
+## .NET
 
 Zurück zu einem ".NET".
 
 Die Entwicklung auf verschiedenen Plattformen wurde vereinheitlicht.
 
-![.NET 6](images/DotNet.jpg)
+![.NET](images/DotNet.jpg)
 
 Note: 
 * Um mehr Kompatibilität zu gewährleisten wieder mehr Features z.B. WinForms.
@@ -58,7 +58,7 @@ Note:
 ---
 
 <!-- .slide: class="left" -->
-## .NET 6 (7) Architektur
+## .NET Architektur
 
 ![DotNet Architektur](images/DotNetArchitecture.jpg)
 
