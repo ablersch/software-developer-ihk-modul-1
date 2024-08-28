@@ -24,7 +24,7 @@ Note:
 ## Kurs Organisation
 
 * [Skript und Übungen](https://github.com/ablersch/software-developer-ihk-modul-1) von GitHub (https://github.com/ablersch)
-* Stundenplan folgt
+* [Stundenplan](https://ablersch.github.io/software-developer-ihk-modul-1/Stundenplan_SoftwareDeveloper.pdf)
 
 Note: 
 * Anmeldung Computer
@@ -37,15 +37,13 @@ Note:
 Freitags:
 
 * Von 18:00 - 21:00 Uhr
-* Pause:
-
+* gekürzte Pause:
     * 19:30 - 19:45 Uhr
 
 Samstags:
 
 * von 8:00 - 15:00 Uhr
-* Pausen:
-
+* gekürzte Pausen:
     * 10:00 - 10:15 Uhr
     * 11:30 - 12:00 Uhr
 
@@ -87,38 +85,3 @@ abgegeben werden welche folgende Bestandteile beinhaltet:
 * Dokumentation der Anwendung
 
 Die Anwendung muss beim Dozenten ausführbar sein. D.h. notwendige Abhängigkeiten (Datenbanken, Dateien, Konfiguration) mit abgeben.
-
----
-
-<!-- .slide: class="left" -->
-### Ziel der Projekte
-
-Bearbeitung einer programmiertechnischen Aufgaben- bzw. Fragestellung, die
-
-* Selbständig oder in der Gruppe (wird das Projekt in der Gruppe erarbeitet muss definiert werden wer für welchen Teil zuständig ist)
-* in einer vorgegebenen Zeit
-* theoretisch fundiert und/oder anwendungsorientiert
-* unter Berücksichtigung des Kenntnisstandes
-* unter Berücksichtigung fachübergreifender Zusammenhänge bearbeitet wird.
-
----
-
-<!-- .slide: class="left" -->
-### Themenbereiche
-
-Die Themenbereiche für Ihre Projektarbeit leiten sich ab
-
-* aus den Inhalten des Kurses
-* aus angrenzenden Themengebieten
-
-**Beispiele möglicher Projekte:**
-
-* FTP-Server und Client (Light-Version)
-* Chat-Client-Server (Light-Version)
-* Zeit (Stempelung)-Server und Client (Light-Version)
-* Projekt-Datenbank
-* Zeiterfassung- und Auswertung (Datenbank)
-* Passwort-Manager
-* Einfaches Dokumentenverwaltungssystem
-* Zeitmanagement
-* Reisekosten
