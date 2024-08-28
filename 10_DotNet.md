@@ -42,7 +42,7 @@ Note:
 ---
 
 <!-- .slide: class="left" -->
-## .NET bzw .NET 7
+## .NET
 
 Zurück zu einem ".NET".
 
@@ -58,7 +58,7 @@ Note:
 ---
 
 <!-- .slide: class="left" -->
-## .NET 6 (7) Architektur
+## .NET Architektur
 
 ![DotNet Architektur](images/DotNetArchitecture.jpg)
 

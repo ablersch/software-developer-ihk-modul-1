@@ -185,7 +185,10 @@ data-separator-vertical="^\r?\n---\r?\n$"
 				// Flags if speaker notes should be visible in pdf export
   				//showNotes: false,
 				//dependencies: [{ src: 'plugin/toolbar/toolbar.js' }],
-
+				// Activate the scroll view
+				view: 'scroll',
+				// Force the scrollbar to remain visible
+				scrollProgress: true,
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ],
 

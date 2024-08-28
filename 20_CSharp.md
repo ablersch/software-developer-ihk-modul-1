@@ -9,13 +9,11 @@ Grundlagen, Programmaufbau, Codekonventionen, Kommentare und häufige Fehler.
 
 * C\# (gesprochen "C Sharp") wurde bei Microsoft von Anders Hejlsberg 2001 entwickelt.
 
-* Die aktuellste Version C\# 11 wurde 2022 mit Microsoft .NET 7 veröffentlicht.
+* Die aktuellste Version C\# 13 wurde 2024 mit Microsoft .NET 9 veröffentlicht.
 
 * Die Programmiersprache ist voll objektorientiert und beinhaltet verschiedene Elemente aus den Sprachen C, C++, Java, Pascal und Basic.
 
 * C\# wurde wie Java auf Hardwareunabhängigkeit entwickelt
-
-* [TOP 10 Programmiersprachen](https://fossbytes.com/most-popular-programming-languages/)
 
 ---
 
@@ -34,13 +32,12 @@ Zur Erstellung eines C\# Programms wird eine Entwicklungsumgebung (IDE - Integra
 <!-- .slide: class="left" -->
 ### Visual Studio
 
-![Visual Studio 2019](images/visual-studio.png)
+![Visual Studio](images/visual-studio.png)
 
 Note: 
 * Öffnen von Visual Studio
 * eventuell Einstellungen vornehmen
 * Visual Studio Aufbau erklären
-
 
 ---
 
@@ -50,7 +47,7 @@ Note:
 ```csharp []
 using System; // Assemblies einbinden (Klassen aus dem System Namespace nutzen)
 
-namespace Programmaufbau; //Projektteile werden in Namensräumen (Containern) zusammengefasst.
+namespace Programmaufbau; // Projektteile werden in Namensräumen (Containern) zusammengefasst.
 
 internal class Program // Bauplan für Abbildung von Objekten. Alles muss in einer Klasse laufen
 {
