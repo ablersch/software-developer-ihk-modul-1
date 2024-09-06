@@ -35,7 +35,7 @@ Zur Erstellung eines C\# Programms wird eine Entwicklungsumgebung (IDE - Integra
 ![Visual Studio](images/visual-studio.png)
 
 Note: 
-* Öffnen von Visual Studio
+* Öffnen von Visual Studio Community + Registrierung
 * eventuell Einstellungen vornehmen
 * Visual Studio Aufbau erklären
 
@@ -46,17 +46,17 @@ Note:
 ## Programmaufbau
 
 ```csharp []
-using System; // Assemblies einbinden (Klassen aus dem System Namespace nutzen)
+using System; // Assemblies einbinden (Klassen aus dem System Namespace nutzen).
 
-namespace Programmaufbau; //Projektteile werden in Namensräumen (Containern) zusammengefasst.
+namespace Firma.User; //Projektteile werden in Namensräumen (Containern) zusammengefasst.
 
-internal class Program // Bauplan für Abbildung von Objekten. Alles muss in einer Klasse laufen
+internal class Program // Bauplan für Abbildung von Objekten. Alles muss in einer Klasse laufen.
 {
-    static void Main(string[] args) // Einstiegspunkt mit Parameter Array
+    static void Main(string[] args) // Einstiegspunkt mit Parameter Array.
     {
-        Console.WriteLine("IHK"); // String Wert in der Console ausgeben
+        Console.WriteLine("IHK"); // String Wert in der Console ausgeben.
     }
-} // Ende der Klasse
+} // Ende der Klasse.
 
 ```
 
@@ -67,6 +67,8 @@ Note:
 
 In **VS** zweigen wie ein neues Projekt erstellt wird (.NET Konsole ohne Top Level Statements).
 Programm ausführen (Übung dazu folgt).
+
+* AOT: schnellerer Start, benötigen keine .Net Runtime
 
 ---
 
@@ -80,8 +82,9 @@ Console.WriteLine("IHK");
 ```
 
 Note: 
-* Beispiel zeigen in **VS** 2022 mit der neuen Vorlage (.Net 6)
+* Beispiel zeigen in **VS** 2022 mit der neuen Vorlage (.Net 8)
 * Neu erstellen
+* Erstellte Ordner
 * Debug und Release Build (Ordner)
 
 ---
@@ -120,7 +123,7 @@ Note:
 <!-- .slide: class="left" -->
 ## Codekonventionen
 
-* Einrückungen immer nur per Tab (4 Zeichen) nicht mit Leerzeichen
+* Einrückungen immer nur per `Tab` (4 Zeichen) nicht mit Leerzeichen
 * ein Namespace und eine Klasse pro Datei
 * nur eine Variable auf einmal deklarieren
 * nicht selbsterklärende Stellen im Code kommentieren
@@ -182,9 +185,9 @@ Note: In **VS** zeigen
 | byte      | 8 Bit    | Zahlen von 0 bis 255  |
 | sbyte     | 8 Bit     | Zahlen mit Vorzeichen von -128 - 127    |
 | char      | 16 Bit           | Speichert ein einzelnes Zeichen/Buchstabe |
-| decimal   | 128 Bit  | Zahl mit Dezimalstellen 29 Stellen (–7,922816E28 bis +7,922816E28)    |
-| double    | 64 bit  | Speichert Kommazahlen mit 15 Stellen (–1,79769313486232E308 bis +1,79769313486232E308)    |
 | float     | 32 Bit  | Speichert Kommazahlen mit 6 bis 9 Stellen (-3.402823E38 bis +3.402823E38)   |
+| double    | 64 bit  | Speichert Kommazahlen mit 15 Stellen (–1,79769313486232E308 bis +1,79769313486232E308)    |
+| decimal   | 128 Bit  | Zahl mit Dezimalstellen 29 Stellen (–7,922816E28 bis +7,922816E28)    |
 
 ---
 
@@ -228,7 +231,7 @@ Der boolesche Wert eines Ausdrucks ist die Grundlage für alle Vergleiche und Be
 <!-- .slide: class="left" -->
 ## Ein- und Ausgabe in der Konsole
 
-Einige wichtige Methoden zur Ein- und Ausgabe gehören zur Klasse [Console](https://docs.microsoft.com/de-de/dotnet/api/system.console?view=net-6.0) im Namespace System. Sie lauten:
+Einige wichtige Methoden zur Ein- und Ausgabe gehören zur Klasse [Console](https://learn.microsoft.com/de-de/dotnet/api/system.console?view=net-8.0) im Namespace System. Sie lauten:
 
 | Methode      | Beschreibung
 | -------------|-------------|
@@ -271,7 +274,7 @@ Erst bei einem Tastendruck soll sich das Konsolenfenster schließen.
 <!-- .slide: class="left" -->
 ## Übung 1.1
 
-Erstelle ein neues .Net Konsolen Projekt. Dieses soll in der Console nach deinem Vornamen und Nachnamen fragen. Beide Werte sollen dann eingeben werden. Am Ende den Namen komplett ausgeben.
+Erstelle ein neues .Net Konsolen Projekt. Dieses soll in der Console nach deinem Vornamen und Nachnamen fragen. Beide Werte müssen dann eingegeben werden. Am Ende wird der Namen komplett ausgegeben.
 
 Zum Beispiel:
 
@@ -350,7 +353,7 @@ static void Main(string[] args)
 <!-- .slide: class="left" -->
 Dieses Programm wirft **einen Kompilierzeitfehler** und der Build wird fehlschlagen. Der fehlerhafte Code wird sogar unterstrichen, um den Programmierer auf den Fehler hinzuweisen, den er gemacht hat \(das fehlende schließende Anführungszeichen\):
 
-![](images/csharp-error.png)
+![Fehlerausgabe in Visual Studio](images/csharp-error.png)
 
 ---
 

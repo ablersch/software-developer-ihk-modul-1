@@ -34,7 +34,7 @@ Console.Write(summe);
 <!-- .slide: class="left" -->
 ## Variablen var
 
-Variablen, die im Methodenbereich deklariert werden, können einen impliziten "Typ" var haben. Der Compiler bestimmt den Datentyp automatisch auf Basis des zugewiesenen Wertes.
+Variablen, die im Methodenbereich deklariert werden, können einen impliziten "Typ" `var` haben. Der Compiler bestimmt den Datentyp automatisch auf Basis des zugewiesenen Wertes.
 
 Die folgenden zwei Deklarationen sind funktional äquivalent:
 
@@ -172,6 +172,6 @@ Note: & vergleicht immer beide Werte (Wobei && false liefert wenn bereits der er
 
 1. Erstelle ein weiteres .Net Konsolen Projekt. Dieses fragt zwei Zahlenwerte (int) in der Konsole ab und gibt die Summe wieder aus.
 
-2. Außerdem soll verglichen werden ob die beiden Zahlenwerte identisch sind. Wenn ja soll 'true' ausgegeben werden, ansonsten 'false.'
+2. Zusätzlich soll verglichen werden ob die beiden Zahlenwerte identisch sind. Wenn ja soll "true" ausgegeben werden, ansonsten "false".
 
 3. Ändere dein Projekt damit es auch mit Kommazahlen arbeiten kann.

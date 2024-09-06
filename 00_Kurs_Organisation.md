@@ -17,6 +17,7 @@ Note:
   * Programmiervorkenntnisse
   * Warum dieser Kurs? Welche Ziele werden verfolgt?
 * Sitzplan erstellen
+* What's App Gruppe für schnellen Austausch wegen Termine
 
 ---
 
@@ -24,7 +25,7 @@ Note:
 ## Kurs Organisation
 
 * [Skript und Übungen](https://github.com/ablersch/software-developer-ihk-modul-1) von GitHub (https://github.com/ablersch)
-* [Stundenplan] (https://ablersch.github.io/software-developer-ihk-modul-1/Stundenplan_SoftwareDeveloper.pdf)
+* [Stundenplan](https://ablersch.github.io/software-developer-ihk-modul-1/Stundenplan_SoftwareDeveloper.pdf)
 
 Note: 
 * Anmeldung Computer

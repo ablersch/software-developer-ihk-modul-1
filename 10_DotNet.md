@@ -72,7 +72,7 @@ Note:
 <!-- .slide: class="left" -->
 ## Ablauf der Entwicklung eines .NET Programms
 
-* Jede der unterstützten Hochsprachen wird von .NET zunächst in die Zwischensprache **IL**(Intermediate Language) übersetzt.
+* Jede der unterstützten Hochsprachen wird vom .NET Compiler in die Zwischensprache **IL**(Intermediate Language) übersetzt.
 
 * Ein kompiliertes Programm besteht aus Anweisungen in der Sprache **IL**.
 
@@ -109,4 +109,6 @@ class MainClass
 }
 ```
 
-Note: Umwandlung zeigen in https://sharplab.io/ (IL, JIT) + Unterschied verschiedener Prozessoren.
+Note: 
+* Umwandlung zeigen in https://sharplab.io/ (IL, JIT)
+* Unterschied verschiedener Prozessoren.

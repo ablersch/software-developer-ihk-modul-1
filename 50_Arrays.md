@@ -16,7 +16,7 @@ Ein [Array](https://docs.microsoft.com/de-de/dotnet/csharp/programming-guide/arr
 
 Arrays werden definiert in dem nach dem Datentyp eckige Klammern folgen.
 
-```string[] cars```
+`string[] cars`
 
 Dieses Array nimmt Elemente vom Datentyp string auf.
 Werte können direkt beim anlegen dem Array hinzugefügt werden.
@@ -80,4 +80,4 @@ foreach (var car in cars)
 }
 ```
 
-Note: **ÜBUNG 5** Arrays
+Note: **ÜBUNG 6** Arrays

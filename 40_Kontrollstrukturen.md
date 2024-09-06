@@ -6,7 +6,43 @@ Möglichkeit Programme sinnvoll zu strukturieren und zu steuern.
 ---
 
 <!-- .slide: class="left" -->
-## IF-ELSE - Anweisung
+## If-Anweisung
+
+Mit der `if`-Anweisung lässt sich ein Codeblock definieren der nur ausgeführt wird wenn die Bedingung `true` ist.
+
+```csharp
+if (condition)
+{
+    // Codeblock der ausgeführt wird wenn die Bedinung true ist. 
+}
+```
+
+```csharp
+if (1 < 5)
+{
+    Console.WriteLine("1 ist kleiner als 5.");
+}
+
+```
+
+---
+
+<!-- .slide: class="left" -->
+## Else-Anweisung
+
+Zusätzlich zur `if`-Anweisung lässt sich ein `else`-Block definieren. Dieser wird ausgeführt wenn die Bedingung `false` ist.
+
+```csharp []
+if (condition)
+{
+    // Codeblock der ausgeführt wird wenn die Bedinung true ist. 
+}
+else 
+{
+    // Codeblock der ausgeführt wird wenn die Bedinung false ist.
+}
+
+```
 
 ```csharp []
 var testValue = 50;
@@ -22,13 +58,32 @@ else
 }
 ```
 
-[Bedingungsoperator (Frageoperator)](https://docs.microsoft.com/de-de/dotnet/csharp/language-reference/operators/conditional-operator) liefert immer einen Ausdruck bzw. eine Wertzuweisung: **?:**
+---
+
+<!-- .slide: class="left" -->
+## Else-if-Anweisung
+
+Es lassen sich weitere `else if` Blöcke verketten wenn eine weitere Bedingung geprüft und anderst darauf reagiert werden soll.
 
 ```csharp []
-var text = (testValue == 50) ? "erfüllt" : "nicht erfüllt";
+var temperature = 10;
+string text;
+
+if (temperature == 20)
+{
+    text = "Temperatur erreicht";
+}
+else if (temperature > 20)  
+{
+    text = "Temperatur ist zu hoch";
+}
+else 
+{
+    text = "Temperatur ist zu niedrig";
+}
 ```
 
-Mehr zum Thema [IF](https://docs.microsoft.com/de-de/dotnet/csharp/language-reference/statements/selection-statements#the-if-statemente)
+Mehr zum Thema [If](https://docs.microsoft.com/de-de/dotnet/csharp/language-reference/statements/selection-statements#the-if-statemente)
 
 Note: 
 * if(else) + tab + tab. 
@@ -37,9 +92,27 @@ Note:
 ---
 
 <!-- .slide: class="left" -->
-## SWITCH-CASE - Anweisung
+## Bedingungsoperator (Frageoperator)
 
-Bei der SWITCH-Anweisung wird der Ausdruck in der Anweisung ausgewertet und in Abhängigkeit des ganzzahligen Ausdrucks zum entsprechenden CASE gesprungen.
+Oft auch als kurzes `if else` bezeichnet. Es kann verwendet werden, um mehrere Codezeilen durch eine einzige Zeile zu ersetzen.
+Liefert immer einen Ausdruck bzw. eine Wertzuweisung: **?:**
+
+```csharp
+Variable = (Bedingung) ? expressionTrue :  expressionFalse;
+```
+
+```csharp
+var text = (testValue == 50) ? "erfüllt" : "nicht erfüllt";
+```
+
+Mehr zum [Bedingungsoperator](https://docs.microsoft.com/de-de/dotnet/csharp/language-reference/operators/conditional-operator) 
+
+---
+
+<!-- .slide: class="left" -->
+## Switch-Anweisung
+
+Bei der `Switch`-Anweisung wird der Ausdruck in der Anweisung ausgewertet und in Abhängigkeit des ganzzahligen Ausdrucks zum entsprechenden `case` gesprungen.
 
 ```csharp []
 int caseSwitch = 1;
@@ -51,13 +124,18 @@ switch (caseSwitch)
     case 2:
         Console.WriteLine("Case 2");
         break;
+    case > 2:
+        Console.WriteLine("Case 3");
+        break;
     default: // Optional, wird ausgeführt wenn kein Case Fall zutrifft
         Console.WriteLine("Default case");
         break;
 }
 ```
 
-Note: switch + tab + tab
+Note: 
+* switch + tab + tab
+* Es sind auch weitere Musterabgleiche möglich.
 
 ---
 
@@ -80,7 +158,7 @@ switch (stadt)
 }
 ```
 
-Mehr zum Thema [SWITCH-CASE](https://docs.microsoft.com/de-de/dotnet/csharp/language-reference/statements/selection-statements#the-switch-statement)
+Mehr zum Thema [Switch](https://docs.microsoft.com/de-de/dotnet/csharp/language-reference/statements/selection-statements#the-switch-statement)
 
 ---
 
@@ -96,7 +174,7 @@ Schleifen sind praktisch, weil sie Zeit sparen, Fehler reduzieren und den Code b
 <!-- .slide: class="left" -->
 ### While-Schleife
 
-While-Schleifen können einen Codeblock so lange ausführen, bis eine bestimmte Bedingung ```true``` ist.
+`While`-Schleifen können einen Codeblock so lange ausführen, bis eine bestimmte Bedingung ```true``` ist. Der Ausdruck wird vor jeder Ausführung geprüft.
 
 ```csharp []
 int i = 0;
@@ -109,12 +187,14 @@ while (i < 99 )
 
 Mehr zum Thema [While-Schleifen](https://docs.microsoft.com/de-de/dotnet/csharp/language-reference/statements/iteration-statements#the-while-statement)
 
+Note: Nicht vergessen die Variable zu erhöhen. Sonst endet die Schleife nie. 
+
 ---
 
 <!-- .slide: class="left" -->
 ### Do-While-Schleife
 
-Die do/while-Schleife ist eine Variante der while-Schleife. Diese Schleife führt den Codeblock einmal aus, bevor sie prüft, ob die Bedingung wahr ist, und wiederholt dann die Schleife, solange die Bedingung wahr ist.
+Die `do/while`-Schleife ist eine Variante der `while`-Schleife. Diese Schleife führt den Codeblock einmal aus, bevor sie prüft, ob die Bedingung `true` ist, und wiederholt dann die Schleife, solange die Bedingung `true` ist.
 
 ```csharp []
 int i = 0;
@@ -123,7 +203,7 @@ do
     Console.WriteLine("i hat den Wert: " + i);
     i++;
 }
-while (i < 99 )
+while (i < 99 );
 ```
 
 Mehr zum Thema [Do-While-Schleifen](https://docs.microsoft.com/de-de/dotnet/csharp/language-reference/statements/iteration-statements#the-do-statement)
@@ -133,7 +213,7 @@ Mehr zum Thema [Do-While-Schleifen](https://docs.microsoft.com/de-de/dotnet/csha
 <!-- .slide: class="left" -->
 ### For-Schleife
 
-Wenn Sie genau wissen, wie oft Sie einen Codeblock in einer Schleife durchlaufen wollen, verwenden Sie die for-Schleife anstelle einer while-Schleife.
+Wenn Sie genau wissen, wie oft Sie einen Codeblock in einer Schleife durchlaufen wollen, verwenden Sie die `for`-Schleife anstelle einer `while`-Schleife.
 
 ![For-Schleife](images/for-loop.png)
 
@@ -141,9 +221,9 @@ Wenn Sie genau wissen, wie oft Sie einen Codeblock in einer Schleife durchlaufen
 
 <!-- .slide: class="left" -->
 ```csharp []
-// i setzen bevor die Schleife beginnt
-// Kondition die geprüft wird. i muss kleiner 10 sein
-// Erhöht den Schleifenzähler nach jedem Schleifendurchlauf
+// i setzen bevor die Schleife beginnt.
+// Bedingung die geprüft wird. i muss kleiner 10 sein.
+// Erhöht den Schleifenzähler nach jedem Schleifendurchlauf.
 for (int i = 0; i < 10; i++ )
 {
     // Start bei 0 - 9 (10 Iterationen)
@@ -156,16 +236,15 @@ Mehr zum Thema [For-Schleifen](https://docs.microsoft.com/de-de/dotnet/csharp/la
 Note: 
 * for (aufsteigender Counter) + tab + tab 
 * fore (absteigender Counter) + tab + tab
-* int n = int.Parse(Console.ReadLine());
+* Für Übung notwendig: int n = int.Parse(Console.ReadLine());
 
 ---
 
 <!-- .slide: class="left" -->
-## Übung
+## Übung 3
 
-Erstelle ein weiteres .Net Konsolen Projekt. Dieses fragt einen Zahlenwerte (int) in der Konsole ab.
-Nun soll in einer Schleife solange von 1 beginnend immer die nächste Zahl bis zum eingegeben Wert ausgegeben werden.
-Was muss getan werden um vom eingegebenen Zahlenwert bis zur 1 zu kommen?
+1. Erstelle ein weiteres .Net Konsolen Projekt. Dieses fragt einen Zahlenwerte (int) in der Konsole ab.
+Nun soll in einer Schleife solange von 1 beginnend immer die nächste Zahl bis zum eingegebenen Wert ausgegeben werden.
 
 Beispiel:
 
@@ -179,6 +258,8 @@ Bitte eine Zahl eingeben:
 5
 ```
 
+2. Was muss getan werden um vom eingegebenen Zahlenwert bis zur 1 zu kommen?
+
 ---
 
 <!-- .slide: class="left" -->
@@ -191,7 +272,8 @@ Ein Quadrat mit n-Zeilen zeichnen, die jeweils n-mal das Zeichen **=-** enthalte
 ```csharp []
 // Wieviel Schleifendurchläufe
 int n = int.Parse(Console.ReadLine());
-// Äußere Schleife (erzeugt neue Zeile)
+
+// Äußere Schleife (erzeugt eine neue Zeile)
 for (int row = 1; row <= n; row++)
 {
     // Innere Schleife (Schreibt den Inhalt in die Zeile)
@@ -199,12 +281,13 @@ for (int row = 1; row <= n; row++)
     {
         Console.Write("=-");
     }
+
     // Erzeugt eine neue Zeile
     Console.WriteLine();
 }
 ```
 
-Note: **Übung 3** verschachtelte Schleife
+Note: **Übung 4** verschachtelte Schleife
 
 ---
 
@@ -212,7 +295,7 @@ Note: **Übung 3** verschachtelte Schleife
 ### Foreach-Anweisung
 
 Die [foreach-Anweisung](https://docs.microsoft.com/de-de/dotnet/csharp/language-reference/statements/iteration-statements#the-foreach-statementn) kann auf Arrays und für jede Klasse eingesetzt
-werden, welche die Schnittstelle IEnumerable implementiert. Fehler mit falscher Indexierung sind nicht mehr möglich.
+werden, welche die Schnittstelle `IEnumerable` implementiert. Fehler mit falscher Indexierung sind nicht mehr möglich.
 
 **For Schleife:**
 
@@ -249,56 +332,34 @@ Note:
 ### Break und Continue
 
 ```csharp []
-// Schleife komplett beenden, Execute nie ausführen
+// Schleife komplett beenden, Execute nie ausführen.
 for (int i = 0; i < 10; i++) 
 {
-    if (i == 0) break;
+    if (i == 0) 
+    {
+        break;
+    }
     Execute("DoSomething");
 }
 ```
 
 ```csharp []
 // Execute nur beim ersten Durchlauf nicht ausführen.
-// Continue beginnt nächste Iteration
+// Continue beginnt nächste Iteration.
 for (int i = 0; i < 10; i++) 
 {
-    if (i == 0) continue;
+    if (i == 0) 
+    {
+        continue;
+    }
     Execute("DoSomething");
 }
 ```
 
 Mehr zum Thema [Sprunganweisungen](https://docs.microsoft.com/de-de/dotnet/csharp/language-reference/keywords/jump-statements)
 
----
-
-<!-- .slide: class="left" -->
-## Gültigkeitsbereich von Variablen
-
-**Eine Variable steht immer nur innerhalb ihres Geltungsbereichs zur Verfügung.**
-
-* keine globalen Variablen
-* innerhalb einer Klasse
-* innerhalb einer Methode. z.B. die übergebenen Argumente, aber auch für andere Zwischenwerte, die nur in dieser Methode benötigt werden.
-* innerhalb eines Blocks. z.B. Laufvariablen in for- und foreach-Schleifen oder auch eine Variable innerhalb eines if-Zweigs.
-
-Außerhalb dieses Bereichs steht eine Variable nicht zur Verfügung: Sie ist dort unbekannt (ihr Wert kann nicht genutzt werden).
-
----
-
-<!-- .slide: class="left" -->
-### Deklaration von Variablen
-
-Das führt zur Frage, wo eine Variable deklariert werden sollte. Dafür gilt vorrangig die Frage der Lesbarkeit:
-
-* Eine Variable, die nur innerhalb eines winzigen Code-Teils benötigt wird, sollte dort deklariert werden.
-
-* Eine Variable, die als [var](https://docs.microsoft.com/de-de/dotnet/csharp/language-reference/keywords/var) deklariert wird, kann erst dort deklariert werden, wo sie (erstmals) einen Wert zugewiesen bekommt.
-
-* Andere lokale Variablen sollten möglichst zusammenhängend am Anfang eines Code-Teils deklariert werden.
-
-* Auch Klassen Variablen sollten innerhalb der Klasse an einer sinnvollen Stelle stehen.
-
 Note:
-* **VS** Sichtbarkeit von Variablen zeigen (Klasse, Methode, If, ...).
 * Var
-* **ÜBUNG 4** Fakultät
+* **ÜBUNG 5** Fakultät
+
+

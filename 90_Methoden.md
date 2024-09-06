@@ -149,7 +149,7 @@ int Multiplikation(float, float, int) // --> Fehler, nicht möglich
 
 Note: 
 **VS** Methoden
-**ÜBUNG 7 und 8** Palindrom und Medienverwaltung 1
+**ÜBUNG 8 und 9** Palindrom und Medienverwaltung 1
 
 ---
 

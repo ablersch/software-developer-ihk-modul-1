@@ -9,8 +9,6 @@
 *.userosscache
 *.sln.docstates
 
-Uebung_03*
-Loesung_3
 Uebung_04*
 Loesung_4
 Uebung_05*
@@ -21,6 +19,8 @@ Uebung_07*
 Loesung_7
 Uebung_08*
 Loesung_8
+Uebung_09*
+Loesung_9
 
 # alte nicht mehr genutzte Uebungen
 old*
