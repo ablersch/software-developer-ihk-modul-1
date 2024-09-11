@@ -5,21 +5,7 @@ Hilfestellungen und Tipps für Visual Studio
 ---
 
 <!-- .slide: class="left" -->
-## Einrichtung
-
-Beim ersten Start:
-
-![Visual Studio Start](images/visual-studio-start.png)
-
-* Einloggen mit Account (wenn Account besteht)
-* Entwicklungseinstellungen: C#
-* Farbschema wählen (Empfehlung: Light)
-* Start Visual Studio
-
----
-
-<!-- .slide: class="left" -->
-## Project Solutions and Projects
+## Projekt und Solution
 
 ![Solutions und Projekte](images/VS-solutions-and-projects.png)
 
@@ -33,16 +19,6 @@ Ein Projekt in VS gruppiert logisch mehrere Dateien, die eine bestimmte Anwendun
 
 <!-- .slide: class="left" -->
 **Visual Studio Solution** stellt einen Container (eine Arbeitslösung) dar, in dem Projekte logisch gebunden sind. Der Zweck der Bindung dieser VS-Projekte besteht darin, eine Möglichkeit zu schaffen, dass der Code aus einem der Projekte mit dem Code aus den übrigen VS-Projekten zusammenarbeitet, um sicherzustellen, dass die Anwendung oder die Website korrekt funktioniert. Wenn das von uns entwickelte Softwareprodukt oder die Dienstleistung groß ist, wird es als VS-Lösung erstellt, und diese Lösung wird in Projekte (VS-Projekte) aufgeteilt, und innerhalb jedes Projekts gibt es Ordner mit Quelldateien.
-
----
-
-<!-- .slide: class="left" -->
-## Erstes Konsolenprojekt erstellen
-
-* Neues Projekt erstellen → Konsole-App (.NET 6)
-* aussagekräftigen Namen vergeben
-* Speicherort festlegen
-* Visual Studio erstellt ein leeres C\# Programm
 
 ---
 
@@ -95,7 +71,7 @@ Code formatieren: Bearbeiten &rarr; Erweitert &rarr; Dokument formatieren
 
 * F4 - Auf die Eigenschaften wechseln
 * F5 - Startet das Startprojekt mit Debugger
-* CRTL-F5 - Fürt den Code ohne Debugger aus. (Konsolenfenster bleibt mit der Aufforderung "Press any key to continue" offen)
+* CRTL-F5 - Führt den Code ohne Debugger aus. (Konsolenfenster bleibt mit der Aufforderung "Press any key to continue" offen)
 * F7 - von GUI in die Code-Bind Datei springen
 * F9 - Breakpoint setzen/entfernen
 * F12 - Gehe zur Definition

@@ -77,7 +77,7 @@ Programm ausführen (Übung dazu folgt).
 
 Seit C# 9 ist eine `Main` Methode nicht mehr notwendig. Es können [Top-Level Anweisungen](https://docs.microsoft.com/de-de/dotnet/csharp/fundamentals/program-structure/top-level-statements) verwendet werden um den Code zu minimieren.
 
-```csharp []
+```csharp
 Console.WriteLine("IHK"); 
 ```
 
@@ -105,17 +105,14 @@ Note:
 <!-- .slide: class="left" -->
 ## Codekonventionen Namen
 
-* Generell sind bei Namen nur Buchstaben erlaubt, keine Zahlen oder Sonderzeichen.
+* Es sind nur Buchstaben erlaubt, keine Zahlen oder Sonderzeichen.
+* aussagekräftige Namen verwenden
 * Pascal-Schreibweise (jeden Anfangsbuchstaben eines Wortes groß)
     * bei Klassen- und Methodennamen
-    * z.B.: **WriteToErrorLog()**
+    * z.B.: `WriteToErrorLog()`
 * Camel-Schreibweise (jeden Anfangsbuchstaben eines Wortes groß, außer beim ersten Wort)
     * bei Variablen
-    * z.B.: **string exportFilePath**
-* Großbuchstaben
-    * bei Konstanten
-    * z.B.:**APPLICATION_PATH = "xxxx"**
-* aussagekräftige Namen verwenden
+    * z.B.: `string exportFilePath`
 * Mehr zum Thema [Namenskonvention](https://docs.microsoft.com/de-de/dotnet/standard/design-guidelines/naming-guidelines)
 
 ---
@@ -155,7 +152,7 @@ Note:
 Es können Aufgaben markiert werden, welche später erledigt werden sollen.
 Visual Studio bietet dafür eine extra Ansicht wo alle [TODO's](https://docs.microsoft.com/de-de/visualstudio/ide/using-the-task-list?view=vs-2022) aufgeführt werden.
 
-```csharp []
+```csharp
 //TODO: Name anpassen
 string abcdef = string.Empty;
 ```
@@ -213,14 +210,14 @@ Mehr zum Thema [Datentypen](https://docs.microsoft.com/de-de/dotnet/csharp/langu
 
 Der `bool` Datentyp wird genutzt wenn nur zwei Werte möglich sind. z.B. Ja/nein, An/Aus oder Wahr/Falsch.
 
-```csharp []
+```csharp
 bool isOpen = true;
 Console.WriteLine(isOpen);  // Ausgabe: True
 ```
 
 Üblicher ist es jedoch, boolesche Werte aus booleschen Ausdrücken zurückzugeben, um bedingte Tests durchzuführen.
 
-```csharp []
+```csharp
 Console.WriteLine(10 > 9); // Ausgabe True, weil 10 größer ist wie 9
 ```
 
@@ -244,7 +241,7 @@ Einige wichtige Methoden zur Ein- und Ausgabe gehören zur Klasse [Console](http
 
 ## Beispiel
 
-```csharp []
+```csharp
 Console.Write("I");
 Console.Write("H");
 Console.Write("K");
@@ -278,7 +275,7 @@ Erstelle ein neues .Net Konsolen Projekt. Dieses soll in der Console nach deinem
 
 Zum Beispiel:
 
-```csharp []
+```csharp
 Wie ist dein Vorname?
 'Andreas'
 Wie ist dein Nachname?
@@ -297,7 +294,7 @@ Erst bei einem Tastendruck soll sich das Konsolenfenster schließen.
 
 Einer der häufigsten Fehler bei Anfängern ist **Schreiben außerhalb des Blocks der `Main()` Methode**. Dadurch kann die Entwicklungsumgebung oder der Compiler die angegebenen Befehle im Programm nicht richtig lesen.
 
-```csharp []
+```csharp
 static void Main(string[] args)
 {
 }
@@ -311,7 +308,7 @@ Console.WriteLine("Hello C#");
 
 Ein weiterer Fehler ist das Vertauschen von **Groß- und Kleinbuchstaben**. Diese sind jedoch für den Aufruf der Befehle und deren korrekter Funktion von Bedeutung.
 
-```csharp []
+```csharp
 static void Main(string[] args)
 {
     Console.Writeline("Hello C#");
@@ -327,7 +324,7 @@ Im obigen Beispiel ist `Writeline` falsch geschrieben und muss auf `WriteLine` k
 
 Das Fehlen von **einem Semikolon** \(`;`\) am Ende der Befehle ist eines der meisten Fehler bei Programmieranfänger. Das Überspringen dieses Zeichens führt zu einer **Fehlfunktion des Programms**.
 
-```csharp []
+```csharp
 static void Main(string[] args)
 {
     Console.WriteLine("Hello C#")
@@ -341,7 +338,7 @@ static void Main(string[] args)
 
 Das Fehlen von **Anführungszeichen** oder **das Fehlen von öffnenden oder schließenden Klammern** kann sich ebenfalls als Problem erweisen. Wie beim Semikolon führt auch hier das Problem zu einer **Fehlfunktion des Programms** oder insgesamt zu dessen Ausfall. Dieser Fehler macht sich bei größerem Code kaum bemerkbar.
 
-```csharp []
+```csharp
 static void Main(string[] args)
 {
     Console.WriteLine("Hello C#);
@@ -360,7 +357,7 @@ Dieses Programm wirft **einen Kompilierzeitfehler** und der Build wird fehlschla
 <!-- .slide: class="left" -->
 Ein weiteres Beispiel ist das Fehlen von `{` oder `}`. Es kann zu unerwarteten Fehlermeldungen führen, die nicht immer leicht zu verstehen sind.
 
-```csharp []
+```csharp
 class Example
 {
     static void Main(string[] args)

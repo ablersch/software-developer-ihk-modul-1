@@ -215,11 +215,11 @@ Console.WindowWidth = 150; // Setzt die Fenster Breite
 <!-- .slide: class="left" -->
 ### Konsole
 
-Mit ```ReadKey()``` kann die vom Benutzer gedrückte Taste abgerufen werden. Die Methode liefert ein ```ConsoleKeyInfo``` Objekt zurück. Damit kann auf die Eingabe zugegriffen werden mit folgenden Eigenschaften:
+Mit `ReadKey()` kann die vom Benutzer gedrückte Taste abgerufen werden. Die Methode liefert ein `ConsoleKeyInfo` Objekt zurück. Damit kann auf die Eingabe zugegriffen werden mit folgenden Eigenschaften:
 
-* Key: Es kann auf bestimmte Tasten über die Enumeration ```ConsoleKey``` geprüft werden.
+* Key: Es kann auf bestimmte Tasten über die Enumeration `ConsoleKey` geprüft werden.
 * KeyChar: Ruft das Unicode Zeichen ab (also das gedrückte Zeichen).
-* Modifiers: Es kann auf bestimmte Tasten (z.b. SHIFT, ALT, CONTROL) über die Enumeration ```ConsoleModifiers``` geprüft werden.
+* Modifiers: Es kann auf bestimmte Tasten (z.b. SHIFT, ALT, CONTROL) über die Enumeration `ConsoleModifiers` geprüft werden.
 
 ```csharp []
 // ReadKey aufrufen und den Wert in einer lokalen Variable speichern

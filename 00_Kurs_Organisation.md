@@ -17,7 +17,7 @@ Note:
   * Programmiervorkenntnisse
   * Warum dieser Kurs? Welche Ziele werden verfolgt?
 * Sitzplan erstellen
-* What's App Gruppe für schnellen Austausch wegen Termine
+* What's App Gruppe oder Email Adressen für schnellen Austausch wegen Terminausfall (Krankheit)
 
 ---
 
@@ -29,6 +29,7 @@ Note:
 
 Note: 
 * Anmeldung Computer
+* Git Repo öffnen, Link speichern!
 
 ---
 
@@ -60,6 +61,10 @@ Samstags:
 | Modul III - C# GUI und Webanwendungen| 25 |
 | Modul IV - Projektarbeit | 25 |
 
+Note:
+* Modul I: Grundlagen C# Programmierung, If-Anweisung, Schleifen, Methoden
+* Modul II: Objektorientierung, Vererbungen, Listen, LINQ, Dateioerationen
+* Modul III: GUI mit WPF, Systemprozesse, API, SQL
 ---
 
 <!-- .slide: class="left" -->
@@ -67,9 +72,9 @@ Samstags:
 
 * Nach den ersten drei Modulen erfolgt je eine schriftliche Prüfung
   * Multiple-choice Fragen
-  * Code Snippet schriftlich erstellen
-  * Fragen bzw Ablauf eines Codekonstrukts beantworten bzw beschreiben
-  * Fehlersuche
+  * Code-Snippet schriftlich erstellen
+  * Fragen bzw Ablauf eines Codekonstrukts beantworten bzw. beschreiben
+  * Fehlersuche in bereitgestelltem Code
 * Projektarbeit
   * Das gelernte in einem kleinen Projekt umsetzen
 
@@ -78,11 +83,12 @@ Samstags:
 <!-- .slide: class="left" -->
 ## Projektarbeit
 
-Das Projekt muss als reines Softwareprojekt mit einem Zeitaufwand von ca 30
+Das Projekt muss als reines Softwareprojekt mit einem Zeitaufwand von ca. 30
 Stunden ausgeführt werden. Es muss eine Projektdokumentation erstellt und
 abgegeben werden welche folgende Bestandteile beinhaltet:
 
-* Ziel und Aufgabe der Anwendung
+* Ziel der Anwendung
+* Aufbau der Anwendung
 * Dokumentation der Anwendung
 
 Die Anwendung muss beim Dozenten ausführbar sein. D.h. notwendige Abhängigkeiten (Datenbanken, Dateien, Konfiguration) mit abgeben.
@@ -95,7 +101,5 @@ Die Anwendung muss beim Dozenten ausführbar sein. D.h. notwendige Abhängigkeit
 Bearbeitung einer programmiertechnischen Aufgaben- bzw. Fragestellung, die
 
 * Selbständig oder in der Gruppe (wird das Projekt in der Gruppe erarbeitet muss definiert werden wer für welchen Teil zuständig ist)
-* in einer vorgegebenen Zeit
-* theoretisch fundiert und/oder anwendungsorientiert
-* unter Berücksichtigung des Kenntnisstandes
-* unter Berücksichtigung fachübergreifender Zusammenhänge bearbeitet wird.
+* in der vorgegebenen Zeit
+* unter Berücksichtigung des Kenntnisstandes bearbeitet wird.

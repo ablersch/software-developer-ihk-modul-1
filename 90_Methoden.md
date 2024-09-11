@@ -133,6 +133,13 @@ class Program
 ---
 
 <!-- .slide: class="left" -->
+## Methodensignatur
+
+![Methodensignatur](images/Methodensignatur.png)
+
+---
+
+<!-- .slide: class="left" -->
 ## Überladen (Overloading)
 
 Von **Überladen** spricht man, wenn mehrere Methoden den gleichen Namen
@@ -140,11 +147,27 @@ aber eine unterschiedliche Anzahl an Parametern oder unterschiedliche
 Parametertypen haben.
 
 ```csharp []
-void Multiplikation(double)
-void Multiplikation(int)
-void Multiplikation(int, int)
-void Multiplikation(float, float, int)
-int Multiplikation(float, float, int) // --> Fehler, nicht möglich
+void Multiplikation(double value)
+void Multiplikation(int value)
+void Multiplikation(int value, int result)
+void Multiplikation(float valueA, float valueB, int result)
+int Multiplikation(float valueA, float valueB, int result) // --> Fehler, nicht möglich
+```
+
+---
+
+<!-- .slide: class="left" -->
+## Optionale Parameter
+
+Ein optionaler Parameter hat einen Standardwert. Die Methode, die optionale Parameter hat, kann ohne diese Argumente aufgerufen werden. Sie können aber auch angegeben werden. Dann werden die Standardwerte überschrieben.
+
+```csharp []
+public static void MethodWithOptParams(int first, int second = 10)
+{
+    Console.WriteLine(first + second);
+}
+MethodWithOptParams(20); // Ergebnis ist 30
+MethodWithOptParams(20, 35); // Ergebnis ist 55
 ```
 
 Note: 
@@ -154,7 +177,7 @@ Note:
 ---
 
 <!-- .slide: class="left" -->
-## Ref Parameter
+## Ref und Out Parameter
 
 Es gibt zwei Möglichkeiten um Parameter an eine Methode zu übergeben:
 
@@ -164,18 +187,70 @@ Es gibt zwei Möglichkeiten um Parameter an eine Methode zu übergeben:
 Normalerweise wird **call by value** verwendet. Der Wert wird als **Kopie übergeben** und kann bearbeitet werden. Der ursprünglich übergebene Wert
 wird dabei nicht verändert.
 
+---
+
+<!-- .slide: class="left" -->
+## Beispiel: call by value
+
+```csharp []
+class Program
+{
+    public static void ChangeAndWrite(int number)
+    {
+        number = 10;
+        Console.WriteLine($"Inside ChangeAndWrite: {number}");
+    }
+    
+    static void Main(string[] args)
+    {
+        int number = 5;
+        Console.WriteLine($"Value before ChangeAndWrite call: {number}");
+        ChangeAndWrite(number);
+        Console.WriteLine($"Value after ChangeAndWrite call: {number}");
+        Console.ReadKey();
+    }
+}
+```
+
+```bash
+Value before ChangeAndWrite call: 5
+Inside ChangeAndWrite: 10
+Value after ChangeAndWrite call: 5
+```
+
+---
+
+<!-- .slide: class="left" -->
+## Ref Parameter
+
 Damit der ursprüngliche Wert ebenfalls
 geändert werden kann, kann der Wert als **Verweis** (Reference) übergeben
 werden. Dazu wird das Schlüsselwort [ref](https://docs.microsoft.com/de-de/dotnet/csharp/language-reference/keywords/ref) verwendet.
 
 ```csharp []
-int zahl = 2;
-Addiere(ref zahl);
-...
-Addiere(ref int zahlTemp) {
-    // die Variable Zahl wird überschrieben
-    zahlTemp = zahlTemp + 5;
+class Program
+{
+    public static void ChangeAndWrite(ref int number)
+    {
+        number = 10;
+        Console.WriteLine($"Inside ChangeAndWrite: {number}");
+    }
+    
+    static void Main(string[] args)
+    {
+        int number = 5;
+        Console.WriteLine($"Value before ChangeAndWrite call: {number}");
+        ChangeAndWrite(ref number);
+        Console.WriteLine($"Value after ChangeAndWrite call: {number}");
+        Console.ReadKey();
+    }
 }
+```
+
+```bash
+Value before ChangeAndWrite call: 5
+Inside ChangeAndWrite: 10
+Value after ChangeAndWrite call: 10
 ```
 
 ---
@@ -193,17 +268,27 @@ einen bestimmten Wert speichern soll z.B. wird dies bei TryParse verwendet.
 ```csharp []
 Addiere(10, 5, out int result);
 
-bool Addiere(int zahl1, int zahl2, out int result) {
+bool Addiere(int zahl1, int zahl2, out int result) 
+{
     result = zahl1 + zahl2;
 
-    if (result > 10){
+    if (result > 10)
+    {
          return true;
-    } else {
+    } 
+    else 
+    {
         return false;
     }
 
-    // return (result > 10)
+    // Gleiche Funktion nur kompakter: return (result > 10)
 }
 ```
 
 Note: **VS** Ref und out Parameter zeigen.
+
+---
+
+## TODO: Vergleich ref und out
+
+Note: https://code-maze.com/cshrap-ref-out-keywords/

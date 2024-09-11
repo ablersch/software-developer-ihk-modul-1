@@ -9,6 +9,10 @@ Was ist Microsoft .NET
 
 ![.NET historische Entwicklung](images/DotNetHistory.png)
 
+Note:
+* .Net Framework: geschlossener Quellcode von MS entwickelt.
+* .Net Core: Open Source und plattformunabhängig.
+* .Net: Vereinheitlichung und mehr Features verfügbar.
 ---
 
 <!-- .slide: class="left" -->
