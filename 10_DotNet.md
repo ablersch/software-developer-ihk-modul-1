@@ -13,6 +13,7 @@ Note:
 * .Net Framework: geschlossener Quellcode von MS entwickelt.
 * .Net Core: Open Source und plattformunabhängig.
 * .Net: Vereinheitlichung und mehr Features verfügbar.
+  
 ---
 
 <!-- .slide: class="left" -->
@@ -35,7 +36,7 @@ Note:
 
 * .NET Core ist plattformunabhängig (Cross-Plattform).
 
-* OpenSource Implementierung von .NET Framework (komplett auf GitHub verfügbar)
+* Open Source Implementierung vom .NET Framework (komplett auf [GitHub](https://github.com/dotnet) verfügbar)
 
 Note: 
 * Auf das wichtigste reduziert.

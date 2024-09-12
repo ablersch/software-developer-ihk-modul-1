@@ -36,9 +36,9 @@ Zur Erstellung eines C\# Programms wird eine Entwicklungsumgebung (IDE - Integra
 
 Note: 
 * Öffnen von Visual Studio Community + Registrierung
-* eventuell Einstellungen vornehmen
+* neues Projekt
 * Visual Studio Aufbau erklären
-
+* eventuell Einstellungen vornehmen
 
 ---
 
@@ -57,15 +57,16 @@ internal class Program // Bauplan für Abbildung von Objekten. Alles muss in ein
         Console.WriteLine("IHK"); // String Wert in der Console ausgeben.
     }
 } // Ende der Klasse.
-
 ```
+[Allgemeine Struktur eines C# Programmes](https://learn.microsoft.com/de-de/dotnet/csharp/fundamentals/program-structure/).
+Mehr zu [Main-Methode](https://learn.microsoft.com/de-de/dotnet/csharp/fundamentals/program-structure/main-command-line).
 
 Note: 
 * Static kann ausgeführt werden ohne Instanz einer Klasse. Daraus können selbst nur statische Methoden aufgerufen werden.
 * Alle Zeilen werden mit Strichpunkt abgeschlossen.
 * Jeder Block ist eingefasst in {}
 
-In **VS** zweigen wie ein neues Projekt erstellt wird (.NET Konsole ohne Top Level Statements).
+In **VS** zeigen wie ein neues Projekt erstellt wird (.NET Konsole ohne Top Level Statements).
 Programm ausführen (Übung dazu folgt).
 
 * AOT: schnellerer Start, benötigen keine .Net Runtime
@@ -75,7 +76,7 @@ Programm ausführen (Übung dazu folgt).
 <!-- .slide: class="left" -->
 ## Top-Level Anweisung
 
-Seit C# 9 ist eine `Main` Methode nicht mehr notwendig. Es können [Top-Level Anweisungen](https://docs.microsoft.com/de-de/dotnet/csharp/fundamentals/program-structure/top-level-statements) verwendet werden um den Code zu minimieren.
+Seit C# 9 ist eine `Main`-Methode nicht mehr notwendig. Es können [Top-Level Anweisungen](https://docs.microsoft.com/de-de/dotnet/csharp/fundamentals/program-structure/top-level-statements) verwendet werden um den Code zu minimieren.
 
 ```csharp
 Console.WriteLine("IHK"); 
@@ -83,6 +84,7 @@ Console.WriteLine("IHK");
 
 Note: 
 * Beispiel zeigen in **VS** 2022 mit der neuen Vorlage (.Net 8)
+* `Main`-Methode muss nicht mehr explizit erstellt werden.
 * Neu erstellen
 * Erstellte Ordner
 * Debug und Release Build (Ordner)
@@ -94,19 +96,23 @@ Note:
 
 * Klassen und Methoden können in sogenannten Namensräumen (engl. Namespaces) hierarchisch geordnet werden.
 
-* Damit auf Klassen eines [Namensraums](https://docs.microsoft.com/de-de/dotnet/csharp/programming-guide/namespaces/using-namespaces) zugegriffen werden kann, muss ein Verweis auf den Namensraum bestehen (siehe Projektmappenexplorer).
+![Namespace](images/Namespace.png)
+
+* Damit auf Klassen eines [Namensraums](https://docs.microsoft.com/de-de/dotnet/csharp/programming-guide/namespaces/using-namespaces) zugegriffen werden kann, muss ein Verweis auf den Namensraum bestehen.
 
 * Ein Namespace wird mit `using` eingebunden
 
-![Namespace](images/Namespace.png)
+```csharp
+using System;
+```
 
 ---
 
 <!-- .slide: class="left" -->
-## Codekonventionen Namen
+## Codekonventionen: Namensgebung
 
+* **aussagekräftige Namen** verwenden
 * Es sind nur Buchstaben erlaubt, keine Zahlen oder Sonderzeichen.
-* aussagekräftige Namen verwenden
 * Pascal-Schreibweise (jeden Anfangsbuchstaben eines Wortes groß)
     * bei Klassen- und Methodennamen
     * z.B.: `WriteToErrorLog()`
@@ -131,7 +137,7 @@ Note:
 <!-- .slide: class="left" -->
 ## XML-Kommentare
 
-* Durch die Verwendung von XML Tags kann der Code kommentiert und diese Kommentare auch mit Intelli-Sense angezeigt werden.
+* Durch die Verwendung von XML-Tags kann der Code kommentiert und diese Kommentare auch mit Intelli-Sense angezeigt werden.
 * Ein Export zu Dokumentationszwecken ist möglich.
 * Das Grundgerüst wird automatisch generiert.
 * Mehr zum Thema [XML-Kommentare](https://docs.microsoft.com/de-de/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)
@@ -186,6 +192,9 @@ Note: In **VS** zeigen
 | double    | 64 bit  | Speichert Kommazahlen mit 15 Stellen (–1,79769313486232E308 bis +1,79769313486232E308)    |
 | decimal   | 128 Bit  | Zahl mit Dezimalstellen 29 Stellen (–7,922816E28 bis +7,922816E28)    |
 
+
+Note: Welchen Wert z.B. eine Variable annehmen/speichern kann.
+
 ---
 
 <!-- .slide: class="left" -->
@@ -233,9 +242,13 @@ Einige wichtige Methoden zur Ein- und Ausgabe gehören zur Klasse [Console](http
 | Methode      | Beschreibung
 | -------------|-------------|
 | `Clear()`     | Konsolenfenster leeren
-| `ReadLine()` | Liest eine Zeile als **string** von der Konsole.
+| `ReadLine()` | Liest eine Zeile als String von der Konsole.
 | `Write()`    | Gibt einen String auf der Konsole ohne Zeilenumbruch aus.
 | `WriteLine()`| Entspricht Write() nur mit Zeilenumbruch.
+
+Note:
+* Zeigen Wert von Konsole in Variable speichern `ReadLine` 
+* `ReadKey` damit Konsole offen bleibt
 
 ---
 
@@ -247,7 +260,9 @@ Console.Write("H");
 Console.Write("K");
 // Ausgabe: IHK
 
-Console.WriteLine("IHK")
+Console.Write("\n");
+Console.WriteLine("IHK");
+// Ausgabe: IHK
 ``` 
 
 Note: 
@@ -259,23 +274,27 @@ Note:
 <!-- .slide: class="left" -->
 ## Übung 1
 
-Erstelle ein neues .Net Konsolen Projekt. Dieses soll in der Console:
+Erstelle ein neues .Net Konsolen-Projekt. Dieses soll in der Console:
 
-```Hallo IHK ULM```
+```bash
+Hallo IHK ULM
+```
 
 ausgeben.
 Erst bei einem Tastendruck soll sich das Konsolenfenster schließen.
+
+Note: `Console.ReadKey();`
 
 ---
 
 <!-- .slide: class="left" -->
 ## Übung 1.1
 
-Erstelle ein neues .Net Konsolen Projekt. Dieses soll in der Console nach deinem Vornamen und Nachnamen fragen. Beide Werte müssen dann eingegeben werden. Am Ende wird der Namen komplett ausgegeben.
+Erstelle ein neues .Net Konsolen Projekt. Dieses soll in der Console nach deinem Vornamen und Nachnamen fragen. Beide Werte müssen dann eingegeben werden. Am Ende wird der Name komplett ausgegeben.
 
 Zum Beispiel:
 
-```csharp
+```bash
 Wie ist dein Vorname?
 'Andreas'
 Wie ist dein Nachname?
