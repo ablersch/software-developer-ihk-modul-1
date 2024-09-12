@@ -57,19 +57,8 @@ Die Entwicklung auf verschiedenen Plattformen wurde vereinheitlicht.
 Note: 
 * Um mehr Kompatibilität zu gewährleisten wieder mehr Features z.B. WinForms.
 * Unabhängig von den Tools (z.B. VS Versionen)
-* (.Net 7) Vereinfachung und Cloud Anwendungen
-
----
-
-<!-- .slide: class="left" -->
-## .NET Architektur
-
-![DotNet Architektur](images/DotNetArchitecture.jpg)
-
-Note:
-* .Net Runtime und Mono Runtime bilden die Basis
-* BCL (Base Class Library) Teil der CLI
 * .Net 6 vereint .Net Framework, .Net Core und Mono
+* (.Net 7) Vereinfachung und Cloud Anwendungen
 
 ---
 
