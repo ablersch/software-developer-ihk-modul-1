@@ -9,7 +9,7 @@ Variablen und Operatoren
 
 In Variablen können Werte vom entsprechenden Datentypen gespeichert werden.
  
-```csharp []
+```csharp [1-2|4-5|6-7|8-9|10-11|12-13|14-15]
 // Deklaration (Name und Datentyp wird bekanntgegeben)
 int alter;
 
@@ -23,10 +23,13 @@ alter = 30;
 alter = 40;
 
 // Deklarieren und initialisieren
-double summe = 11.5;
+decimal euro = 11.15;
 
-// Wert benutzen (ausgeben)
-Console.Write(summe);
+// Wert benutzen/ausgeben
+Console.Write(euro);
+
+// Deklarieren und initialisieren über eine Consoleneingabe
+string name = Console.ReadLine();
 ```
 
 ---
