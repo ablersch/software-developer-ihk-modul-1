@@ -163,6 +163,22 @@ Mehr zum Thema [Switch](https://docs.microsoft.com/de-de/dotnet/csharp/language-
 ---
 
 <!-- .slide: class="left" -->
+## Übung 3
+
+1. Erstelle ein .Net Konsolen-Projekt. Es soll eine Zahl eingegeben werden. Es wird überprüft ob die Zahl einem Wochentag entspricht und dann der Name des Wochentags ausgegeben werden.
+
+1 = Montag
+2 = Dienstag
+...
+7 = Sonntag
+
+Wird eine ungültige Zahl eingegeben soll ein Fehlertext ausgegeben werden
+
+2. Bei einem Tag im Wochenende (Samstag und Sonntag) soll die Ausgabe "Wochenende" lauten.
+
+---
+
+<!-- .slide: class="left" -->
 ## Schleifen (Iterationen)
 
 Bei der Programmierung ist es oft erforderlich, einen Block von Befehlen mehrfach auszuführen.
@@ -236,14 +252,14 @@ Mehr zum Thema [For-Schleifen](https://docs.microsoft.com/de-de/dotnet/csharp/la
 Note: 
 * for (aufsteigender Counter) + tab + tab 
 * fore (absteigender Counter) + tab + tab
-* Für Übung notwendig: int n = int.Parse(Console.ReadLine());
+* Für Übung notwendig: `int n = int.Parse(Console.ReadLine());`
 
 ---
 
 <!-- .slide: class="left" -->
-## Übung 3
+## Übung 4
 
-1. Erstelle ein weiteres .Net Konsolen Projekt. Dieses fragt einen Zahlenwerte (int) in der Konsole ab.
+1. Erstelle ein .Net Konsolen-Projekt. Dieses fragt einen Zahlenwerte (int) in der Konsole ab.
 Nun soll in einer Schleife solange von 1 beginnend immer die nächste Zahl bis zum eingegebenen Wert ausgegeben werden.
 
 Beispiel:
@@ -303,7 +319,7 @@ werden, welche die Schnittstelle `IEnumerable` implementiert. Fehler mit falsche
 double [] meinArray = new double [] { 1.1, 1.2, 1.3, 1.4, 1.5 };
 for(int i=0; i < meinArray.Length; i++)
 {
-    Console.WriteLine($"{meinArray[i]}\n");
+    Console.Write($"{meinArray[i]}\n");
 }
 ```
 

@@ -9,7 +9,7 @@ Variablen und Operatoren
 
 In Variablen können Werte vom entsprechenden Datentypen gespeichert werden.
  
-```csharp [1-2|4-5|6-7|8-9|10-11|12-13|14-15]
+```csharp []
 // Deklaration (Name und Datentyp wird bekanntgegeben)
 int alter;
 
@@ -30,6 +30,9 @@ Console.Write(euro);
 
 // Deklarieren und initialisieren über eine Consoleneingabe
 string name = Console.ReadLine();
+
+// Text (string) in einen int-Wert umwandeln
+int input = int.Parse(Console.ReadLine());
 ```
 
 ---
@@ -57,8 +60,8 @@ mehr zum Thema [var](https://docs.microsoft.com/en-us/dotnet/csharp/language-ref
 Sinnvoll wenn die Variable immer den gleichen Wert behalten soll z.B. (PI).
 
 ```csharp []
-const double PI = 3.14159265359;
-const int PAGE_SIZE = 50;
+const double Pi = 3.14159265359;
+const int PageSize = 50;
 ```
 
 ---
@@ -74,7 +77,7 @@ Ein [Operator](https://docs.microsoft.com/de-de/dotnet/csharp/language-reference
 ## arithmetische Operatoren
 
 Erlauben mathematische Operationen auf Zahlen.
-Eine Division durch 0 gibt ein Programmfehler
+Eine Division durch 0 gibt ein Programmfehler.
 
 | Operator  | Name        | Beschreibung  |
 | ----------|-------------| --------------|
@@ -96,26 +99,28 @@ Note:
 * Punt vor Strich Regeln gelten.
     * Können durch Klammern umgangen werden.
     * Werte in der Klammer werden zuerst ausgeführt.
-* Der Modulo-Operator wird als Restoperator bezeichnet, weil er den Rest einer ganzzahligen Division zurückgibt.
+* Der Modulo-Operator wird als Restoperator bezeichnet, weil er den Rest einer ganzzahligen Division zurückgibt (10 % 3 = 1).
 
 ---
 
 <!-- .slide: class="left" -->
 ## Postfix und Prefix
 
-Das Prefix erhöht den Wert und fährt dann mit dem Ausdruck fort, während das Postfix den Ausdruck auswertet und dann die Inkrementierung durchführt.
+Das [Prefix](https://learn.microsoft.com/de-de/dotnet/csharp/language-reference/operators/arithmetic-operators#increment-operator-) erhöht den Wert und fährt dann mit dem Ausdruck fort.
 
-* Prefix `++x`
-* Postfix `x++`
+Während das Postfix den Ausdruck auswertet und dann die Inkrementierung durchführt.
+
+* Prefix: `++x`
+* Postfix: `x++`
 
 ```csharp []
 int a = 50;
-Console.WriteLine(++a);  // 51
-Console.WriteLine(a);    // 51
+Console.WriteLine(++a);  // Outout: 51
+Console.WriteLine(a);    // Output: 51
 
 a = 50;
-Console.WriteLine(a++);  // 50
-Console.WriteLine(a);    // 51
+Console.WriteLine(a++);  // Output: 50
+Console.WriteLine(a);    // Output: 51
 ```
 
 ---
@@ -139,7 +144,9 @@ Diese führen eine Aktion aus und weisen den Wert der Variable zu.
 [Beispiele logische bit Operatoren](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/boolean-logical-operators) und
 [Bitweise und Verschiebungs-Operatoren](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/bitwise-and-shift-operators)
 
-Note: & vergleicht immer beide Werte (Wobei && false liefert wenn bereits der erste Wert false ist).
+Note: `&` vergleicht immer beide Werte obwohl eventuell der erste schon `false` lieferte.
+
+Wobei `&&` `false` liefert wenn bereits der erste Wert `false` ist.
 
 ---
 
@@ -154,6 +161,11 @@ Note: & vergleicht immer beide Werte (Wobei && false liefert wenn bereits der er
 | <         | Kleiner als    |
 | >=        | Größer als oder gleich   |
 | <=        | Kleiner als oder gleich    |
+
+```csharp
+Console.WriteLine(5 == 7);
+// Output: false
+```
 
 ---
 
@@ -173,7 +185,7 @@ Note: & vergleicht immer beide Werte (Wobei && false liefert wenn bereits der er
 <!-- .slide: class="left" -->
 ## Übung 2
 
-1. Erstelle ein weiteres .Net Konsolen Projekt. Dieses fragt zwei Zahlenwerte (int) in der Konsole ab und gibt die Summe wieder aus.
+1. Erstelle ein .Net Konsolen-Projekt. Dieses fragt zwei Zahlenwerte (int) in der Konsole ab und gibt die Summe wieder aus.
 
 2. Zusätzlich soll verglichen werden ob die beiden Zahlenwerte identisch sind. Wenn ja soll "true" ausgegeben werden, ansonsten "false".
 

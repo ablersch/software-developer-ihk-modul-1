@@ -291,7 +291,7 @@ Note: `Console.ReadKey();`
 <!-- .slide: class="left" -->
 ## Übung 1.1
 
-Erstelle ein neues .Net Konsolen Projekt. Dieses soll in der Console nach deinem Vornamen und Nachnamen fragen. Beide Werte müssen dann eingegeben werden. Am Ende wird der Name komplett ausgegeben.
+Erstelle ein neues .Net Konsolen-Projekt. Dieses soll in der Console nach deinem Vornamen und Nachnamen fragen. Beide Werte müssen dann eingegeben werden. Am Ende wird der Name komplett ausgegeben.
 
 Zum Beispiel:
 
