@@ -32,7 +32,7 @@ Zur Erstellung eines C\# Programms wird eine Entwicklungsumgebung (IDE - Integra
 <!-- .slide: class="left" -->
 ### Visual Studio
 
-![Visual Studio](images/visual-studio.png)
+![Visual Studio](images/VisualStudio.png)
 
 Note: 
 * Öffnen von Visual Studio Community + Registrierung
@@ -58,6 +58,7 @@ internal class Program // Bauplan für Abbildung von Objekten. Alles muss in ein
     }
 } // Ende der Klasse.
 ```
+
 [Allgemeine Struktur eines C# Programmes](https://learn.microsoft.com/de-de/dotnet/csharp/fundamentals/program-structure/).
 Mehr zu [Main-Methode](https://learn.microsoft.com/de-de/dotnet/csharp/fundamentals/program-structure/main-command-line).
 
@@ -69,7 +70,7 @@ Note:
 In **VS** zeigen wie ein neues Projekt erstellt wird (.NET Konsole ohne Top Level Statements).
 Programm ausführen (Übung dazu folgt).
 
-* AOT: schnellerer Start, benötigen keine .Net Runtime
+AOT: schnellerer Start, benötigen keine .Net Runtime.
 
 ---
 
@@ -85,7 +86,7 @@ Console.WriteLine("IHK");
 Note: 
 * Beispiel zeigen in **VS** 2022 mit der neuen Vorlage (.Net 8)
 * `Main`-Methode muss nicht mehr explizit erstellt werden.
-* Neu erstellen
+* Neu erstellen (builden)
 * Erstellte Ordner
 * Debug und Release Build (Ordner)
 
@@ -159,7 +160,7 @@ Es können Aufgaben markiert werden, welche später erledigt werden sollen.
 Visual Studio bietet dafür eine extra Ansicht wo alle [TODO's](https://docs.microsoft.com/de-de/visualstudio/ide/using-the-task-list?view=vs-2022) aufgeführt werden.
 
 ```csharp
-//TODO: Name anpassen
+// TODO: Name anpassen
 string abcdef = string.Empty;
 ```
 

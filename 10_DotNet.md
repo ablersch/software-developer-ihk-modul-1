@@ -19,13 +19,13 @@ Note:
 <!-- .slide: class="left" -->
 ## .NET Framework
 
-* Das .NET Framework bezeichnet eine von Microsoft entwickelte Plattform zur Entwicklung und Ausführung von Anwendungen für das Web,Windows und Azure.
+* Das .NET Framework bezeichnet eine von Microsoft entwickelte Plattform zur Entwicklung und Ausführung von Anwendungen für das Web, Windows und Azure.
+
+* Es unterstützt eine Vielzahl an Programmiersprachen (C++, C#, F# und Visual Basic).
 
 * Windows only
 
 * Beim .NET Framework handelt es sich um geschlossenen Quellcode.
-
-* Es unterstützt eine Vielzahl an Programmiersprachen (C++, C#, F# und Visual Basic).
 
 ---
 
@@ -67,13 +67,16 @@ Note:
 <!-- .slide: class="left" -->
 ## Ablauf der Entwicklung eines .NET Programms
 
-* Jede der unterstützten Hochsprachen wird vom .NET Compiler in die Zwischensprache **IL**(Intermediate Language) übersetzt.
+* Jede der unterstützten Hochsprachen wird vom .NET Compiler in die Zwischensprache **Common Intermediate Language** (CIL) übersetzt.
 
-* Ein kompiliertes Programm besteht aus Anweisungen in der Sprache **IL**.
+* Ein kompiliertes Programm besteht aus Anweisungen in der Sprache **CIL**.
 
-* Der IL Code wird von einem sogenannten **Just-in-Time Compiler** (JIT-Compiler) in die Maschinensprache des jeweiligen Prozessors übersetzt.
+* Der CIL-Code wird von einem sogenannten **Just-in-Time Compiler** (JIT-Compiler) in die Maschinensprache des jeweiligen Prozessors übersetzt.
 
 * Das Programm wird dann von der Laufzeitumgebung **Common Language Runtime** (CLR) ausgeführt.
+
+Note:   
+Allgemein: Ein C#-Programm wird in einem Textformat geschrieben, und der Text des Programms wird als Quellcode bezeichnet. Es wird in eine ausführbare Datei kompiliert (z.B. Program.cs wird zu Program.exe kompiliert) oder es wird direkt aus der .NET-Umgebung ausgeführt.
 
 ---
 
@@ -85,7 +88,6 @@ Note:
 Note: 
 * IL (systemunabhängig) = Programmbefehle als Bytefolge
 * Just in Time: Auf Zielsystem zur Laufzeit. Übersetzt Bytecode in Maschinensprache (Maschinencode) des jeweiligen Prozessors.
-* Ein C#-Programm wird in einem Textformat geschrieben, und der Text des Programms wird als Quellcode bezeichnet. Es wird in eine ausführbare Datei kompiliert (z.B. Program.cs wird zu Program.exe kompiliert) oder es wird direkt aus der .NET-Umgebung ausgeführt.
 
 ---
 
