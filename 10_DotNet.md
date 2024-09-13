@@ -13,13 +13,13 @@ Note:
 * .Net Framework: geschlossener Quellcode von MS entwickelt.
 * .Net Core: Open Source und plattformunabhängig.
 * .Net: Vereinheitlichung und mehr Features verfügbar.
-  
+
 ---
 
 <!-- .slide: class="left" -->
 ## .NET Framework
 
-* Das .NET Framework bezeichnet eine von Microsoft entwickelte Plattform zur Entwicklung und Ausführung von Anwendungen für Windows und das Web.
+* Das .NET Framework bezeichnet eine von Microsoft entwickelte Plattform zur Entwicklung und Ausführung von Anwendungen für das Web,Windows und Azure.
 
 * Windows only
 
@@ -33,10 +33,11 @@ Note:
 ## .NET Core
 
 * Modernere Weiterentwicklung vom .NET Framework.
-
 * .NET Core ist plattformunabhängig (Cross-Plattform).
-
 * Open Source Implementierung vom .NET Framework (komplett auf [GitHub](https://github.com/dotnet) verfügbar)
+* Xamarin für mobile Anwendungen
+* Unity/Mono für Spieleentwicklung
+
 
 Note: 
 * Auf das wichtigste reduziert.
@@ -49,9 +50,9 @@ Note:
 <!-- .slide: class="left" -->
 ## .NET
 
-Zurück zu einem ".NET".
-
-Die Entwicklung auf verschiedenen Plattformen wurde vereinheitlicht.
+* Zukunft von .NET
+* Zurück zu einem ".NET".
+* Die Entwicklung auf verschiedenen Plattformen wurde vereinheitlicht.
 
 ![.NET](images/DotNet.jpg)
 

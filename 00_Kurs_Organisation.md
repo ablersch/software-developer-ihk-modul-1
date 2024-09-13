@@ -28,6 +28,7 @@ Note:
 * [Stundenplan](https://ablersch.github.io/software-developer-ihk-modul-1/Stundenplan_SoftwareDeveloper.pdf)
 
 Note: 
+* Skript online immer aktueller als der Ausdruck
 * Anmeldung Computer
 * Git Repo öffnen, Link speichern!
 
@@ -49,6 +50,10 @@ Samstags:
     * 10:00 - 10:15 Uhr
     * 11:30 - 12:00 Uhr
 
+Note:
+Abmelden wenn jemand keine Zeit hat
+Ablauf im Stundenplan ist nur ein grober Anhaltspunkt
+
 ---
 
 <!-- .slide: class="left"-->
@@ -63,8 +68,8 @@ Samstags:
 
 Note:
 * Modul I: Grundlagen C# Programmierung, If-Anweisung, Schleifen, Methoden
-* Modul II: Objektorientierung, Vererbungen, Listen, LINQ, Dateioerationen
-* Modul III: GUI mit WPF, Systemprozesse, API, SQL
+* Modul II: Objektorientierung, Vererbungen, Listen, LINQ, Dateioperationen
+* Modul III: GUI mit WPF, Systemprozesse, API, SQL, eigene Wünsche?
 ---
 
 <!-- .slide: class="left" -->
@@ -74,7 +79,7 @@ Note:
   * Multiple-choice Fragen
   * Code-Snippet schriftlich erstellen
   * Fragen bzw Ablauf eines Codekonstrukts beantworten bzw. beschreiben
-  * Fehlersuche in bereitgestelltem Code
+  * Fehlersuche im Code
 * Projektarbeit
   * Das gelernte in einem kleinen Projekt umsetzen
 
