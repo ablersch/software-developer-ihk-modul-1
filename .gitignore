@@ -9,7 +9,7 @@
 *.userosscache
 *.sln.docstates
 
-Uebung_04*
+#Uebung_04*
 Loesung_4
 Uebung_05*
 Loesung_5
