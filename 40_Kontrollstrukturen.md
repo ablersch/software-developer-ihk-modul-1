@@ -329,9 +329,9 @@ werden, welche die Schnittstelle `IEnumerable` implementiert. Fehler mit falsche
 
 ```csharp []
 double [] meinArray = new double [] { 1.1, 1.2, 1.3, 1.4, 1.5 };
-for(int i=0; i < meinArray.Length; i++)
+for(int i = 0; i < meinArray.Length; i++)
 {
-    Console.Write($"{meinArray[i]}\n");
+    Console.WriteLine(meinArray[i]);
 }
 ```
 
@@ -340,12 +340,9 @@ for(int i=0; i < meinArray.Length; i++)
 ```csharp []
 foreach (var meinWert in meinArray)
 {
-    Console.WriteLine($"{meinWert}\n");
+    Console.WriteLine(meinWert);
 }
 ```
-
-**Achtung:** Der foreach-Bezeichner "meinWert" ist schreibgeschützt. Er
-kann also nicht zur Zuweisung von Array Werten verwendet werden!
 
 Note: 
 * foreach + tab + tab
