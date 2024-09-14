@@ -168,11 +168,12 @@ Außerdem gibt es weitere Kommentar Arten wie z.B.:
 
 * UNDONE
 * HACK
-* FIXME
+* UnresolvedMergeConflict
 
 Note: In **VS** zeigen
 
 * Kommentare, XML Kommentare und TODO's
+* Es können eigene Task Kommentare erstellt werden Evironment --> Task List
 * Codevervollständigung
 * Intelli-Sense
 

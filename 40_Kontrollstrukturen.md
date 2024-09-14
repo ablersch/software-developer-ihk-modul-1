@@ -35,11 +35,11 @@ Zusätzlich zur `if`-Anweisung lässt sich ein `else`-Block definieren. Dieser w
 ```csharp []
 if (condition)
 {
-    // Codeblock der ausgeführt wird wenn die Bedinung true ist. 
+    // Codeblock der ausgeführt wird wenn die Bedingung true ist. 
 }
 else 
 {
-    // Codeblock der ausgeführt wird wenn die Bedinung false ist.
+    // Codeblock der ausgeführt wird wenn die Bedingung false ist.
 }
 
 ```
@@ -190,12 +190,24 @@ Schleifen sind praktisch, weil sie Zeit sparen, Fehler reduzieren und den Code b
 <!-- .slide: class="left" -->
 ### While-Schleife
 
-`While`-Schleifen können einen Codeblock so lange ausführen, bis eine bestimmte Bedingung ```true``` ist. Der Ausdruck wird vor jeder Ausführung geprüft.
+`While`-Schleifen führen einen Codeblock so lange aus, solange eine bestimmte Bedingung `true` ist. 
+
+Der Ausdruck wird vor jeder Ausführung geprüft.
+
+```csharp []
+while (condition)
+{
+    // Codeblock der ausgeführt wird wenn die Bedingung true ist. 
+    // Es muss darauf geachtet werden das die Bedingung irgendwann false wird
+}
+
+```
 
 ```csharp []
 int i = 0;
-while (i < 99 )
+while (i < 5 )
 {
+    // Code wird 5x ausgeführt
     Console.WriteLine("i hat den Wert: " + i);
     i++;
 }
