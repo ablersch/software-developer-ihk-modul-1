@@ -18,7 +18,7 @@ Arrays werden definiert in dem nach dem Datentyp eckige Klammern folgen.
 
 `string[] cars`
 
-Dieses Array nimmt Elemente vom Datentyp string auf.
+Dieses Array nimmt Elemente vom Datentyp `string` auf.
 Werte können direkt beim anlegen dem Array hinzugefügt werden.
 
 ```csharp []

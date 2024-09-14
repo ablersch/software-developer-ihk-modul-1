@@ -118,16 +118,19 @@ Bei der `Switch`-Anweisung wird der Ausdruck in der Anweisung ausgewertet und in
 int caseSwitch = 1;
 switch (caseSwitch)
 {
-    case 1:
+    case < 0: // Case Fall muss eindeutig sein
         Console.WriteLine("Case 1");
         break; // Beendet die Switch Ausführung
-    case 2:
+    case 1:
+        Console.WriteLine("Case 1");
+        break;
+    case 2: 
         Console.WriteLine("Case 2");
         break;
     case > 2:
-        Console.WriteLine("Case 3");
+        Console.WriteLine("Case > 2");
         break;
-    default: // Optional, wird ausgeführt wenn kein Case Fall zutrifft
+    default: // Wird ausgeführt wenn kein Case Fall zutrifft
         Console.WriteLine("Default case");
         break;
 }
@@ -136,7 +139,8 @@ switch (caseSwitch)
 Note: 
 * switch + tab + tab
 * Es sind auch weitere Musterabgleiche möglich.
-
+* Welcher Wert geht in den Default Zweig?  --> 0
+* Durchrutschen möglich mit `case 3:` ohne Code und break.
 ---
 
 <!-- .slide: class="left" -->
@@ -165,16 +169,23 @@ Mehr zum Thema [Switch](https://docs.microsoft.com/de-de/dotnet/csharp/language-
 <!-- .slide: class="left" -->
 ## Übung 3
 
-1. Erstelle ein .Net Konsolen-Projekt. Es soll eine Zahl eingegeben werden. Es wird überprüft ob die Zahl einem Wochentag entspricht und dann der Name des Wochentags ausgegeben werden.
+1. Erstelle ein .Net Konsolen-Projekt. Es soll eine Zahl eingegeben werden. Es wird überprüft ob die Zahl einem Wochentag entspricht und dann der Name des Wochentags ausgegeben werden. Nutzen Sie hierfür die `switch`-Anweisung.
 
-1 = Montag
-2 = Dienstag
-...
-7 = Sonntag
+- 1 = Montag
+- 2 = Dienstag
+- ...
+- 7 = Sonntag
 
 Wird eine ungültige Zahl eingegeben soll ein Fehlertext ausgegeben werden
 
 2. Bei einem Tag im Wochenende (Samstag und Sonntag) soll die Ausgabe "Wochenende" lauten.
+
+### Beispiel Ausgabe:
+```bash
+Eine Zahl 1-7 eingeben:
+2
+Dienstag
+```
 
 ---
 
@@ -198,7 +209,7 @@ Der Ausdruck wird vor jeder Ausführung geprüft.
 while (condition)
 {
     // Codeblock der ausgeführt wird wenn die Bedingung true ist. 
-    // Es muss darauf geachtet werden das die Bedingung irgendwann false wird
+    // Es muss darauf geachtet werden das die Bedingung irgendwann false wird.
 }
 
 ```
@@ -364,7 +375,7 @@ for (int i = 0; i < 10; i++)
     {
         break;
     }
-    Execute("DoSomething");
+    Console.WriteLine("Ausgabe");
 }
 ```
 
@@ -377,14 +388,13 @@ for (int i = 0; i < 10; i++)
     {
         continue;
     }
-    Execute("DoSomething");
+    Console.WriteLine("Ausgabe");
 }
 ```
 
 Mehr zum Thema [Sprunganweisungen](https://docs.microsoft.com/de-de/dotnet/csharp/language-reference/keywords/jump-statements)
 
 Note:
-* Var
 * **ÜBUNG 6** Fakultät
 
 
