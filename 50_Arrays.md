@@ -80,4 +80,4 @@ foreach (var car in cars)
 }
 ```
 
-Note: **ÜBUNG 6** Arrays
+Note: **ÜBUNG 7** Arrays

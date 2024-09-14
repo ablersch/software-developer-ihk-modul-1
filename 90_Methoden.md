@@ -172,7 +172,7 @@ MethodWithOptParams(20, 35); // Ergebnis ist 55
 
 Note: 
 **VS** Methoden
-**ÜBUNG 8 und 9** Palindrom und Medienverwaltung 1
+**ÜBUNG 9 und 10** Palindrom und Medienverwaltung 1
 
 ---
 

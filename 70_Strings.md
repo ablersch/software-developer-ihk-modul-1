@@ -240,4 +240,4 @@ if (info.KeyChar == 'a')
 Note: 
 * Daten von der Console lesen. 
 * ConsoleKeyInfo zeigen.
-* **ÜBUNG 7** Passwort
+* **ÜBUNG 8** Passwort

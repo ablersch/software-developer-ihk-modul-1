@@ -315,7 +315,7 @@ for (int row = 1; row <= n; row++)
 }
 ```
 
-Note: **Übung 4** verschachtelte Schleife
+Note: **Übung 5** verschachtelte Schleife
 
 ---
 
@@ -388,6 +388,6 @@ Mehr zum Thema [Sprunganweisungen](https://docs.microsoft.com/de-de/dotnet/cshar
 
 Note:
 * Var
-* **ÜBUNG 5** Fakultät
+* **ÜBUNG 6** Fakultät
 
 
