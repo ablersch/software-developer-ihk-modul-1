@@ -49,8 +49,6 @@ Note:
 <!-- .slide: class="left" -->
 ## Methode aufrufen
 
-Name der Methode mit () und ;. 
-
 Eine Methode kann mehrfach aufgerufen werden.
 
 ```csharp []
@@ -77,9 +75,9 @@ static void MyMethod(string name)
 
 static void Main(string[] args)
 {
-  MyMethod("Andreas");
-  MyMethod("Lea");
-  MyMethod("Ben");
+    MyMethod("Andreas");
+    MyMethod("Lea");
+    MyMethod("Ben");
 }
 ```
 
@@ -137,6 +135,7 @@ class Program
 
 ![Methodensignatur](images/Methodensignatur.png)
 
+Note: **ÜBUNG** BMI
 ---
 
 <!-- .slide: class="left" -->
@@ -172,123 +171,4 @@ MethodWithOptParams(20, 35); // Ergebnis ist 55
 
 Note: 
 **VS** Methoden
-**ÜBUNG 9 und 10** Palindrom und Medienverwaltung 1
-
----
-
-<!-- .slide: class="left" -->
-## Ref und Out Parameter
-
-Es gibt zwei Möglichkeiten um Parameter an eine Methode zu übergeben:
-
-* Parameterübergabe als Wert (**call by value**)
-* Parameterübergabe als Verweis (**call by reference**)
-
-Normalerweise wird **call by value** verwendet. Der Wert wird als **Kopie übergeben** und kann bearbeitet werden. Der ursprünglich übergebene Wert
-wird dabei nicht verändert.
-
----
-
-<!-- .slide: class="left" -->
-## Beispiel: call by value
-
-```csharp []
-class Program
-{
-    public static void ChangeAndWrite(int number)
-    {
-        number = 10;
-        Console.WriteLine($"Inside ChangeAndWrite: {number}");
-    }
-    
-    static void Main(string[] args)
-    {
-        int number = 5;
-        Console.WriteLine($"Value before ChangeAndWrite call: {number}");
-        ChangeAndWrite(number);
-        Console.WriteLine($"Value after ChangeAndWrite call: {number}");
-        Console.ReadKey();
-    }
-}
-```
-
-```bash
-Value before ChangeAndWrite call: 5
-Inside ChangeAndWrite: 10
-Value after ChangeAndWrite call: 5
-```
-
----
-
-<!-- .slide: class="left" -->
-## Ref Parameter
-
-Damit der ursprüngliche Wert ebenfalls
-geändert werden kann, kann der Wert als **Verweis** (Reference) übergeben
-werden. Dazu wird das Schlüsselwort [ref](https://docs.microsoft.com/de-de/dotnet/csharp/language-reference/keywords/ref) verwendet.
-
-```csharp []
-class Program
-{
-    public static void ChangeAndWrite(ref int number)
-    {
-        number = 10;
-        Console.WriteLine($"Inside ChangeAndWrite: {number}");
-    }
-    
-    static void Main(string[] args)
-    {
-        int number = 5;
-        Console.WriteLine($"Value before ChangeAndWrite call: {number}");
-        ChangeAndWrite(ref number);
-        Console.WriteLine($"Value after ChangeAndWrite call: {number}");
-        Console.ReadKey();
-    }
-}
-```
-
-```bash
-Value before ChangeAndWrite call: 5
-Inside ChangeAndWrite: 10
-Value after ChangeAndWrite call: 10
-```
-
----
-
-<!-- .slide: class="left" -->
-## Out Parameter (Ausgabeparameter)
-
-Ausgabeparameter ([out](https://docs.microsoft.com/de-de/dotnet/csharp/language-reference/keywords/out-parameter-modifier)) verhalten sich genau wie ref-Parameter, nur dass diesen nicht initialisierte Variablen übergeben werden können.
-
-Dieser Parameter wurden spezielle für den Fall entwickelt das eine
-Methode mehrere Werte zurückgeben soll. Dieser Parameter übergibt der
-Methode keinen Wert, sondern teilt ihr mit, in welcher Variable sie
-einen bestimmten Wert speichern soll z.B. wird dies bei TryParse verwendet.
-
-```csharp []
-Addiere(10, 5, out int result);
-
-bool Addiere(int zahl1, int zahl2, out int result) 
-{
-    result = zahl1 + zahl2;
-
-    if (result > 10)
-    {
-         return true;
-    } 
-    else 
-    {
-        return false;
-    }
-
-    // Gleiche Funktion nur kompakter: return (result > 10)
-}
-```
-
-Note: **VS** Ref und out Parameter zeigen.
-
----
-
-## TODO: Vergleich ref und out
-
-Note: https://code-maze.com/cshrap-ref-out-keywords/
+**ÜBUNG** Palindrom

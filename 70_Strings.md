@@ -1,6 +1,6 @@
-# Strings
+# Strings und Chars
 
-Zeichenketten in C#
+Zeichenketten und Zeichen in C#
 
 ---
 
@@ -22,9 +22,9 @@ Console.Write(zeichenkette); // Hallo C# - Fans
 ---
 
 <!-- .slide: class="left" -->
-## String Zugriff
+## String Zugriff über Index
 
-* Über Index
+* Ein Zeichen über Index abrufen
 
 ```csharp []
 string text = "Hello";
@@ -51,52 +51,65 @@ if (text.Equals("IHK Ulm"))  // => true
 if (text.Equals("ihk ulm", StringComparison.OrdinalIgnoreCase))  // => true
 ```
 
+* Prüfen ob der String ein Zeichen beinhaltet
+  
+```csharp []
+if (text.Contains("U")) // => true
+```
+
 * Länge eines Strings ermitteln
 
 ```csharp []
 int i = text.Length;
 ```
 
+---
+
+<!-- .slide: class="left" -->
+## String Methoden
+
 * Umwandeln in String
 
 ```csharp []
 text = text + i;     //.ToString()
-text += i;
+// Alternativ: text += i;
 ```
 
 * Teilstring von Index 0 bis Index 2
 
 ```csharp []
-text = text.Substring(0, text.IndexOf("K") +1); // Array Index beginnt bei 0
+text = text.Substring(0, text.IndexOf("K") + 1); // Array Index beginnt bei 0
 ```
 
 * Teile eines Strings ersetzen
 
 ```csharp []
 text = text.Replace("H", "A");
- ```
+```
 
 Note: weitere Methoden zeigen in **VS**. z.B. string.IsNullOrEmpty, Trim, Remove, ToUpper ...
+
+**ÜBUNG** Email
 
 ---
 
 <!-- .slide: class="left" -->
 ## String Konvertierung
 
-* Konvertierung eines Strings in int mit der Klasse **Convert**
+* Konvertierung eines Strings in `int` mit der Klasse `Convert`
 
 ```csharp []
 string text = "580";
 int zahl = Convert.ToInt32(text);
 ```
 
-* Konvertierung mit **Parse**
+* Konvertierung mit `Parse`
 
 ```csharp []
-zahl = Int32.Parse(text);
+zahl = int.Parse(text);
 ```
 
-* Prüfen ob Konvertierung möglich ist mit **TryParse**
+* Prüfen ob Konvertierung möglich ist mit `TryParse`
 
 ```csharp []
 bool result = Int32.TryParse(text, out var zahl);  
@@ -105,7 +118,7 @@ if (!result) {
 }
 ```
 
-* Konvertierung von **double** nach int
+* Konvertierung von `double` nach `int`
 
 ```csharp []
 double zahl = 12.66789;
@@ -198,46 +211,76 @@ Console.Write("You pressed \n");
 ---
 
 <!-- .slide: class="left" -->
-## Konsole
+## Char
 
-Die Klasse `Console` kann nicht nur Daten lesen und schreiben sondern auch:
+Das Schlüsselwort `char` (Character) repräsentiert ein einzelnes Zeichen.
 
-```csharp []
-Console.BackgroundColor = ConsoleColor.DarkRed; //Hintergrundfarbe setzen
-Console.ForegroundColor = ConsoleColor.White: //Vordergrundfarbe setzen
-Console.Title = "IHK Ulm"; // Setzt den Titel im Konsolenfenster
-Console.WindowHeight = 50; // Setzt die Fenster Höhe
-Console.WindowWidth = 150; // Setzt die Fenster Breite
+Verwendet das [Unicode-Zeichensystem (UTF-16 )](https://www.unicode.org/charts/PDF/U0000.pdf) Dadurch können Zeichen aus nahezu allen Schriftsprachen der Welt dargestellt werden, einschließlich Sonderzeichen, Symbole und Emojis.
+
+```csharp
+char a = 'A';
+char a = '\u0041'; // Unicode für A (Hexadezimal)
+char a = (char)65; // Unicode für A (Dezimal)
+char heart = '\u2665'; // Unicode für das Herzsymbol
+
+char[] ch = new char[2];
+ch[0] = 'A';        // Character literal
+ch[1] = 'B';        // Character literal
 ```
+
+Note: `(char)65` bezieht sich sowohl auf einen ASCII- als auch auf einen Unicode-Wert. In ASCII steht 65 für das Zeichen „A“. Unicode ist als Obermenge von ASCII konzipiert, so dass das Zeichen „A“ in Unicode ebenfalls den Codepunkt 65 in Dezimalschrift hat. Somit ist (char)65 sowohl in ASCII als auch in Unicode gültig, da Unicode den ursprünglichen ASCII-Satz in seinen ersten 128 Werten umfasst.
+
+Hex wird in der Regel in Unicode-Notation verwendet, geschrieben als „U+0041“. https://www.asciitable.com/
 
 ---
 
 <!-- .slide: class="left" -->
-### Konsole
+## Konvertierung in numerische Werte
 
-Mit `ReadKey()` kann die vom Benutzer gedrückte Taste abgerufen werden. Die Methode liefert ein `ConsoleKeyInfo` Objekt zurück. Damit kann auf die Eingabe zugegriffen werden mit folgenden Eigenschaften:
+Ein `char` kann in seinen entsprechenden numerischen Wert (den Unicode-Codepunkt) konvertiert werden, da er intern als Ganzzahl gespeichert wird:
 
-* Key: Es kann auf bestimmte Tasten über die Enumeration `ConsoleKey` geprüft werden.
-* KeyChar: Ruft das Unicode Zeichen ab (also das gedrückte Zeichen).
-* Modifiers: Es kann auf bestimmte Tasten (z.b. SHIFT, ALT, CONTROL) über die Enumeration `ConsoleModifiers` geprüft werden.
+```csharp
+char letter = 'A';
+int unicodeValue = (int)letter;
+Console.WriteLine(unicodeValue); // Ausgabe: 65
+```
 
-```csharp []
-// ReadKey aufrufen und den Wert in einer lokalen Variable speichern
-// Dann prüfen ob die gedrückte Taste ESC war
-ConsoleKeyInfo info = Console.ReadKey();
-if (info.Key == ConsoleKey.Escape)
-{
-    Console.WriteLine("You pressed escape!");
-}
-// Prüfen auf den Buchstaben 'a'
-if (info.KeyChar == 'a')
-{
-    Console.WriteLine("You pressed a");
-}
+Umgekehrt kann eine Zahl auch in ein Zeichen konvertiert werden:
 
+```csharp
+int code = 65;
+char letter = (char)code;
+Console.WriteLine(letter); // Ausgabe: 'A'
+```
+---
+
+<!-- .slide: class="left" -->
+## Char Methoden
+
+* String in `char` konvertieren
+```csharp
+char sign = char.Parse("A");
+```
+
+* Prüfen ob ein `char` ein Buchstabe ist
+  
+```csharp
+Char.IsLetter('B')
+```
+
+* Prüfen ob ein `char` eine Zahl ist
+  
+```csharp
+Char.IsDigit('1')
+```
+
+* Zeichen in Groß - Kleinbuchstaben wandeln
+```csharp
+Char.ToUpper('a')
+Char.ToLower('A')
 ```
 
 Note: 
-* Daten von der Console lesen. 
-* ConsoleKeyInfo zeigen.
-* **ÜBUNG 8** Passwort
+* Mit einer Schleife einen String als char weiterverarbeiten.
+`foreach (char c in input){}`
+* **ÜBUNG** Pangramm

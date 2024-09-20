@@ -51,3 +51,4 @@ Das führt zur Frage, wo eine Variable deklariert werden sollte. Dafür gilt vor
 
 Note:
 * **VS** Sichtbarkeit von Variablen zeigen (Klasse, Methode, If, ...).
+* **ÜBUNG** Medienverwaltung 1

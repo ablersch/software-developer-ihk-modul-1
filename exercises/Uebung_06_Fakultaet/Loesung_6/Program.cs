@@ -14,7 +14,7 @@ internal class Program
         // Sonderfall: 0!
         ulong result = 1;
 
-        if (input >= 0)
+        if (input > 1)
         {
             for (ulong i = 1; i <= input; i++)
             {
@@ -22,15 +22,12 @@ internal class Program
                 // Alternativ: result *= i;
             }
         }
-        else
-        {
-            result = 0;
-        }
 
         Console.Write("Die Fakultät der Zahl ");
         Console.Write(input);
         Console.Write(" ist: ");
         Console.Write(result);
+
         Console.WriteLine("\nTaste drücken um zu beenden");
         Console.ReadKey();
     }

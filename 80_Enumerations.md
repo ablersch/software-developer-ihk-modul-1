@@ -7,10 +7,8 @@ Enumerationtypen
 <!-- .slide: class="left" -->
 ## Was sind Enumerations
 
-[Enumerations](https://docs.microsoft.com/de-de/dotnet/csharp/programming-guide/enumeration-types) helfen Programme leichter lesbar zu gestalten. Meist werden
-Konstanten oder Optionen damit abgebildet. Alle Werte sind schreibgeschützt.
-
-Alle Werte in einer Enumeration werden auf eine Zahl abgebildet. Wird kein Wert definiert wird bei 0 begonnen.
+Eine [Enumeration](https://docs.microsoft.com/de-de/dotnet/csharp/programming-guide/enumeration-types) (Aufzählung) in C# ist ein Datentyp, der eine Sammlung von benannten Ganzzahlen (Integer-Werten) definiert. 
+Mit Enumerations können Sie Werte definieren, die in einem bestimmten Kontext sinnvoll sind und einen eindeutigen Namen haben, was den Code lesbarer und leichter verständlich macht.
 
 ---
 
@@ -18,63 +16,74 @@ Alle Werte in einer Enumeration werden auf eine Zahl abgebildet. Wird kein Wert 
 ## Enumeration Definieren
 
 ```csharp []
-// Es werden intern Werte von 0 -6 vergeben
-public enum Days { Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday }
+public enum Status 
+{ 
+    NotStarted,     // default Wert: 0
+    InProgress,     // default Wert: 1
+    OnHold, 
+    Completed
+}
 
 // Internen Wert anpassen
-public enum Days { Monday = 1, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday }
-
+public enum Status 
+{ 
+    NotStarted = 100,
+    InProgress = 200,
+    OnHold = 300, 
+    Completed = 400
+}
 ```
+
+---
+
+<!-- .slide: class="left" -->
+## Warum Enumerations verwenden
+
+* Lesbarkeit: Statt eine Zahl zu verwenden, geben Enums benannte Werte zurück, die den Code lesbarer machen.
+
+* Vermeidung von Fehlern: Wenn Sie eine Liste von zulässigen Werten haben, stellen Enumerations sicher, dass nur gültige Werte verwendet werden.
+
+Note: Sie sind besonders nützlich, wenn Sie mit festen Werten arbeiten, die nicht geändert werden sollen.
 
 ---
 
 <!-- .slide: class="left" -->
 ## Beispiel
 
+<!--.element: class="stretch" -->
 ```csharp []
-using System;
-
 class Program
 {
-    enum ErrorStatus
-    {
-        None=100,  
-        Trivial=200,  
-        Important=300,  
-        Critical=900
-    };
+    public enum WeekDays 
+    { 
+        Monday,     // default Wert: 0
+        Tuesday,    // default Wert: 1
+        Wednesday, 
+        Thursday, 
+        Friday, 
+        Saturday, 
+        Sunday      // default Wert: 6
+    }
 
     static void Main()
     {
-        // Neue Variable erstellen und Enum Wert zuweisen
-        ErrorStatus eStatus = ErrorStatus.Critical;
+        // Verwendung der Enumeration
+        Wochentag heute = Wochentag.Monday;
 
-        if (eStatus == ErrorStatus.Trivial)
+        // Umwandeln von einem Integer-Wert zu einer Enumeration
+        heute = (WeekDays)6;
+
+        // Ausgabe des heutigen Tages. Name des Enums + den integer Wert
+        Console.WriteLine("Heute ist: " + heute + "und hat den Wert " + (int)heute);
+
+        if (heute == Wochentag.Saturday || heute == Wochentag.Sunday) 
         {
-            Console.WriteLine("Not true");
-        }
-        else if (eStatus == ErrorStatus.Critical)
-        {
-            Console.WriteLine("True");
-        }
-        // Name der Enum und den Wert ausgeben
-        Console.WriteLine($"Der Status Code ist {eStatus} mit dem Wert {(int)eStatus}");
+            Console.WriteLine("Wochenende");
         }
     }
 }
 ```
 
-Note: **VS** Enum
-
----
-
-<!-- .slide: class="left" -->
-## Enum Übung
-
-Erstellen Sie ein kleines Konsolen Programm wo ein Level (Werte 1-3) für eine Person abgefragt wird. Dieser Wert soll in einer Enum Variable gespeichert werden. Danach die Bezeichnung des zugehörigen Enum Wertes ausgeben.
-
-Enum Werte:
-
-* 1 = Beginner
-* 2 = Advanced
-* 3 = Master
+Note: 
+* **VS** Enum demonstrieren
+* **Übung** Enum

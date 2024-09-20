@@ -4,7 +4,12 @@
 
 Erstellen Sie eine Konsolenanwendung welche die Fakultät einer Zahl berechnet.
 
-Die Fakultät einer positiven Ganzzahl n ist definiert als 1 * 2 * 3 * … * (n-1) * n. Die Fakultät von 0 beträgt 1, die Fakultät von negativen Zahlen und nicht ganzen Zahlen ist nicht definiert.
+Die Fakultät einer Zahl n (geschrieben als n!) ist das Produkt aller natürlichen Zahlen von 1 bis n. Kurz gesagt: Die Fakultät multipliziert alle ganzen Zahlen von 1 bis zu der gegebenen Zahl n.
+
+Ein wichtiger Sonderfall ist die Fakultät von 0:
+0! = 1
+
+Die Fakultät von negativen Zahlen und nicht ganzen Zahlen ist nicht definiert.
 
 ### Beispiele
 
