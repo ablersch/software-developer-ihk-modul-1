@@ -44,7 +44,9 @@ Note: Collection Expression seid C# 12 `string[] names = ["Julia", "Anna", "Thom
 <!-- .slide: class="left" -->
 ## Zugriff auf die Elemente im Array
 
-Elemente in einem Array werden mit einem Index angesprochen und verändert. Dieser beginnt immer bei 0! D.h. das erste Element des Arrays ist auf dem Index 0. Das dritte Element den Index 2.
+Elemente in einem Array werden mit einem Index angesprochen und verändert. Dieser beginnt immer bei 0. 
+
+D.h. das erste Element des Arrays ist auf dem Index 0. Das dritte Element hat den Index 2.
 
 ```csharp []
 string[] animals = new string[3];
@@ -113,7 +115,7 @@ Ein `string` kann sehr leicht in ein Array konvertiert werden:
 
 ```csharp
 string names = "Anna;Tom;Kate;Tobias";
-string[] namesArray = input.Split(';');
+string[] namesArray = names.Split(';');
 ```
 
 Note: **ÜBUNG 8** Temperaturstatistik 

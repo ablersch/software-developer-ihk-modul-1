@@ -24,7 +24,7 @@ Console.Write(zeichenkette); // Hallo C# - Fans
 <!-- .slide: class="left" -->
 ## String Zugriff über Index
 
-* Ein Zeichen über Index abrufen
+* Ein Zeichen (`char`) über Index abrufen
 
 ```csharp []
 string text = "Hello";
@@ -87,7 +87,13 @@ text = text.Substring(0, text.IndexOf("K") + 1); // Array Index beginnt bei 0
 text = text.Replace("H", "A");
 ```
 
-Note: weitere Methoden zeigen in **VS**. z.B. string.IsNullOrEmpty, Trim, Remove, ToUpper ...
+Note: 
+weitere Methoden zeigen in **VS**. z.B.: 
+* string.IsNullOrEmpty
+* Trim 
+* Remove
+* ToUpper 
+* ...
 
 **ÜBUNG** Email
 
@@ -113,7 +119,8 @@ zahl = int.Parse(text);
 
 ```csharp []
 bool result = Int32.TryParse(text, out var zahl);  
-if (!result) {
+if (!result) 
+{
     Console.WriteLine("Umwandlung fehlgeschlagen");
 }
 ```
@@ -184,7 +191,7 @@ Console.WriteLine($"Hallo es ist jetzt {DateTime.Now:t}");// Hallo es ist jetzt 
 ```
 
 Mehr zum Thema [String Formatierung 1](https://docs.microsoft.com/de-de/dotnet/standard/base-types/formatting-types) und 
-[String Formatierung 2](http://www.ne555.at/2014/index.php/pc-programmierung/einfuehrung-c/274-strings-formatieren-mit-c.html)
+[String Formatierung 2](https://freeasphosting.net/format-string-in-csharp-string-interpolation.html)
 
 Note: Platzhalter können mehrfach verwendet werden.
 {0,-20:D} rechts der Zahl 20 Stellen frei
@@ -228,7 +235,11 @@ ch[0] = 'A';        // Character literal
 ch[1] = 'B';        // Character literal
 ```
 
-Note: `(char)65` bezieht sich sowohl auf einen ASCII- als auch auf einen Unicode-Wert. In ASCII steht 65 für das Zeichen „A“. Unicode ist als Obermenge von ASCII konzipiert, so dass das Zeichen „A“ in Unicode ebenfalls den Codepunkt 65 in Dezimalschrift hat. Somit ist (char)65 sowohl in ASCII als auch in Unicode gültig, da Unicode den ursprünglichen ASCII-Satz in seinen ersten 128 Werten umfasst.
+Note: `(char)65` bezieht sich sowohl auf einen ASCII- als auch auf einen Unicode-Wert. In ASCII steht 65 für das Zeichen „A“. 
+
+Unicode ist als Obermenge von ASCII konzipiert, so dass das Zeichen „A“ in Unicode ebenfalls den Codepunkt 65 in Dezimalschrift hat. 
+
+Somit ist (char)65 sowohl in ASCII als auch in Unicode gültig, da Unicode den ursprünglichen ASCII-Satz in seinen ersten 128 Werten umfasst.
 
 Hex wird in der Regel in Unicode-Notation verwendet, geschrieben als „U+0041“. https://www.asciitable.com/
 
@@ -252,6 +263,7 @@ int code = 65;
 char letter = (char)code;
 Console.WriteLine(letter); // Ausgabe: 'A'
 ```
+
 ---
 
 <!-- .slide: class="left" -->
@@ -263,7 +275,7 @@ char sign = char.Parse("A");
 ```
 
 * Prüfen ob ein `char` ein Buchstabe ist
-  
+
 ```csharp
 Char.IsLetter('B')
 ```
