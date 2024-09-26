@@ -5,24 +5,28 @@ Was sind Methoden? Warum soll man Methoden benutzen?
 ---
 
 <!-- .slide: class="left" -->
-## Methodendefinition
+## Methoden
 
-* Warum Methoden verwenden? Um Code wiederzuverwenden: Definieren Sie den Code einmal, und verwenden Sie ihn viele Male.
+**Warum Methoden verwenden?**
+
+Um Code wiederzuverwende und das Programm klarer zu strukturieren. Der Code wird einmal definieren und viele Male wiederverwendet.
+
 * Methoden können definierte Parameter entgegennehmen.
 * Eine Methode kann nur einen oder auch keinen (void) Wert zurückgeben.
 * Methoden werden innerhalb der Klasse ausformuliert.
 * Methoden gehören immer zu einer Klasse.
 * Eine Klasse kann mehrere Methoden enthalten, wobei die Methoden in beliebiger Reihenfolge deklariert werden können.
-* Mit Methoden wird eine Aktion ausgeführt, Daten verändert oder ausgegeben.
-* Der Codeblock einer Methode wird nur ausgeführt wenn die Methode aufgerufen wird.
-* Mehr zum Thema [Methoden](https://docs.microsoft.com/de-de/dotnet/csharp/methods)
+* Mit Methoden werden Aktionen ausgeführt, Daten verändert oder ausgegeben.
+* Der Codeblock einer Methode wird nur ausgeführt, wenn die Methode aufgerufen wird.
+
+Mehr zum Thema [Methoden](https://docs.microsoft.com/de-de/dotnet/csharp/methods)
 
 Note: In C# wird nur von Methoden gesprochen. Keine Unterscheidung wie in C von Funktion (mit Rückgabewert) oder Prozedur (void)
 
 ---
 
 <!-- .slide: class="left" -->
-## Syntax der Methodendefinition
+## Methodendefinition
 
 Methoden werden innerhalb einer Klasse definiert. Mit:
 
@@ -43,6 +47,13 @@ Note:
 * static bedeutet, dass die Methode zur Klasse Program gehört und nicht zu einem Objekt der Klasse Program. 
 * void Die Methode gibt keinen Wert zurück
 * Pascal-Schreibweise (jeden Anfangsbuchstaben eines Wortes groß)
+
+---
+
+<!-- .slide: class="left" -->
+## Methodendefinition
+
+![Methodensignatur](images/Methodensignatur.png)
 
 ---
 
@@ -128,14 +139,8 @@ class Program
 }
 ```
 
----
-
-<!-- .slide: class="left" -->
-## Methodensignatur
-
-![Methodensignatur](images/Methodensignatur.png)
-
 Note: **ÜBUNG** BMI
+
 ---
 
 <!-- .slide: class="left" -->

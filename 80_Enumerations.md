@@ -7,7 +7,8 @@ Enumerationtypen
 <!-- .slide: class="left" -->
 ## Was sind Enumerations
 
-Eine [Enumeration](https://docs.microsoft.com/de-de/dotnet/csharp/programming-guide/enumeration-types) (Aufzählung) in C# ist ein Datentyp, der eine Sammlung von benannten Ganzzahlen (Integer-Werten) definiert. 
+Eine [Enumeration](https://docs.microsoft.com/de-de/dotnet/csharp/programming-guide/enumeration-types) (Aufzählung) ist ein Datentyp, der eine Sammlung von benannten Ganzzahlen (Integer-Werten) definiert. 
+
 Mit Enumerations können Sie Werte definieren, die in einem bestimmten Kontext sinnvoll sind und einen eindeutigen Namen haben, was den Code lesbarer und leichter verständlich macht.
 
 ---
@@ -15,7 +16,7 @@ Mit Enumerations können Sie Werte definieren, die in einem bestimmten Kontext s
 <!-- .slide: class="left" -->
 ## Enumeration Definieren
 
-```csharp []
+```csharp
 public enum Status 
 { 
     NotStarted,     // default Wert: 0
@@ -23,7 +24,9 @@ public enum Status
     OnHold, 
     Completed
 }
+```
 
+```csharp
 // Internen Wert anpassen
 public enum Status 
 { 
@@ -39,7 +42,7 @@ public enum Status
 <!-- .slide: class="left" -->
 ## Warum Enumerations verwenden
 
-* Lesbarkeit: Statt eine Zahl zu verwenden, geben Enums benannte Werte zurück, die den Code lesbarer machen.
+* Verbesserung der Lesbarkeit: Statt eine Zahl zu verwenden, geben Enums benannte Werte zurück, die den Code lesbarer machen.
 
 * Vermeidung von Fehlern: Wenn Sie eine Liste von zulässigen Werten haben, stellen Enumerations sicher, dass nur gültige Werte verwendet werden.
 
@@ -85,5 +88,5 @@ class Program
 ```
 
 Note: 
-* **VS** Enum demonstrieren
+* **VS** Enum demonstrieren (mit `Enum.IsDefined(typeof(Level), inputZahl`)
 * **Übung** Enum

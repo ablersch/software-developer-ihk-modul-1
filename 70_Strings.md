@@ -100,7 +100,7 @@ weitere Methoden zeigen in **VS**. z.B.:
 ---
 
 <!-- .slide: class="left" -->
-## String Konvertierung
+## Stringkonvertierung
 
 * Konvertierung eines Strings in `int` mit der Klasse `Convert`
 
@@ -139,7 +139,7 @@ Note: Bei Convert und Parse Fehler abfangen.
 ---
 
 <!-- .slide: class="left" -->
-## String Verkettung
+## Stringverkettung
 
 * Verkettung mit "+"-Operator
 
@@ -170,28 +170,61 @@ Mehr zum Thema [String Verkettung](https://docs.microsoft.com/de-de/dotnet/cshar
 ---
 
 <!-- .slide: class="left" -->
-## String Formatierung
+## Stringformatierung
 
-```csharp []
-// Nach dem Wert 20 Stellen frei
-Console.WriteLine($"Die Summe von {a,-20:D} plus {b,-20:D} ist {a + b,-20:D}");
-
-// Festkomma ,0 ,00 ,000
-Console.WriteLine($"Die Summe von {a:F1} plus {b:F2} ist {a + b:F3}");
-
-// Vor dem Wert 20 Stellen frei lassen und die Zahl PI mit 3 Nachkommastellen ausgeben
-Console.WriteLine($"{Math.PI,20:F3}");
-
-int value = 12345;
-Console.WriteLine(value.ToString("D8")); // 00001234
-Console.WriteLine(value.ToString("[##-##-##]")); // [1-23-45]
-
-Console.WriteLine($"Hallo es ist jetzt {DateTime.Now:HH:mm}"); // Hallo es ist jetzt 14:25
-Console.WriteLine($"Hallo es ist jetzt {DateTime.Now:t}");// Hallo es ist jetzt 14:25
+* Abstände bei der Ausgabe (vor bzw nach dem Wert 10 Stellen frei)
+```csharp
+Console.WriteLine($"Die Summe von {a,-10:D} plus {b,-10:D} ist {a + b,10:D}."); 
+// Die Summe von 1     plus 2          ist           3.
 ```
 
-Mehr zum Thema [String Formatierung 1](https://docs.microsoft.com/de-de/dotnet/standard/base-types/formatting-types) und 
-[String Formatierung 2](https://freeasphosting.net/format-string-in-csharp-string-interpolation.html)
+* Feste Angabe der Nachkommastellen
+```csharp
+Console.WriteLine($"Wert {1:F1} und Wert {2:F2}");
+// Wert 1,0 und Wert 2,00
+```
+
+* Ausgabe muss mindestens 8 Dezimalstellen haben.
+```csharp
+int value = 12345;
+Console.WriteLine($"{value:D8}"); 
+// Alternativen:
+Console.WriteLine(value.ToString("D8")); 
+Console.WriteLine(string.Format("{0:D8}", value));
+// 00001234
+```
+
+---
+
+<!-- .slide: class="left" -->
+## Stringformatierung
+
+* Währungsformatierung
+```csharp
+// UTF 8 Kodierung nutzen wegen Darstellung Eurozeichen
+Console.OutputEncoding = System.Text.Encoding.UTF8; 
+Console.WriteLine($"Kontostand: {value:C}.");
+// Kontostand:  12.345,00 €.
+```
+
+* Eigene Formate (Telefonnummern, Postleitzahlen, ....)
+```csharp
+Console.WriteLine(value.ToString("[##-##-##]")); 
+// [1-23-45]
+Console.WriteLine($"{value:D-#######}"); 
+// D-12345
+```
+
+* Datumsformatierung
+```csharp
+Console.WriteLine($"Es ist jetzt {DateTime.Now:HH:mm}"); 
+// Es ist jetzt 14:25
+Console.WriteLine($"Es ist das Jahr {DateTime.Now:yyyy}");
+// Es ist das Jahr 2024
+```
+
+Mehr zum Thema [Stringformatierung 1](https://docs.microsoft.com/de-de/dotnet/standard/base-types/formatting-types),  
+[Stringformatierung 2](https://freeasphosting.net/format-string-in-csharp-string-interpolation.html) und [Datumsformatierung](https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings)
 
 Note: Platzhalter können mehrfach verwendet werden.
 {0,-20:D} rechts der Zahl 20 Stellen frei
@@ -275,13 +308,11 @@ char sign = char.Parse("A");
 ```
 
 * Prüfen ob ein `char` ein Buchstabe ist
-
 ```csharp
 Char.IsLetter('B')
 ```
 
 * Prüfen ob ein `char` eine Zahl ist
-  
 ```csharp
 Char.IsDigit('1')
 ```
