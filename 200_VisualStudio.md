@@ -12,57 +12,50 @@ Hilfestellungen und Tipps für Visual Studio
 ---
 
 <!-- .slide: class="left" -->
-**Visual Studio Project** repräsentiert "das Projekt", an dem wir arbeiten. Am Anfang werden dies unsere Konsolenanwendungen sein, die wir mit Hilfe der Übungen schreiben lernen werden. Mit tieferem Lernen, Zeit und Übung werden sich diese Projekte in Richtung Desktop-Anwendungen, Web-Anwendungen und andere Entwicklungen bewegen. 
-Ein Projekt in VS gruppiert logisch mehrere Dateien, die eine bestimmte Anwendung oder eine Komponente aufbauen. Ein C#-Projekt enthält eine oder mehrere C#-Quelldateien, Konfigurationsdateien und andere Ressourcen. In jeder C#-Quelldatei gibt es eine oder mehrere Definitionen von Typen (Klassen oder andere Definitionen). In den Klassen gibt es Methoden (Aktionen), und sie enthalten eine Folge von Befehlen.
+**Visual Studio Project** repräsentiert "das Projekt", an dem wir arbeiten. Dies kann eine Konsolen-Anwendungen, eine Desktop-Anwendungen, eine Web-Anwendungen oder auch eine Bibliothek sein. 
+Ein Projekt in VS beinhaltet mehrere Dateien, die eine bestimmte Anwendung oder eine Komponente aufbauen. Ein C#-Projekt enthält eine oder mehrere C#-Quelldateien, Konfigurationsdateien und andere Ressourcen.
 
 ---
 
 <!-- .slide: class="left" -->
-**Visual Studio Solution** stellt einen Container (eine Arbeitslösung) dar, in dem Projekte logisch gebunden sind. Der Zweck der Bindung dieser VS-Projekte besteht darin, eine Möglichkeit zu schaffen, dass der Code aus einem der Projekte mit dem Code aus den übrigen VS-Projekten zusammenarbeitet, um sicherzustellen, dass die Anwendung oder die Website korrekt funktioniert. Wenn das von uns entwickelte Softwareprodukt oder die Dienstleistung groß ist, wird es als VS-Lösung erstellt, und diese Lösung wird in Projekte (VS-Projekte) aufgeteilt, und innerhalb jedes Projekts gibt es Ordner mit Quelldateien.
+**Visual Studio Solution** stellt einen Container dar, in dem Projekte zusammengefasst sind. Dies kann bei größeren Anwendungen hilfreich sein, da diese meiste aus mehreren Projekten bestehen.
+
+Dadurch hat man die Möglichkeit z.B. gemeinsam genutzten Code in ein eigenes Projekt zu verschieben.
 
 ---
 
 <!-- .slide: class="left" -->
 ## Debugging
 
-Debugging ist der Prozess des "Anhängens" an die Programmausführung, der es uns erlaubt, den Prozess Schritt für Schritt zu verfolgen. Wir können Zeile für Zeile verfolgen, was in unserem Programm geschieht, welchen Weg es folgt, wie die Werte der definierten Variablen bei jedem Schritt der Fehlersuche sind und viele andere Dinge, die es uns ermöglichen, Fehler (Bugs) zu erkennen.
+Beim Debugging geht es darum, Fehler im Code zu finden und zu beheben.
+
+Im Detail bedeutet Debugging:
+
+1. Fehler finden: Du überprüfst den Code Schritt für Schritt, um die Stelle zu finden, an der etwas nicht wie erwartet funktioniert.
+   
+2. Verstehen, was passiert: Beim Debuggen kannst du den Programmablauf verfolgen, Variablenwerte überprüfen und so verstehen, warum ein Fehler auftritt.
+   
+3. Fehler beheben: Nachdem der Fehler gefunden wurde, änderst du den Code, um das Problem zu lösen.
 
 ---
 
 <!-- .slide: class="left" -->
 ### Debugging nutzen
 
-* Zeile markieren und Breakpoint (Punkt an welchem das Programm stoppen soll) setzen. F9 oder mit der Maus.
+Es gibt Tools wie **Breakpoints**, die das Programm an bestimmten Stellen anhalten, damit du es genauer untersuchen kannst.
+
+* Zeile markieren und Breakpoint setzen. F9 oder Klick mit der Maus.
 * Programm mit Debugger starten (F5)
-* Mit F10 kann mit einzelnen Schritten der Code debuggt werden
+* Mit F11 kann mit einzelnen Schritten der Code durchlaufen werden
 
----
-
-<!-- .slide: class="left" -->
-### Debugging Shortcuts
-
-* F11 Einzelschritt  
-* F10 Prozedurschritt (Methoden werden übersprungen)
-* F9 Setzt oder entfernt einen Breakpoint auf der aktuellen Zeile
-* Auto und Local: Variablenüberwachung
-* Breakpoints (mit Trefferanzahl oder Bedingung)
+Note: 
+Debugging zeigen in **VS**
+* Breakpoints
+* bedingte Breakpoints
+* Einzelschritte 
+* Fenster welches die Werte der Variablen anzeigt
+* Werte beim Debugging anzeigen.
 * Ansicht &rarr; Fehlerliste
-
-Note: Debugging zeigen in VS
-Breakpoints, bedingte Breakpoints, Einzelschritte ..., Fenster welches die Werte der Variablen anzeigt, Werte beim Debugging anzeigen.
-
----
-
-<!-- .slide: class="left" -->
-## Allgemein
-
-[Zeichen in IntelliSense Liste](https://msdn.microsoft.com/de-de/library/y47ychfe.aspx)
-
-[Schlüsselworte in C#](https://docs.microsoft.com/de-de/dotnet/csharp/language-reference/keywords/)
-
-Lesezeichen: STRG + B gefolgt von T oder Symbol (bzw Bearbeiten &rarr; Lesezeichen)
-
-Code formatieren: Bearbeiten &rarr; Erweitert &rarr; Dokument formatieren
 
 ---
 
@@ -71,11 +64,13 @@ Code formatieren: Bearbeiten &rarr; Erweitert &rarr; Dokument formatieren
 
 * F4 - Auf die Eigenschaften wechseln
 * F5 - Startet das Startprojekt mit Debugger
-* CRTL-F5 - Führt den Code ohne Debugger aus. (Konsolenfenster bleibt mit der Aufforderung "Press any key to continue" offen)
+* CRTL-F5 - Führt den Code ohne Debugger aus
 * F7 - von GUI in die Code-Bind Datei springen
 * F9 - Breakpoint setzen/entfernen
+* F10 Prozedurschritt beim debuggen (Methoden werden übersprungen)
+* F11 Einzelschritt beim debuggen 
 * F12 - Gehe zur Definition
-* Strg + Mausrad drehen - Code vergrößernMarkdown Preview
+* Strg + Mausrad drehen - Code vergrößern
 
 [weitere Shortcuts](https://www.dofactory.com/reference/visual-studio-shortcuts)
 
@@ -90,6 +85,8 @@ Extras &rarr; Einstellungen importieren/exportieren &rarr; Ausgewählte Umgebung
 
 <!-- .slide: class="left" -->
 ### Klassendiagramm erstellen
+
+Ist ein extra Feature das in Visual Studio 2022 installiert werden muss.
 
 ![Klassendiagramm](images/KlassendiagrammErstellen.png)
 
@@ -126,7 +123,7 @@ Bezeichnung + Tab + Tab oder Rechtsklick &rarr; Ausschnitt einfügen
 * cw
 * try
 
-Codeschnipsel bearbeiten unter: Extras &rarr; Codeschnipsel-Manager
+Codeschnipsel bearbeiten unter: Extras(Tools) &rarr; Codeschnipsel-Manager
 
 ### Beispiel bei Switch
 
