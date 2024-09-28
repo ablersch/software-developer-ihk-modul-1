@@ -14,9 +14,6 @@ string zeichenkette;
 
 zeichenkette = "Hallo C#";
 Console.Write(zeichenkette); // Ausgabe: Hallo C#
-
-zeichenkette = zeichenkette + " - Fans\n";
-Console.Write(zeichenkette); // Hallo C# - Fans
 ```
 
 ---
@@ -24,7 +21,7 @@ Console.Write(zeichenkette); // Hallo C# - Fans
 <!-- .slide: class="left" -->
 ## String Zugriff über Index
 
-* Ein Zeichen (`char`) über Index abrufen
+* Ein Zeichen (`char`) über den Index abrufen
 
 ```csharp []
 string text = "Hello";
@@ -34,7 +31,7 @@ Console.WriteLine(text[0]);  // Ausgabe: H
 * Index abrufen
 
 ```csharp []
-Console.WriteLine(text.IndexOf("l"));  // Ausgabe 2
+Console.WriteLine(text.IndexOf("l"));  // Ausgabe: 2
 ```
 
 ---
@@ -71,7 +68,7 @@ int i = text.Length;
 * Umwandeln in String
 
 ```csharp []
-text = text + i;     //.ToString()
+text = text + i;
 // Alternativ: text += i;
 ```
 
@@ -89,10 +86,10 @@ text = text.Replace("H", "A");
 
 Note: 
 weitere Methoden zeigen in **VS**. z.B.: 
-* string.IsNullOrEmpty
-* Trim 
-* Remove
-* ToUpper 
+* `string.IsNullOrEmpty`
+* `Trim` 
+* `Replace`
+* `ToUpper` 
 * ...
 
 **ÜBUNG** Email
@@ -132,19 +129,19 @@ if (!result)
 }
 ```
 
-Mehr zum Thema [String Konvertierung](https://docs.microsoft.com/de-de/dotnet/csharp/programming-guide/types/how-to-convert-a-string-to-a-number)
+Mehr zum Thema [Stringkonvertierung](https://docs.microsoft.com/de-de/dotnet/csharp/programming-guide/types/how-to-convert-a-string-to-a-number)
 
-Note: Bei Convert und Parse Fehler abfangen.
+Note: Bei `Convert` und `Parse` Fehler abfangen.
 
 ---
 
 <!-- .slide: class="left" -->
 ## Stringverkettung
 
-* Verkettung mit "+"-Operator
+* Verkettung mit dem "+"-Operator
 
 ```csharp
-Console.WriteLine("Die Summe von "+ a + " plus " + b + " ist " + (a+b)));
+Console.WriteLine("Die Summe von " + a + " plus " + b + " ist " + (a+b));
 ```
 
 * Interpolation
@@ -165,7 +162,7 @@ sb.Append(" ist ");
 sb.Append(a+b);
 ```
 
-Mehr zum Thema [String Verkettung](https://docs.microsoft.com/de-de/dotnet/csharp/how-to/concatenate-multiple-strings)
+Mehr zum Thema [Stringverkettung](https://docs.microsoft.com/de-de/dotnet/csharp/how-to/concatenate-multiple-strings)
 
 ---
 
@@ -226,8 +223,9 @@ Console.WriteLine($"Es ist das Jahr {DateTime.Now:yyyy}");
 Mehr zum Thema [Stringformatierung 1](https://docs.microsoft.com/de-de/dotnet/standard/base-types/formatting-types),  
 [Stringformatierung 2](https://freeasphosting.net/format-string-in-csharp-string-interpolation.html) und [Datumsformatierung](https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings)
 
-Note: Platzhalter können mehrfach verwendet werden.
-{0,-20:D} rechts der Zahl 20 Stellen frei
+Note: 
+* Platzhalter können mehrfach verwendet werden.
+* {0,-20:D} rechts der Zahl 20 Stellen frei
 
 ---
 
@@ -246,6 +244,7 @@ Note: Platzhalter können mehrfach verwendet werden.
 
 ```csharp
 Console.Write("You pressed \n");
+// Alterntive: Console.WriteLine("You pressed");
 ```
 
 ---
@@ -259,8 +258,8 @@ Verwendet das [Unicode-Zeichensystem (UTF-16 )](https://www.unicode.org/charts/P
 
 ```csharp
 char a = 'A';
-char a = '\u0041'; // Unicode für A (Hexadezimal)
-char a = (char)65; // Unicode für A (Dezimal)
+a = '\u0041'; // Unicode für A (Hexadezimal)
+a = (char)65; // Unicode für A (Dezimal)
 char heart = '\u2665'; // Unicode für das Herzsymbol
 
 char[] ch = new char[2];
@@ -325,5 +324,5 @@ Char.ToLower('A')
 
 Note: 
 * Mit einer Schleife einen String als char weiterverarbeiten.
-`foreach (char c in input){}`
+  * `foreach (char c in input){}`
 * **ÜBUNG** Pangramm
