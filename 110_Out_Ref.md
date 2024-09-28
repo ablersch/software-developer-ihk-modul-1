@@ -129,7 +129,7 @@ Ausgabeparameter ([out](https://docs.microsoft.com/de-de/dotnet/csharp/language-
 Dieser Parameter wurden spezielle für den Fall entwickelt das eine
 Methode mehrere Werte zurückgeben soll. Dieser Parameter übergibt der
 Methode keinen Wert, sondern teilt ihr mit, in welcher Variable sie
-einen bestimmten Wert speichern soll z.B. wird dies bei TryParse verwendet.
+einen bestimmten Wert speichern soll z.B. wird dies bei `TryParse` verwendet.
 
 ```csharp []
 Addiere(10, 5, out int result);

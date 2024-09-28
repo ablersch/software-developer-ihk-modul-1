@@ -115,21 +115,21 @@ int zahl = Convert.ToInt32(text);
 zahl = int.Parse(text);
 ```
 
-* Prüfen ob Konvertierung möglich ist mit `TryParse`
-
-```csharp []
-bool result = Int32.TryParse(text, out var zahl);  
-if (!result) 
-{
-    Console.WriteLine("Umwandlung fehlgeschlagen");
-}
-```
-
 * Konvertierung von `double` nach `int`
 
 ```csharp []
 double zahl = 12.66789;
-int intZahl = Convert.ToInt32(zahl);  // gerundet 13
+int intZahl = int.Parse(zahl);  // gerundet 13
+```
+
+* Prüfen ob eine Konvertierung möglich ist mit `TryParse`
+
+```csharp []
+bool result = int.TryParse(text, out var zahl);  
+if (!result) 
+{
+    Console.WriteLine("Umwandlung fehlgeschlagen");
+}
 ```
 
 Mehr zum Thema [String Konvertierung](https://docs.microsoft.com/de-de/dotnet/csharp/programming-guide/types/how-to-convert-a-string-to-a-number)
@@ -153,7 +153,7 @@ Console.WriteLine("Die Summe von "+ a + " plus " + b + " ist " + (a+b)));
 Console.WriteLine($"Die Summe von {a} plus {b} ist {a+b}");
 ```
 
-* StringBuilder
+* String zusammen bauen
 
 ```csharp []
 StringBuilder sb = new StringBuilder();
@@ -172,7 +172,7 @@ Mehr zum Thema [String Verkettung](https://docs.microsoft.com/de-de/dotnet/cshar
 <!-- .slide: class="left" -->
 ## Stringformatierung
 
-* Abstände bei der Ausgabe (vor bzw nach dem Wert 10 Stellen frei)
+* Abstände bei der Ausgabe (vor bzw. nach dem Wert 10 Stellen frei)
 ```csharp
 Console.WriteLine($"Die Summe von {a,-10:D} plus {b,-10:D} ist {a + b,10:D}."); 
 // Die Summe von 1     plus 2          ist           3.
@@ -201,7 +201,7 @@ Console.WriteLine(string.Format("{0:D8}", value));
 
 * Währungsformatierung
 ```csharp
-// UTF 8 Kodierung nutzen wegen Darstellung Eurozeichen
+// UTF 8 Kodierung nutzen wegen Darstellung des Eurozeichens
 Console.OutputEncoding = System.Text.Encoding.UTF8; 
 Console.WriteLine($"Kontostand: {value:C}.");
 // Kontostand:  12.345,00 €.

@@ -180,7 +180,9 @@ Wird eine ungültige Zahl eingegeben soll ein Fehlertext ausgegeben werden
 
 2. Bei einem Tag im Wochenende (Samstag und Sonntag) soll die Ausgabe "Wochenende" lauten.
 
-### Beispiel Ausgabe:
+
+### Beispiel Ausgabe
+
 ```bash
 Eine Zahl 1-7 eingeben:
 2
