@@ -115,7 +115,7 @@ Ein `string` kann sehr leicht in ein Array konvertiert werden:
 
 ```csharp
 string names = "Anna;Tom;Kate;Tobias";
-string[] namesArray = names.Split(';');
+string[] namesSplitted = names.Split(';');
 ```
 
 Note: **ÜBUNG 8** Temperaturstatistik 
