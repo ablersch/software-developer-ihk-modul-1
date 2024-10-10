@@ -5,7 +5,7 @@ Wo ist eine Variable gültig?
 ---
 
 <!-- .slide: class="left" -->
-## Gültigkeitsbereich von Variablen
+## Gültigkeitsbereiche von Variablen
 
 **Eine Variable steht immer nur innerhalb ihres Geltungsbereichs zur Verfügung.**
 
@@ -20,7 +20,7 @@ internal class Program
     {
         int loops = int.Parse(Console.ReadLine()); // lokale Variable innerhalb der Methode.
 
-        for (int i = 0; i < loops; i++) // Variable i ist nur im for Block gültig
+        for (int i = 0; i < loops; i++) // Variable i ist nur im for-Block gültig
         {
             Output(i.ToString());
         }
@@ -50,5 +50,9 @@ Das führt zur Frage, wo eine Variable deklariert werden sollte. Dafür gilt vor
 * Auch Klassen Variablen sollten innerhalb der Klasse an einer sinnvollen Stelle stehen.
 
 Note:
-* **VS** Sichtbarkeit von Variablen zeigen (Klasse, Methode, If, ...).
+* **VS** Sichtbarkeit von Variablen zeigen 
+  * Klasse 
+  * Methode 
+  * If
+  * weitere Klasse
 * **ÜBUNG** Medienverwaltung 1

@@ -1,11 +1,11 @@
 # "Call by value" und "Call by reference"
 
-Was ist der Unterschiede? Wann was benutzen?
+Was ist der Unterschied? Wann was benutzen?
 
 ---
 
 <!-- .slide: class="left" -->
-## Ref und Out Parameter
+## Parameterübergabe
 
 Es gibt zwei Möglichkeiten um Parameter an eine Methode zu übergeben:
 
@@ -13,11 +13,11 @@ Es gibt zwei Möglichkeiten um Parameter an eine Methode zu übergeben:
 * Parameterübergabe als Kopie
 * Änderungen an der Kopie haben keinen Einfluss auf die ursprüngliche Variable außerhalb der Methode.
 * In C# ist dies der Standardübergabemechanismus
-
+<br>
 #### Call by Reference
 * Parameterübergabe als Verweis (Referenz) auf die Originalvariable
 * Änderungen an dieser Referenz beeinflussen die Originalvariable direkt.
-* In C# wird dies erreicht durch das Verwenden des `ref`- oder `out`-Schlüsselworts.
+* In C# wird dies erreicht durch das Verwenden des `ref`-Schlüsselworts.
 * Dies ist nützlich wenn eine Methode mehrere Werte zurückgibt oder eine übergebene Variable verändern soll.
 
 

@@ -55,7 +55,7 @@ Note:
 
 Um an eine Methode Werte mitzugeben werden Parameter benötigt. Es können ein oder mehrere Parameter definiert werden.
 
-Der Aufruf der Methode muss aber genau die gleiche Anzahl an Parameter haben wie die Methodendefinition Parameter.
+Der Aufruf der Methode muss aber genau die gleiche Anzahl an Parametern beinhalten wie die Methodendefinition Parameter hat.
 
 ```csharp []
 static void MyMethod(string name) 
@@ -171,6 +171,7 @@ MethodWithOptParams(20, 35); // Ergebnis ist 55
 Note: 
 Es werden immer die Methoden bevorzugt die keine optionalen Parameter haben.
 In IntelliSense werden optionale Parameter in eckigen Klammern angezeigt.
+
 **VS** Methoden
 
 ---
@@ -199,6 +200,7 @@ MethodForTest(xPosition: 1, yPosition: 2, 3); // fehler
 
 Note:
 Kann bei vielen Methoden-Parametern zu einer besseren Lesbarkeit beitragen.
+
 Außerdem können sie zur eindeutigen Identifizierung eines optionalen Parameters verwendet werden, wenn es mehr als einen Parameter desselben Typs gibt:
 ```csharp
 MarkAsDone(int first, int second=0, int third=0) {}

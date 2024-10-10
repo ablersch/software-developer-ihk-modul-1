@@ -26,7 +26,7 @@ Mit `ReadKey()` kann die vom Benutzer gedrückte Taste abgerufen werden. Die Met
 
 * `Key`: Es kann auf bestimmte Tasten über die Enumeration `ConsoleKey` geprüft werden.
 * `KeyChar`: Ruft das gedrückte Unicode-Zeichen ab.
-* `ConsoleModifiers`: Über dies Enumeration kann auf bestimmte Tasten (z.B. SHIFT, ALT, CONTROL) geprüft werden.
+* `ConsoleModifiers`: Über diese Enumeration kann auf bestimmte Tasten (z.B. SHIFT, ALT, CONTROL) geprüft werden.
 
 ```csharp []
 ConsoleKeyInfo info = Console.ReadKey();
@@ -40,6 +40,11 @@ if (info.Key == ConsoleKey.Escape)
 else if (info.KeyChar == 'a')
 {
     Console.WriteLine("You pressed a");
+}
+// Prüfen auf 'Shift'
+else if (info.Modifiers == ConsoleModifiers.Shift)
+{
+    Console.WriteLine("You pressed shift");
 }
 
 ```
