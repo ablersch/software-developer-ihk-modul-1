@@ -17,8 +17,8 @@ Es gibt zwei Möglichkeiten um Parameter an eine Methode zu übergeben:
 #### Call by Reference
 * Parameterübergabe als Verweis (Referenz) auf die Originalvariable
 * Änderungen an dieser Referenz beeinflussen die Originalvariable direkt.
-* In C# wird dies erreicht durch das Verwenden des ref- oder out-Schlüsselworts.
-* Diese Methode ist nützlich, wenn eine Methode mehrere Werte zurückgeben oder eine übergebene Variable verändern soll.
+* In C# wird dies erreicht durch das Verwenden des `ref`- oder `out`-Schlüsselworts.
+* Dies ist nützlich wenn eine Methode mehrere Werte zurückgibt oder eine übergebene Variable verändern soll.
 
 
 ---
@@ -57,7 +57,7 @@ Value after ChangeAndWrite call: 5
 <!-- .slide: class="left" -->
 ## Beispiel: Call by Reference
 
-Damit der ursprüngliche Wert geändert wird kann, der Wert als **Verweis** (Referenz) übergeben
+Damit der ursprüngliche Wert geändert wird kann der Wert als **Verweis** (Referenz) übergeben
 werden. Dazu wird das Schlüsselwort [ref](https://docs.microsoft.com/de-de/dotnet/csharp/language-reference/keywords/ref) verwendet.
 
 ```csharp []

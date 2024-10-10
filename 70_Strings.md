@@ -106,17 +106,17 @@ string text = "580";
 int zahl = Convert.ToInt32(text);
 ```
 
-* Konvertierung mit `Parse`
-
-```csharp []
-zahl = int.Parse(text);
-```
-
 * Konvertierung von `double` nach `int`
 
 ```csharp []
 double zahl = 12.66789;
-int intZahl = int.Parse(zahl);  // gerundet 13
+int intZahl = Convert.ToInt32(zahl);  // gerundet 13
+```
+
+* Konvertierung mit `Parse`
+
+```csharp []
+zahl = int.Parse(text);
 ```
 
 * Prüfen ob eine Konvertierung möglich ist mit `TryParse`
@@ -141,13 +141,13 @@ Note: Bei `Convert` und `Parse` Fehler abfangen.
 * Verkettung mit dem "+"-Operator
 
 ```csharp
-Console.WriteLine("Die Summe von " + a + " plus " + b + " ist " + (a+b));
+Console.WriteLine("Die Summe von " + a + " plus " + b + " ist " + (a + b));
 ```
 
 * Interpolation
 
 ```csharp
-Console.WriteLine($"Die Summe von {a} plus {b} ist {a+b}");
+Console.WriteLine($"Die Summe von {a} plus {b} ist {a + b}");
 ```
 
 * String zusammen bauen
@@ -172,7 +172,7 @@ Mehr zum Thema [Stringverkettung](https://docs.microsoft.com/de-de/dotnet/csharp
 * Abstände bei der Ausgabe (vor bzw. nach dem Wert 10 Stellen frei)
 ```csharp
 Console.WriteLine($"Die Summe von {a,-10:D} plus {b,-10:D} ist {a + b,10:D}."); 
-// Die Summe von 1     plus 2          ist           3.
+// Die Summe von 1          plus 2          ist           3.
 ```
 
 * Feste Angabe der Nachkommastellen
@@ -188,7 +188,7 @@ Console.WriteLine($"{value:D8}");
 // Alternativen:
 Console.WriteLine(value.ToString("D8")); 
 Console.WriteLine(string.Format("{0:D8}", value));
-// 00001234
+// 00012345
 ```
 
 ---
@@ -244,7 +244,7 @@ Note:
 
 ```csharp
 Console.Write("You pressed \n");
-// Alterntive: Console.WriteLine("You pressed");
+// Alternative: Console.WriteLine("You pressed");
 ```
 
 ---

@@ -9,11 +9,11 @@ Was sind Methoden? Warum soll man Methoden benutzen?
 
 **Warum Methoden verwenden?**
 
-Um Code wiederzuverwende und das Programm klarer zu strukturieren. Der Code wird einmal definieren und viele Male wiederverwendet.
+Um Code wiederzuverwenden und das Programm klarer zu strukturieren. Der Code wird einmal definiert und kann wiederverwendet werden.
 
 * Methoden können definierte Parameter entgegennehmen.
-* Eine Methode kann nur einen oder auch keinen (void) Wert zurückgeben.
-* Methoden werden innerhalb der Klasse ausformuliert.
+* Eine Methode kann nur einen oder auch keinen (`void`) Wert zurückgeben.
+* Methoden werden innerhalb der Klasse definiert.
 * Methoden gehören immer zu einer Klasse.
 * Eine Klasse kann mehrere Methoden enthalten, wobei die Methoden in beliebiger Reihenfolge deklariert werden können.
 * Mit Methoden werden Aktionen ausgeführt, Daten verändert oder ausgegeben.
@@ -21,7 +21,7 @@ Um Code wiederzuverwende und das Programm klarer zu strukturieren. Der Code wird
 
 Mehr zum Thema [Methoden](https://docs.microsoft.com/de-de/dotnet/csharp/methods)
 
-Note: In C# wird nur von Methoden gesprochen. Keine Unterscheidung wie in C von Funktion (mit Rückgabewert) oder Prozedur (void)
+Note: In C# wird nur von Methoden gesprochen. Keine Unterscheidung wie in C von Funktion (mit Rückgabewert) oder Prozedur (void).
 
 ---
 
@@ -35,48 +35,27 @@ Methoden werden innerhalb einer Klasse definiert. Mit:
 ```csharp []
 class Program
 {
-    static void MyMethod() 
+    public static void MyMethod() 
     {
-        // code to be executed
+        // Code to be executed
     }
 }
 ```
 
 Note: 
-* MyMethod() Name der Methode
-* static bedeutet, dass die Methode zur Klasse Program gehört und nicht zu einem Objekt der Klasse Program. 
-* void Die Methode gibt keinen Wert zurück
+* `MyMethod()` Name der Methode
+* `static` bedeutet, dass die Methode zur Klasse Program gehört und nicht zu einem Objekt der Klasse Program. 
+* `void` Die Methode gibt keinen Wert zurück
 * Pascal-Schreibweise (jeden Anfangsbuchstaben eines Wortes groß)
 
 ---
 
 <!-- .slide: class="left" -->
-## Methodendefinition
-
-![Methodensignatur](images/Methodensignatur.png)
-
----
-
-<!-- .slide: class="left" -->
-## Methode aufrufen
-
-Eine Methode kann mehrfach aufgerufen werden.
-
-```csharp []
-static void Main(string[] args)
-{
-    MyMethod();
-}
-```
-
----
-
-<!-- .slide: class="left" -->
-## Methodenparameter
+## Methodenaufruf und Methodenparameter
 
 Um an eine Methode Werte mitzugeben werden Parameter benötigt. Es können ein oder mehrere Parameter definiert werden.
 
-Der Aufruf der Methode muss aber genau die gleiche Anzahl an Argumente haben wie die Methodendefinition Parameter.
+Der Aufruf der Methode muss aber genau die gleiche Anzahl an Parameter haben wie die Methodendefinition Parameter.
 
 ```csharp []
 static void MyMethod(string name) 
@@ -92,6 +71,8 @@ static void Main(string[] args)
 }
 ```
 
+Note: Methode kann mehrfach aufgerufen werden.
+
 ---
 
 <!-- .slide: class="left" -->
@@ -99,7 +80,7 @@ static void Main(string[] args)
 
 Das Schlüsselwort `void`, das in den obigen Beispielen verwendet wird, gibt an, dass die Methode keinen Wert zurückgeben soll. 
 
-Wenn die Methode einen Wert zurückgeben soll, können Sie anstelle von void einen Datentyp (z. B. int oder double) verwenden und innerhalb der Methode das Schlüsselwort return verwenden:
+Wenn die Methode einen Wert zurückgeben soll, können Sie anstelle von `void` einen Datentyp (z. B. `int` oder `double`) verwenden und innerhalb der Methode das Schlüsselwort `return` verwenden:
 
 ```csharp []
 static int MyMethod(int x) 
@@ -122,15 +103,14 @@ class Program
 {
     static void Main(string[] args)
     {
+        // Wert direkt für die Ausgabe verwenden.
         Console.WriteLine("Ergebnis: " + Addition(12, 10));
 
+        // Wert in einer Variable speichern
         int result = Addition(10, 10);
-
-        Console.WriteLine("Taste drücken um zu beenden...");
-        Console.ReadKey();
     }
 
-    // Neue Methode welche einen int Wert zurücklieferet und zwei int Werte als Parameter entgegen nimmt
+    // Neue Methode welche einen int-Wert zurückliefert und zwei int-Werte als Parameter entgegen nimmt
     private static int Addition(int zahl1, int zahl2)
     {
         // Wert welcher zurück gegeben werden soll
@@ -139,6 +119,13 @@ class Program
 }
 ```
 
+---
+
+<!-- .slide: class="left" -->
+## Methodendefinition
+
+![Methodensignatur](images/Methodensignatur.png)
+
 Note: **ÜBUNG** BMI
 
 ---
@@ -146,24 +133,31 @@ Note: **ÜBUNG** BMI
 <!-- .slide: class="left" -->
 ## Überladen (Overloading)
 
-Von **Überladen** spricht man, wenn mehrere Methoden den gleichen Namen
-aber eine unterschiedliche Anzahl an Parametern oder unterschiedliche
-Parametertypen haben.
+Von **Überladen** spricht man, wenn mehrere Methoden den gleichen Namen haben,
+aber eine unterschiedliche Anzahl an Parameter oder unterschiedliche
+Parametertypen besitzen.
 
 ```csharp []
-void Multiplikation(double value)
-void Multiplikation(int value)
-void Multiplikation(int value, int result)
-void Multiplikation(float valueA, float valueB, int result)
-int Multiplikation(float valueA, float valueB, int result) // --> Fehler, nicht möglich
+void Multiplikation(double value) {};
+void Multiplikation(int value) {};
+void Multiplikation(int value, int result) {};
+void Multiplikation(float valueA, float valueB, int result) {};
+
+// Fehler, nicht möglich
+float Multiplikation(float valueA, float valueB, int result) {}; 
 ```
+
+Note:
+Dies wäre möglich da andere Parametertypen:
+`int Multiplikation(int valueA, int valueB, int result) {};` 
 
 ---
 
 <!-- .slide: class="left" -->
 ## Optionale Parameter
 
-Ein optionaler Parameter hat einen Standardwert. Die Methode, die optionale Parameter hat, kann ohne diese Argumente aufgerufen werden. Sie können aber auch angegeben werden. Dann werden die Standardwerte überschrieben.
+Ein optionaler Parameter hat einen Standardwert. Dieser muss immer am Ende der Parameterliste, nach allen obligatorischen Parametern, stehen.
+Die Methode, die optionale Parameter hat, kann ohne diese Parameter aufgerufen werden. Sie können aber auch angegeben werden. Dann werden die Standardwerte überschrieben.
 
 ```csharp []
 public static void MethodWithOptParams(int first, int second = 10)
@@ -175,5 +169,39 @@ MethodWithOptParams(20, 35); // Ergebnis ist 55
 ```
 
 Note: 
+Es werden immer die Methoden bevorzugt die keine optionalen Parameter haben.
+In IntelliSense werden optionale Parameter in eckigen Klammern angezeigt.
 **VS** Methoden
+
+---
+
+<!-- .slide: class="left" -->
+## Benannte Parameter
+
+Benannte Parameter können bei jedem Methodenaufruf verwendet werden. Hierbei wird vor dem Wert auch der Name des Parameters angegeben. Dadurch können die Parameter in beliebiger Reihenfolge angegeben werden.
+
+```csharp []
+public static void MethodForTest(int xPosition, int yPostion, int size)
+{
+    // Code
+}
+
+MethodForTest(1, 2, 3);
+MethodForTest(xPosition: 1, yPosition: 2, size: 3);
+MethodForTest(size: 3, yPosition: 2, xPosition: 1);
+```
+
+Benannte Parameter müssen immer am Ende des Methodenaufrufs stehen.
+
+```csharp []
+MethodForTest(xPosition: 1, yPosition: 2, 3); // fehler
+```
+
+Note:
+Kann bei vielen Methoden-Parametern zu einer besseren Lesbarkeit beitragen.
+Außerdem können sie zur eindeutigen Identifizierung eines optionalen Parameters verwendet werden, wenn es mehr als einen Parameter desselben Typs gibt:
+```csharp
+MarkAsDone(int first, int second=0, int third=0) {}
+MarkAsDone(1, third: 3);
+```
 **ÜBUNG** Palindrom

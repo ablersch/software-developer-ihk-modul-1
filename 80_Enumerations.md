@@ -71,7 +71,7 @@ class Program
     static void Main()
     {
         // Verwendung der Enumeration
-        Wochentag heute = Wochentag.Monday;
+        WeekDays heute = WeekDays.Monday;
 
         // Umwandeln von einem Integer-Wert zu einer Enumeration
         heute = (WeekDays)6;
@@ -79,7 +79,7 @@ class Program
         // Ausgabe des heutigen Tages. Name des Enums + den integer Wert
         Console.WriteLine("Heute ist: " + heute + "und hat den Wert " + (int)heute);
 
-        if (heute == Wochentag.Saturday || heute == Wochentag.Sunday) 
+        if (heute == WeekDays.Saturday || heute == WeekDays.Sunday) 
         {
             Console.WriteLine("Wochenende");
         }
@@ -87,6 +87,26 @@ class Program
 }
 ```
 
+---
+
+<!-- .slide: class="left" -->
+## statische Methoden
+
+* Prüfen ob ein bestimmer Wert in der Enumeration definiert ist
+  
+```csharp
+int input = 7;
+bool inputValueExist = Enum.IsDefined(typeof(WeekDays), input)
+```
+
+* Alle Enumeration-Werte (als `String`) abrufen
+
+```csharp
+var enumValues = Enum.GetValues(typeof(WeekDays));
+```
+
 Note: 
-* **VS** Enum demonstrieren (mit `Enum.IsDefined(typeof(Level), inputZahl`)
+* `typeof(WeekDays)` gibt den Type der Enumeration WeekDays zurück. Es wird verwendet, um den spezifischen Enum-Typ an die Methode zu übergeben. Der Typ wird also zur Laufzeit an die Methode übermittelt.
+* `Enum.GetValuesAsUnderlyingType(typeof(WeekDays));` alle Int-Werte abrufen
+* **VS** Enum demonstrieren
 * **Übung** Enum
