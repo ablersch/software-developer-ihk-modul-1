@@ -195,7 +195,7 @@ MethodForTest(size: 3, yPosition: 2, xPosition: 1);
 Benannte Parameter müssen immer am Ende des Methodenaufrufs stehen.
 
 ```csharp []
-MethodForTest(xPosition: 1, yPosition: 2, 3); // fehler
+MethodForTest(xPosition: 1, yPosition: 2, 3); // Fehler
 ```
 
 Note:
