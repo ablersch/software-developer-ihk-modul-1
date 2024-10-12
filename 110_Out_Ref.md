@@ -97,7 +97,7 @@ Value after ChangeAndWrite call: 10
 
 * Wird verwendet, wenn die Methode nur eine Berechnung durchführen soll, ohne die übergebenen Variablen zu verändern.
 
-* Besonders geeignet für den Umgang mit primitiven Datentypen oder wenn es nicht erforderlich ist, den ursprünglichen Zustand zu ändern.
+* Besonders geeignet für den Umgang mit primitiven Datentypen (int, bool, string, ...) oder wenn es nicht erforderlich ist, den ursprünglichen Zustand zu ändern.
 
 * Beispiel: Methoden, die einen Wert basierend auf Berechnungen zurückgeben (z. B. Berechnung von Flächen, Zinsen, Umrechnungen).
 
@@ -127,10 +127,8 @@ Note: Im Allgemeinen sollte "Call by Value" bevorzugt werden, außer es gibt ein
 
 Ausgabeparameter ([out](https://docs.microsoft.com/de-de/dotnet/csharp/language-reference/keywords/out-parameter-modifier)) verhalten sich genau wie `ref`-Parameter, nur dass diesen nicht initialisierte Variablen übergeben werden können.
 
-Dieser Parameter wurden spezielle für den Fall entwickelt das eine
-Methode mehrere Werte zurückgeben soll. Dieser Parameter übergibt der
-Methode keinen Wert, sondern teilt ihr mit, in welcher Variable sie
-einen bestimmten Wert speichern soll z.B. wird dies bei `TryParse` verwendet.
+Dieser Parameter wurden spezielle für den Fall entwickelt das eine Methode mehrere Werte zurückgeben soll. Dieser Parameter übergibt der
+Methode keinen Wert, sondern teilt ihr mit, in welcher Variable sie einen bestimmten Wert speichern soll z.B. wird dies bei `TryParse` verwendet.
 
 ```csharp []
 Addiere(10, 5, out int result);
