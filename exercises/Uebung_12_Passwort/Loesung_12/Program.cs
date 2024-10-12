@@ -5,12 +5,13 @@ namespace Passwort;
 internal class Program
 {
     private const int MinPasswordLength = 8;
-    private static string password;
 
     private static void Main()
     {
-        Console.WriteLine("Passwort eingeben: ");
         ConsoleKeyInfo keyInfo;
+        string password = string.Empty;
+
+        Console.WriteLine("Passwort eingeben: ");
 
         do
         {
@@ -22,13 +23,15 @@ internal class Program
             {
                 // Den gedrückten Buchstaben dem Password string hinzufügen.
                 password += keyInfo.KeyChar;
-                // Darstellung als Platzhalter mit *.
+
+                // Darstellung des Platzhalters mit *.
                 Console.Write("*");
             }
             else if (keyInfo.Key == ConsoleKey.Backspace && password.Length > 0)
             {
                 // letztes Zeichen entfernen.
                 password = password.Substring(0, password.Length - 1);
+
                 // 2 mal (Backspace Taste und das letzte Zeichen) zurück (Backspace).
                 Console.Write("\b \b");
             }
@@ -51,29 +54,28 @@ internal class Program
         {
             if (containsNumber && containsChar)
             {
-                // Schleife früher beenden.
+                // Schleife früher beenden wenn mind. eine Zahl
+                // und mind. ein Buchstabe enthalten ist.
                 break;
             }
 
-            if (Char.IsDigit(c))
+            if (char.IsDigit(c))
             {
                 containsNumber = true;
             }
-            else if (Char.IsLetter(c))
+            else if (char.IsLetter(c))
             {
                 containsChar = true;
             }
         }
 
-        // Alternative
-        //bool containsNumber = password.Any(char.IsDigit);
-
         if (!containsNumber || !containsChar)
         {
             Console.WriteLine("Das eingegebene Passwort muss aus Zahlen und Buchstaben bestehen.");
+            return;
         }
 
-        Console.WriteLine("Passwort einfolgereich gesetzt.");
+        Console.WriteLine($"Passwort erfolgreich gesetzt: {password}");
         Console.ReadLine();
     }
 }
