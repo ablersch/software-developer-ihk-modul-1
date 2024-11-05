@@ -160,9 +160,13 @@ sb.Append(" plus ");
 sb.Append(b);
 sb.Append(" ist ");
 sb.Append(a+b);
+sb.ToString();
 ```
 
 Mehr zum Thema [Stringverkettung](https://docs.microsoft.com/de-de/dotnet/csharp/how-to/concatenate-multiple-strings)
+
+Note:
+In C# solltest du `StringBuilder` anstelle von normalen Strings verwenden, wenn du viele Änderungen an einem String vornehmen musst, wie etwa Anhängen, Einfügen oder Ersetzen von Zeichenfolgen. Der Grund liegt darin, dass Strings in C# unveränderlich sind – bei jeder Änderung eines Strings wird ein neuer String im Speicher erstellt, was bei vielen Änderungen ineffizient werden kann.
 
 ---
 

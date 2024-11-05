@@ -171,3 +171,15 @@ Oder als Auto Property
 ```csharp []
 public string Name { get; set; }
 ```
+
+---
+
+<!-- .slide: class="left" -->
+### Ligatures (Buchstabenverbindungen)
+
+![Ligatures](images/Ligatures.png)
+
+Diese andere Anzeige wird automatisch durch die augewählte Schriftart gemacht z.B. "Cascadia Code".
+Wenn man dies nicht haben möchte muss die Schriftart ändern auf z.B. "Cascadia Mono" oder "Consolas"
+
+Tools -> Options -> Environment -> Fonts and Colors
