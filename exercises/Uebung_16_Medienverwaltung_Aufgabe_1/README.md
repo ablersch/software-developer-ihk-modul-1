@@ -6,7 +6,7 @@ Erstellen Sie ein Konsolenprogramm welches über ein Menü Daten zu einem Buch a
 
 * Titel
 * Signatur
-* Leihstatus (enum)
+* Status (`enum` Leihstatus)
 * Seitenzahl
 
 Jedes Buch soll eine ganzzahlige Signatur, einen Titel, eine Seitenzahl und ein Attribut für den Leihstatus (präsent/entliehen) besitzen.
