@@ -9,7 +9,7 @@ Erstellen Sie ein Konsolenprogramm welches über ein Menü Daten zu einem Buch a
 * Status (`enum` Leihstatus)
 * Seitenzahl
 
-Jedes Buch soll eine ganzzahlige Signatur, einen Titel, eine Seitenzahl und ein Attribut für den Leihstatus (präsent/entliehen) besitzen.
+Jedes Buch soll eine ganzzahlige Signatur, einen Titel, eine Seitenzahl und ein Status (präsent/entliehen) besitzen.
 
 ## Methoden
 
@@ -22,13 +22,13 @@ Die Anwendung soll folgende Methoden haben (weitere Beschreibung siehe Tabelle):
 
 ## Menü
 
-Erstellen Sie in der Main-Methode ein Menü welches die oben aufgeführten Methoden aufruft. Aufbau des Menüs bitte aus der Tabelle entnehmen.
+Erstellen Sie in der `Main()` ein Menü welches die oben aufgeführten Methoden aufruft. Aufbau des Menüs bitte aus der Tabelle entnehmen.
 
 **Folgende Funktionen/Menüpunkte sollen zur Verfügung stehen:**
 
 |Kommando    | Aktion
 -------------|----------
-|„b“| Anlegen eines Buches. Der Benutzer soll Signatur und Titel eingeben. Die Signatur darf nur aus Zahlen bestehen.|
+|„b“| Anlegen eines Buches. Der Benutzer soll Signatur Titel und Seitenzahl eingeben. Die Signatur und Seitenzahl darf nur aus Zahlen bestehen.|
 |„a“| Ausgabe der Bücherdaten in tabellarischer Form mit einer Spaltenüberschrift.|
 |„e“| Entleihen des Buches. Es soll eine Plausibilitätskontrolle erfolgen, ob das Buch überhaupt präsent ist und ggf. eine Warnung ausgegeben werden.|
 |„r“| Rückgabe des Buches. Es soll eine Plausibilitätskontrolle erfolgen, ob das Buch überhaupt entliehen ist und ggf. eine Warnung ausgegeben werden.|

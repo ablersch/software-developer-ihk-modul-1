@@ -173,7 +173,7 @@ In C# solltest du `StringBuilder` anstelle von normalen Strings verwenden, wenn 
 <!-- .slide: class="left" -->
 ## Stringformatierung
 
-* Abstände bei der Ausgabe (vor bzw. nach dem Wert 10 Stellen frei)
+* Abstände bei der Ausgabe (vom Start des Wertes nach rechts 10 Stellen frei)
 ```csharp
 Console.WriteLine($"Die Summe von {a,-10:D} plus {b,-10:D} ist {a + b,10:D}."); 
 // Die Summe von 1          plus 2          ist           3.
@@ -194,6 +194,10 @@ Console.WriteLine(value.ToString("D8"));
 Console.WriteLine(string.Format("{0:D8}", value));
 // 00012345
 ```
+
+Note: 
+* Platzhalter können mehrfach verwendet werden.
+* {0,-10:D} vom Start des Wertes nach rechts 10 Stellen frei
 
 ---
 
@@ -227,9 +231,6 @@ Console.WriteLine($"Es ist das Jahr {DateTime.Now:yyyy}");
 Mehr zum Thema [Stringformatierung 1](https://docs.microsoft.com/de-de/dotnet/standard/base-types/formatting-types),  
 [Stringformatierung 2](https://freeasphosting.net/format-string-in-csharp-string-interpolation.html) und [Datumsformatierung](https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings)
 
-Note: 
-* Platzhalter können mehrfach verwendet werden.
-* {0,-20:D} rechts der Zahl 20 Stellen frei
 
 ---
 

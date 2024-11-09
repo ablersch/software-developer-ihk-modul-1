@@ -4,6 +4,7 @@ namespace Medienverwaltung_Aufgabe_1;
 
 internal class Program
 {
+    private static int seitenzahl;
     private static int signatur;
     private static Leihstatus status;
     private static string titel;
@@ -19,16 +20,12 @@ internal class Program
     /// </summary>
     public static void Anlegen()
     {
-        Console.WriteLine("Signatur eingeben: ");
-
-        // Es wird solange überprüft bis ein gültiger Zahlenwert eingegeben wurde
-        while (!int.TryParse(Console.ReadLine(), out signatur))
-        {
-            Console.WriteLine("Signatur ist keine Zahl. Erneut eingeben: ");
-        }
+        signatur = NummerEingabe(nameof(signatur));
 
         Console.WriteLine("Titel eingeben:");
         titel = Console.ReadLine();
+
+        seitenzahl = NummerEingabe(nameof(seitenzahl));
 
         status = Leihstatus.präsent;
         Console.WriteLine("Buch erfolgreich angelegt!");
@@ -40,9 +37,15 @@ internal class Program
     public static void Ausgabe()
     {
         Console.WriteLine("Ausgabe");
-        // Rechts des Wertes 15 Stellen
-        Console.WriteLine("{0,-15} {1,-15} {2,-15}", "Signatur", "Titel", "Leihstatus");
-        Console.WriteLine("{0,-15} {1,-15} {2,-15}", signatur, titel, status);
+
+        // Länge des Titelfeldes berechnen. Titel muss mindestens so lange sein wie die Spaltenbezeichnung "Titel".
+        var titleLaenge = titel.Length < nameof(titel).Length ? nameof(titel).Length : titel.Length;
+        // Ein weiteres Zeichen für den Abstand der Spalte und den Wert negieren.
+        titleLaenge = (titleLaenge + 1) * -1;
+
+        // vom Start des Wertes nach rechts 15 Stellen frei. Titelspaltengröße wird berechnet.
+        Console.WriteLine("{0,-15} {1," + titleLaenge + " } {2,-15} {3,-15}", "Signatur", "Titel", "Leihstatus", "Seitenzahl");
+        Console.WriteLine("{0,-15} {1," + titleLaenge + " } {2,-15} {3,-15}", signatur, titel, status, seitenzahl);
     }
 
     /// <summary>
@@ -124,5 +127,19 @@ internal class Program
                     break;
             }
         }
+    }
+
+    private static int NummerEingabe(string name)
+    {
+        int nummer = 0;
+        Console.WriteLine($"{name} eingeben: ");
+
+        // Es wird solange überprüft bis ein gültiger Zahlenwert eingegeben wurde
+        while (!int.TryParse(Console.ReadLine(), out nummer))
+        {
+            Console.WriteLine("Es wurde keine gültige Zahl eingegeben. Erneut versuchen: ");
+        }
+
+        return nummer;
     }
 }
