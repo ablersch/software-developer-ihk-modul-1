@@ -37,15 +37,16 @@ internal class Program
     public static void Ausgabe()
     {
         Console.WriteLine("Ausgabe");
+        Console.WriteLine("{0,-15} {1,-15} {2,-15} {3,-15}", "Signatur", "Titel", "Leihstatus", "Seitenzahl");
+        Console.WriteLine("{0,-15} {1,-15} {2,-15} {3,-15}", signatur, titel, status, seitenzahl);
 
+        // Optional mit dynamischer Titellänge
         // Länge des Titelfeldes berechnen. Titel muss mindestens so lange sein wie die Spaltenbezeichnung "Titel".
-        var titleLaenge = titel.Length < nameof(titel).Length ? nameof(titel).Length : titel.Length;
-        // Ein weiteres Zeichen für den Abstand der Spalte und den Wert negieren.
-        titleLaenge = (titleLaenge + 1) * -1;
-
-        // vom Start des Wertes nach rechts 15 Stellen frei. Titelspaltengröße wird berechnet.
-        Console.WriteLine("{0,-15} {1," + titleLaenge + " } {2,-15} {3,-15}", "Signatur", "Titel", "Leihstatus", "Seitenzahl");
-        Console.WriteLine("{0,-15} {1," + titleLaenge + " } {2,-15} {3,-15}", signatur, titel, status, seitenzahl);
+        // Wert negieren.
+        //var titleLaenge = titel.Length < nameof(titel).Length ? (nameof(titel).Length) * -1 : (titel.Length) * -1;
+        //// vom Start des Wertes nach rechts 15 Stellen frei. Titelspaltengröße wird berechnet.
+        //Console.WriteLine("{0,-15} {1," + titleLaenge + " } {2,-15} {3,-15}", "Signatur", "Titel", "Leihstatus", "Seitenzahl");
+        //Console.WriteLine("{0,-15} {1," + titleLaenge + " } {2,-15} {3,-15}", signatur, titel, status, seitenzahl);
     }
 
     /// <summary>
