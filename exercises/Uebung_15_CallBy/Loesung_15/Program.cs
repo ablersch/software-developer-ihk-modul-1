@@ -12,6 +12,16 @@ internal class Program
         // Wert welcher zurückgegeben wurde der Variable neu zuweisen.
         score = UpdateScore2(score);
         Console.WriteLine(score);
+
+        // Methode mit out-Parameter aufrufen. Score als Kopie übergeben (Call by Value).
+        TryUpdateScore(score, out score);
+        Console.WriteLine(score);
+    }
+
+    // Teil 3
+    private static void TryUpdateScore(int currentScore, out int newScore)
+    {
+        newScore = currentScore + 10;
     }
 
     // Teil 1

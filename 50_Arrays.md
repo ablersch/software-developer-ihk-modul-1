@@ -90,7 +90,11 @@ foreach (var car in cars)
 }
 ```
 
-Note: **ÜBUNG 7** Arrays
+Note: 
+* Die `foreach`-Schleife ist eine spezielle Schleife für das Durchlaufen von Sammlungen (z. B. Arrays).
+* Sie geht automatisch durch alle Elemente und erspart das Arbeiten mit dem Index.
+* Sie eignet sich besonders, wenn man jedes Element eines Arrays einfach auslesen möchte.
+* **ÜBUNG 7** Arrays
 
 ---
 

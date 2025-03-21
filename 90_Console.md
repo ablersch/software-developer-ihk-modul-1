@@ -51,4 +51,4 @@ else if (info.Modifiers == ConsoleModifiers.Shift)
 
 Note: 
 * `ConsoleKeyInfo` zeigen.
-* **ÜBUNG** Passwort
+* **ÜBUNG** Zahlenzähler

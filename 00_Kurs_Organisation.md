@@ -48,7 +48,7 @@ Samstags:
 * von 8:00 - 15:00 Uhr
 * gekürzte Pausen:
     * 10:00 - 10:15 Uhr
-    * 11:30 - 12:00 Uhr
+    * 12:00 - 12:30 Uhr
 
 Note:
 Abmelden wenn jemand keine Zeit hat

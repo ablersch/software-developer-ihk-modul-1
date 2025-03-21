@@ -335,32 +335,33 @@ Note: **Übung 5** verschachtelte Schleife
 <!-- .slide: class="left" -->
 ### Foreach-Anweisung
 
-Die [foreach-Anweisung](https://docs.microsoft.com/de-de/dotnet/csharp/language-reference/statements/iteration-statements#the-foreach-statementn) kann auf Arrays und für jede Klasse eingesetzt
-werden, welche die Schnittstelle `IEnumerable` implementiert. Fehler mit falscher Indexierung sind nicht mehr möglich.
+Die [foreach-Anweisung](https://docs.microsoft.com/de-de/dotnet/csharp/language-reference/statements/iteration-statements#the-foreach-statementn) durchläuft alle Element. Indexfehler sind so nicht mehr möglich. Einfachere Syntax als eine `for`-Schleife. 
 
 **For Schleife:**
 
 ```csharp []
-double [] meinArray = new double [] { 1.1, 1.2, 1.3, 1.4, 1.5 };
-for(int i = 0; i < meinArray.Length; i++)
+string wort = "Hallo";
+for(int i = 0; i < wort.Length; i++)
 {
-    Console.WriteLine(meinArray[i]);
+    Console.WriteLine(wort[i]);
 }
 ```
 
 **Foreach:**
 
 ```csharp []
-foreach (var meinWert in meinArray)
+string wort = "Hallo";
+foreach (char buchstabe in wort)
 {
-    Console.WriteLine(meinWert);
+    Console.WriteLine(buchstabe);
 }
 ```
 
 Note: 
+* Ein `string` ist technisch gesehen eine Sammlung von Zeichen (`char`). Jedes Zeichen einzelnen ausgeben.
 * foreach + tab + tab
 * Sinnvoll wenn alle Werte durchlaufen werden sollen aber kein Index benötigt wird.
-* Mit GetEnumerator() kann Index abgerufen und bearbeitet werden.
+* Mit `GetEnumerator()` kann Index abgerufen und bearbeitet werden.
 
 ---
 
